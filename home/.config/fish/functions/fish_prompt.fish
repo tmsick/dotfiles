@@ -20,11 +20,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# name: nai
-# Display the following bits on the left:
-# * Current directory name
-# * Git branch and dirty state (if inside a git repo)
-
 function _git_branch_name
   echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
 end
@@ -34,15 +29,16 @@ function _git_dirty
 end
 
 function fish_prompt
+  set -l last_status $status
+
   set -l yellow (set_color yellow)
   set -l green (set_color green)
+  set -l red (set_color red)
   set -l normal (set_color normal)
 
   set -l cwd (basename (prompt_pwd))
 
-  echo -e ""
-
-  echo -n -s ' ' $cwd $normal
+  echo -n -s $cwd $normal
 
   if [ (_git_branch_name) ]
     set -l git_branch (_git_branch_name)
@@ -55,6 +51,9 @@ function fish_prompt
     echo -n -s ' ' $git_info $normal
   end
 
-  echo -n -s ' ' $normal
+  if [ $last_status -ne 0 ]
+    echo -n -s $red
+  end
 
+  echo -n -s ' $ ' $normal
 end
