@@ -1,5 +1,7 @@
 # dotfiles
 
+Config file suite for macOS system
+
 ## Linking config files
 
 ```
