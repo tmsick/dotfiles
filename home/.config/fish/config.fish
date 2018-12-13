@@ -8,6 +8,11 @@ if type -q hub
   eval ( hub alias -s )
 end
 
+# nodenv (https://github.com/nodenv/nodenv)
+if type -q nodenv
+  status --is-interactive; and source (nodenv init -|psub)
+end
+
 # rbenv (https://github.com/rbenv/rbenv)
 if type -q rbenv
   status --is-interactive; and source (rbenv init -|psub)
