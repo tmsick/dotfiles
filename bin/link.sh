@@ -17,13 +17,13 @@ done
 
 # Link files in a directory recursively
 function link_files_recursively() {
-  if [[ ! -d "$1" ]]; then
+  local -r SRC_DIR="$1"
+  local -r DEST_DIR="$2"
+
+  if [[ ! -d "$SRC_DIR" ]]; then
     echo "Error: Source directory passed to link_files does not exist" >&2
     return 1
   fi
-
-  local -r SRC_DIR="$1"
-  local -r DEST_DIR="$2"
 
   # Make sure $DEST_DIR exists
   mkdir -p "$DEST_DIR"
@@ -37,7 +37,7 @@ function link_files_recursively() {
   done
 }
 
-readonly SRC_ROOT="$(cd $(dirname $0) && pwd)/home"
+readonly SRC_ROOT="$(cd $(dirname $0) && cd .. && pwd)/home"
 readonly DEST_ROOT="$HOME"
 
 link_files_recursively "$SRC_ROOT" "$DEST_ROOT"
