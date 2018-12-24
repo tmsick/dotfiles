@@ -1,9 +1,8 @@
 #!/bin/bash
 
-set -o errexit \
-  -o noclobber \
-  -o nounset \
-  -o pipefail
+readonly REPO_ROOT="$(cd $(dirname $0) && cd .. && pwd)"
+
+source "$REPO_ROOT/lib/init_settings.lib.sh"
 
 while true; do
   echo "Are you sure you want to install dotfiles? [Y/n]"
@@ -37,7 +36,7 @@ function link_files_recursively() {
   done
 }
 
-readonly SRC_ROOT="$(cd $(dirname $0) && cd .. && pwd)/home"
+readonly SRC_ROOT="$REPO_ROOT/home"
 readonly DEST_ROOT="$HOME"
 
 link_files_recursively "$SRC_ROOT" "$DEST_ROOT"
