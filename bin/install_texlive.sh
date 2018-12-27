@@ -2,9 +2,10 @@
 # Install and configure TeX Live suite
 # You may have to execute this script with `sudo`
 
+source "$(dirname $0)/.bashrc"
+
 readonly REPO_ROOT="$(cd $(dirname $0) && cd .. && pwd)"
 
-source "$REPO_ROOT/lib/init_settings.lib.sh"
 
 # Use JAIST as a mirror site
 readonly TEXLIVE_TLNET_URL="http://ftp.jaist.ac.jp/pub/CTAN/systems/texlive/tlnet"

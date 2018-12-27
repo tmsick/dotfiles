@@ -1,8 +1,8 @@
 #!/bin/bash
 
-readonly REPO_ROOT="$(cd $(dirname $0) && cd .. && pwd)"
+source "$(dirname $0)/.bashrc"
 
-source "$REPO_ROOT/lib/init_settings.lib.sh"
+readonly REPO_ROOT="$(cd $(dirname $0) && cd .. && pwd)"
 
 while true; do
   echo "Are you sure you want to install dotfiles? [Y/n]"
