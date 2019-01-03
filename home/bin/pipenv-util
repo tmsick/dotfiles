@@ -1,0 +1,63 @@
+#!/bin/bash
+readonly SCRIPT_NAME="${0##*/}"
+readonly SCRIPT_DIR="${0%/*}"
+source "$SCRIPT_DIR/.bashrc"
+
+# ================================> functions <=================================
+function usage() {
+  cat <<EOS
+Usage: $SCRIPT_NAME COMMAND [ARGS]...
+
+Commands:
+  ls  Output directories under $PIPENV_DIR
+  rm  Remove directories under $PIPENV_DIR
+
+Usage Examples:
+  List all pipenvs:
+  \$ $SCRIPT_NAME ls
+
+  Remove pipenvs:
+  \$ $SCRIPT_NAME rm 'project-a-3XKTtyel' 'project-b-bvRdHR6M'
+EOS
+}
+
+function list() {
+  ls "$PIPENV_DIR"
+}
+
+function remove() {
+  rm -r "${@/#/$PIPENV_DIR/}"
+}
+
+# ===================================> main <===================================
+if [[ $# -eq 0 ]]; then
+  usage 1>&2
+  exit 1
+fi
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    "--help" | "-h")
+      usage
+      exit
+      ;;
+    "ls")
+      list
+      exit
+      ;;
+    "rm")
+      shift
+      if [[ $# -eq 0 ]]; then
+        usage 1>&2
+        exit 1
+      fi
+      remove "$@"
+      exit
+      ;;
+    *)
+      usage 1>&2
+      exit 1
+      ;;
+  esac
+  shift
+done
