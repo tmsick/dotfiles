@@ -3,6 +3,8 @@ set -gx LANG en_US.UTF-8
 set -g fish_user_paths /usr/local/sbin $fish_user_paths
 set -g fish_user_paths $HOME/bin $fish_user_paths
 
+set -gx PIPENV_DIR $HOME/.local/share/virtualenvs
+
 # GitHub's hub (https://github.com/github/hub)
 if type -q hub
   eval ( hub alias -s )
