@@ -3,6 +3,9 @@ readonly SCRIPT_NAME="${0##*/}"
 readonly SCRIPT_DIR="${0%/*}"
 source "$SCRIPT_DIR/.bashrc"
 
+# =============================> global constants <=============================
+readonly PIPENV_DIR="$HOME/.virtualenvs"
+
 # ================================> functions <=================================
 function usage() {
   cat <<EOS
