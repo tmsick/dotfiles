@@ -1,0 +1,43 @@
+#!/bin/bash
+# Remove trailing empty lines from file and output
+
+readonly SCRIPT_NAME="$(basename $0)"
+readonly SCRIPT_DIR="$(dirname $0)"
+source "$SCRIPT_DIR/.bashrc"
+
+# Original head command which reads ONLY from stdin and accepts ONLY -n option.
+# If lineno which is less than or equals 0 is given, it outputs nothing to
+# stdout with no error.
+function head() {
+  local lineno=0
+  while getopts n: option; do
+    case "$option" in
+      "n")
+        lineno=$OPTARG
+        ;;
+    esac
+  done
+
+  if [[ $lineno -le 0 ]]; then
+    cat < /dev/null
+  else
+    cat - | command head -n $lineno
+  fi
+}
+
+function echo_one_line() {
+  local file="$1"
+  local lineno="$2"
+  cat "$file" | head -n $lineno | tail -n 1
+}
+
+readonly FILE="$1"
+declare -i lineno=$(wc -l "$FILE" | sed -E 's/^ +//g' | cut -d ' ' -f 1)
+
+line="$(echo_one_line $FILE $lineno)"
+while [[ "$line" =~ ^$ && $lineno -gt 0 ]]; do
+  (( lineno-- ))
+  line="$(echo_one_line $FILE $lineno)"
+done
+
+cat "$FILE" | head -n $lineno
