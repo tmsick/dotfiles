@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+# ==================================> header <==================================
+readonly SCRIPT_PATH=$(realpath "$0")
+readonly SCRIPT_NAME=$(basename "$SCRIPT_PATH")
+readonly SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+readonly REPO_ROOT=$(realpath "$SCRIPT_DIR/..")
+readonly LIB_DIR="$REPO_ROOT/lib"
+readonly PROFILE_DIR="$REPO_ROOT/profile"
+
+source "$PROFILE_DIR/bash.profile"
+# ==============================================================================
+
+function echo_help() {
+  cat <<EOS
+THIS IS HELP TEXT
+EOS
+}
+
+# Confirm appropriate (often latest) version of bash is available
+"$LIB_DIR/confirm_bash_appropriacy.sh" $(which bash)
+
+if [[ $# -eq 0 ]]; then
+  # Install everything
+  exit 0
+fi
+
+for arg; do
+  case "$arg" in
+    "dotfiles")
+      "$LIB_DIR/install_dotfiles.sh"
+      ;;
+    "texlive")
+      "$LIB_DIR/install_texlive.sh"
+      ;;
+    *)
+      echo_help 1>&2
+      exit 1
+      ;;
+  esac
+done

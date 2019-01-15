@@ -1,11 +1,15 @@
-#!/bin/bash
-# Install and configure TeX Live suite
-# You may have to execute this script with `sudo`
+#!/usr/bin/env bash
 
-readonly SCRIPT_NAME="$(basename $0)"
-readonly SCRIPT_DIR="$(dirname $0)"
-readonly REPO_ROOT="$(cd $SCRIPT_DIR && cd .. && pwd)"
-source "$SCRIPT_DIR/.bashrc"
+# =========================> start of library header <==========================
+readonly SCRIPT_PATH=$(realpath "$0")
+readonly SCRIPT_NAME=$(basename "$SCRIPT_PATH")
+readonly SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+readonly REPO_ROOT=$(realpath "$SCRIPT_DIR/..")
+readonly LIB_DIR="$REPO_ROOT/lib"
+readonly PROFILE_DIR="$REPO_ROOT/profile"
+
+source "$PROFILE_DIR/bash.profile"
+# ==========================> end of library header <===========================
 
 # The normal user who executed this script
 readonly NORMAL_USER="$(last | head -n 1 | cut -d ' ' -f 1)"
@@ -110,6 +114,8 @@ else
   chown -R "$NORMAL_USER" "$REPO_ROOT/config"
 fi
 declare -r TEXDIR
+echo "TEXDIR: $TEXDIR"
+exit 0
 # Execute installation
 ./install-tl \
   --repository="$repository" \
