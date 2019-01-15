@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# =========================> start of library header <==========================
+# ==================================> header <==================================
 readonly SCRIPT_PATH=$(realpath "$0")
 readonly SCRIPT_NAME=$(basename "$SCRIPT_PATH")
 readonly SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
@@ -9,7 +9,7 @@ readonly LIB_DIR="$REPO_ROOT/lib"
 readonly PROFILE_DIR="$REPO_ROOT/profile"
 
 source "$PROFILE_DIR/bash.profile"
-# ==========================> end of library header <===========================
+# ==============================================================================
 
 readonly COMMAND="brew"
 
