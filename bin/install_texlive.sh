@@ -112,7 +112,6 @@ fi
 declare -r TEXDIR
 # Execute installation
 ./install-tl \
-  --no-gui \
   --repository="$repository" \
   --profile="$profile"
 
