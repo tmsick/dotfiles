@@ -37,9 +37,6 @@ for arg; do
     "dotfiles")
       "$LIB_DIR/install_dotfiles.sh"
       ;;
-    "texlive")
-      "$LIB_DIR/install_texlive.sh"
-      ;;
     *)
       echo_help 1>&2
       exit 1
