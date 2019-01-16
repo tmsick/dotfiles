@@ -1,20 +1,6 @@
 #!/usr/bin/env bash
 source "$DOTFILES_PROFILE"
 
-readonly TMP_DIR=$(generate_unique_tmp_entry_name "texlive")
-readonly MACOS_VERSION=$(sw_vers | grep -E '^ProductVersion' | cut -f 2 |
-  cut -d '.' -f 2)
-readonly MAPFILES=(
-  [11]="hiragino-elcapitan-pron"  # El Capitan
-  [12]="hiragino-elcapitan-pron"  # Sierra
-  [13]="hiragino-highsierra-pron" # High Sierra
-  [14]="hiragino-highsierra-pron" # Mojave
-)
-readonly TLCONTRIB_REPO="http://contrib.texlive.info/current"
-readonly TLCONTRIB_TAG="tlcontrib"
-readonly INTEGRATION_SCRIPT="cjk-gs-integrate-macos.pl"
-readonly SCRIPT_REPOSITORY="https://raw.githubusercontent.com/texjporg/cjk-gs-support/master"
-
 function generate_unique_tmp_entry_name() {
   local prefix=""
   if [[ $# -gt 0 ]]; then
@@ -40,6 +26,20 @@ function is_macos_version_supported() {
 
   return 1
 }
+
+readonly TMP_DIR=$(generate_unique_tmp_entry_name "texlive")
+readonly MACOS_VERSION=$(sw_vers | grep -E '^ProductVersion' | cut -f 2 |
+  cut -d '.' -f 2)
+readonly MAPFILES=(
+  [11]="hiragino-elcapitan-pron"  # El Capitan
+  [12]="hiragino-elcapitan-pron"  # Sierra
+  [13]="hiragino-highsierra-pron" # High Sierra
+  [14]="hiragino-highsierra-pron" # Mojave
+)
+readonly TLCONTRIB_REPO="http://contrib.texlive.info/current"
+readonly TLCONTRIB_TAG="tlcontrib"
+readonly INTEGRATION_SCRIPT="cjk-gs-integrate-macos.pl"
+readonly SCRIPT_REPOSITORY="https://raw.githubusercontent.com/texjporg/cjk-gs-support/master"
 
 if is_macos_version_supported; then
   :
@@ -67,7 +67,7 @@ sudo tlmgr install japanese-otf-nonfree \
   cjk-gs-integrate-macos
 sudo cjk-gs-integrate --link-texmf --cleanup
 
-curl -O "$SCRIPT_REPOSITORY/$INTEGRATE_SCRIPT"
+curl -O "$SCRIPT_REPOSITORY/$INTEGRATION_SCRIPT"
 chmod +x "$INTEGRATION_SCRIPT"
 sudo "./$INTEGRATION_SCRIPT" --link-texmf
 
