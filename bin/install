@@ -19,7 +19,12 @@ export readonly DOTFILES_PROFILE="$PROFILE_DIR/bash.profile"
 
 function echo_help() {
   cat <<EOS
-THIS IS HELP TEXT
+Usage: $SCRIPT_NAME ARGS...
+
+Arguments:
+  dotfiles          Make symlinks of dotfiles
+  texlive_ja_fonts  Install Hiragino fontmaps for TeX Live
+  help              Print this help text
 EOS
 }
 
