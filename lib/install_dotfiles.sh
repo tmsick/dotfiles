@@ -1,15 +1,5 @@
 #!/usr/bin/env bash
-
-# ==================================> header <==================================
-readonly SCRIPT_PATH=$(realpath "$0")
-readonly SCRIPT_NAME=$(basename "$SCRIPT_PATH")
-readonly SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
-readonly REPO_ROOT=$(realpath "$SCRIPT_DIR/..")
-readonly LIB_DIR="$REPO_ROOT/lib"
-readonly PROFILE_DIR="$REPO_ROOT/profile"
-
-source "$PROFILE_DIR/bash.profile"
-# ==============================================================================
+source "$DOTFILES_PROFILE"
 
 function link_files() {
   local src_dir="$1"
