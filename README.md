@@ -1,12 +1,19 @@
 # dotfiles
 
-Config file suite for macOS system
+Initialization suite for macOS system
 
-## Linking config files
+## Installation
 
 ```
 git clone https://github.com/tmsick/dotfiles.git ~/.dotfiles
-~/.dotfiles/bin/link.sh
+cd ~/.dotfiles
+./bin/install ARGS...
+```
+
+## Help
+
+```
+./bin/install help
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked in your system on installation.
