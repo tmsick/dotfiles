@@ -23,8 +23,8 @@ THIS IS HELP TEXT
 EOS
 }
 
-# Confirm appropriate (often latest) version of bash is available
-"$LIB_DIR/confirm_bash_appropriacy.sh" $(which bash)
+# Make sure the latest version of formulae are available
+"$LIB_DIR/install_brew_formula.sh" "bash"
 
 if [[ $# -eq 0 ]]; then
   # Install everything
