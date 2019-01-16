@@ -27,8 +27,8 @@ EOS
 "$LIB_DIR/install_brew_formula.sh" "bash"
 
 if [[ $# -eq 0 ]]; then
-  # Install everything
-  exit 0
+  echo_help 1>&2
+  exit 1
 fi
 
 for arg; do
@@ -39,9 +39,14 @@ for arg; do
     "texlive_ja_fonts")
       "$LIB_DIR/install_texlive_ja_fonts.sh"
       ;;
+    "help")
+      echo_help
+      exit 0
+      ;;
     *)
-      echo_help 1>&2
-      exit 1
+      cat 1>&2 <<EOS
+SCRIPT_NAME: line $LINENO: Invalid option '$arg'. Continue processing.
+EOS
       ;;
   esac
 done
