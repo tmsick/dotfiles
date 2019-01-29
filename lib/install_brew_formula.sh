@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 source "$DOTFILES_PROFILE"
 
-readonly FORMULAE=$(brew list)
+readonly INSTALLED_FORMULAE=$(brew list)
 
 # Make sure brew is installed
 if type brew > /dev/null 2>&1; then
@@ -15,7 +15,7 @@ EOS
 fi
 
 for formula; do
-  if echo "$FORMULAE" | grep "$formula" > /dev/null; then
+  if echo "$INSTALLED_FORMULAE" | grep "$formula" > /dev/null; then
     :
   else
     brew install "$formula"
