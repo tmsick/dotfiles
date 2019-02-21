@@ -53,7 +53,7 @@ pushd "$TMP_DIR"
 
 sudo tlmgr update --self --all
 
-if tlmgr repository list | grep -q "$TLCONTRIB_REPO"; then
+if tlmgr repository list | grep -q "$TLCONTRIB_REPO" > /dev/null; then
   :
 else
   sudo tlmgr repository add "$TLCONTRIB_REPO" "$TLCONTRIB_TAG"
