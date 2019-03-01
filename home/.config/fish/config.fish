@@ -8,11 +8,6 @@ if type -q hub
   eval ( hub alias -s )
 end
 
-# rbenv (https://github.com/rbenv/rbenv)
-if type -q rbenv
-  status --is-interactive; and source (rbenv init -|psub)
-end
-
 # Dan Kogai's mv2trash (https://github.com/dankogai/osx-mv2trash)
 if type -q mv2trash
   alias rm mv2trash
