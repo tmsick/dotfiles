@@ -7,9 +7,7 @@ set -g fish_user_paths $HOME/bin $fish_user_paths
 eval ( hub alias -s )
 
 # nodenv (https://github.com/nodenv/nodenv)
-if type -q nodenv
-  status --is-interactive; and source (nodenv init -|psub)
-end
+status --is-interactive; and source (nodenv init -|psub)
 
 # rbenv (https://github.com/rbenv/rbenv)
 status --is-interactive; and source (rbenv init -|psub)
