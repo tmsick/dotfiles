@@ -6,6 +6,11 @@ set -g fish_user_paths $HOME/bin $fish_user_paths
 # GitHub's hub (https://github.com/github/hub)
 eval ( hub alias -s )
 
+# nodenv (https://github.com/nodenv/nodenv)
+if type -q nodenv
+  status --is-interactive; and source (nodenv init -|psub)
+end
+
 # rbenv (https://github.com/rbenv/rbenv)
 status --is-interactive; and source (rbenv init -|psub)
 
