@@ -1,7 +1,9 @@
 set -gx LANG en_US.UTF-8
+set -gx PIPENV_VENV_IN_PROJECT true
 
 set -g fish_user_paths /usr/local/sbin $fish_user_paths
 set -g fish_user_paths $HOME/bin $fish_user_paths
+
 
 # GitHub's hub (https://github.com/github/hub)
 eval ( hub alias -s )
