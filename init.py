@@ -3,7 +3,7 @@
 
 def main():
     from config import config
-    from installer import dotfiles, brew, mas
+    from app import dotfiles, brew, mas
 
     dotfiles.install()
     brew.install(config["brew"])
