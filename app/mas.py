@@ -1,5 +1,12 @@
-def install(apps):
+def install():
     from subprocess import run, PIPE
+    from .path import root
+
+    configpath = root().joinpath("config", "mas.json")
+    with open(configpath) as f:
+        from json import load
+
+        apps = load(f)
 
     result = run(["mas", "list"], stdout=PIPE)
 
