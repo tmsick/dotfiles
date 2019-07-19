@@ -3,8 +3,9 @@
 
 def main():
     from config import config
-    from installer import brew, mas
+    from installer import dotfiles, brew, mas
 
+    dotfiles.install()
     brew.install(config["brew"])
     mas.install(config["mas"])
 
