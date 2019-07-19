@@ -1,4 +1,3 @@
-import sys
 from pathlib import Path
 
 
@@ -21,12 +20,9 @@ def traverse(srcdir, distdir):
 
 
 def install():
-    cwd = Path.cwd()
-    thisfile, *_ = sys.argv
-    thispath = cwd.joinpath(thisfile)
-    thisdir = thispath.parent
+    from .path import root
 
-    srcdir = thisdir.joinpath("home")
+    srcdir = root().joinpath("home")
     distdir = Path.home()
 
     traverse(srcdir, distdir)
