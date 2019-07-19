@@ -1,16 +1,7 @@
-from .command.run import run
+def install(apps):
+    from subprocess import run, PIPE
 
-
-def before():
-    pass
-
-
-def after():
-    pass
-
-
-def exec_installation(apps):
-    result = run(["mas", "list"])
+    result = run(["mas", "list"], stdout=PIPE)
 
     for info in result.stdout.decode("utf-8").split("\n"):
         if info:
@@ -21,9 +12,3 @@ def exec_installation(apps):
     ids = list(apps.keys())
     if ids:
         run(["mas", "install"] + ids)
-
-
-def install(apps):
-    before()
-    exec_installation(apps)
-    after()
