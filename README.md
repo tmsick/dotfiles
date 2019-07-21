@@ -8,14 +8,15 @@ Initialization suite for macOS system
 - Git
 - Homebrew
     - Python 3
-    - mas-cli
+    - Pipenv
 
 ## Installation
 
 ```
 git clone <this repo> <anywhere you like>
-cd <repo>
-./init
+cd <this repo>
+pipenv install
+pipenv run init.py
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked in your system on installation.
