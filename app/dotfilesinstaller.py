@@ -26,9 +26,15 @@ class DotfilesInstaller:
                 Path.mkdir(distfile.parent, parents=True, exist_ok=True)
 
                 if distfile.exists():
-                    distfile.unlink()
-
-                distfile.symlink_to(srcfile)
+                    if not distfile.samefile(srcfile):
+                        msg = """
+file {} already exists and linkage was not executed
+                        """.format(
+                            distfile
+                        )
+                        raise FileExistsError(msg)
+                else:
+                    distfile.symlink_to(srcfile)
 
             if srcfile.is_dir():
                 self.__traverse(srcfile, distdir.joinpath(srcfile.name))
