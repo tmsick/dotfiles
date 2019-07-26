@@ -1,10 +1,6 @@
 brew:
   homebrew/core:
-    - adns
-    - asciinema
     - aspell
-    - autoconf
-    - automake
     - bash
     - cmake
     - coreutils
@@ -12,120 +8,39 @@ brew:
     - dnsmasq
     - doxygen
     - fish
-    - freetype
-    - gcc
     - gdb
-    - gdbm
-    - gettext
     - ghostscript
     - git
     - git-lfs
-    - glib
-    - gmp
-    - gnutls
     - hub
-    - icu4c
-    - ilmbase
     - imagemagick
-    - isl
-    - jemalloc
-    - jpeg
     - jq
-    - libassuan
-    - libde265
-    - libevent
-    - libffi
-    - libgcrypt
-    - libgpg-error
-    - libheif
-    - libidn2
-    - libksba
-    - libmpc
-    - libomp
-    - libpng
-    - libtasn1
-    - libtermkey
-    - libtiff
-    - libtool
-    - libunistring
-    - libusb
-    - libuv
-    - libvterm
-    - libyaml
-    - little-cms2
-    - lua
-    - makedepend
     - mas
-    - mcrypt
-    - mercurial
-    - mhash
-    - mono
-    - mpfr
-    - msgpack
-    - ncurses
-    - nettle
-    - newt
     - nkf
     - node
-    - node-build
-    - npth
-    - oniguruma
-    - openblas
-    - openexr
-    - openjpeg
-    - openssl
-    - p11-kit
-    - pcre
-    - pcre2
     - peco
-    - perl
-    - pinentry
-    - pinentry-mac
     - pipenv
-    - pkg-config
-    - popt
-    - pth
     - pypy3
-    - python
-    - python@2
     - r
-    - re2c
-    - readline
     - redis
-    - ruby
-    - ruby-build
-    - s-lang
-    - shared-mime-info
-    - sqlite
-    - stone
     - tig
     - tmux
-    - tnftp
-    - trash
     - tree
-    - unbound
-    - unibilium
-    - unixodbc
-    - utf8proc
     - vim
-    - webp
-    - x265
-    - xz
     - yq
-    - zlib
   thoughtbot/formulae:
     - gitsh
 mas:
   405399194: Kindle
-  497799835: Xcode
   409183694: Keynote
-  441258766: Magnet
-  462058435: Microsoft Excel
-  1091189122: Bear
   409201541: Pages
-  1024640650: CotEditor
-  539883307: LINE
-  462054704: Microsoft Word
   409203825: Numbers
+  441258766: Magnet
+  462054704: Microsoft Word
+  462058435: Microsoft Excel
   462062816: Microsoft PowerPoint
+  497799835: Xcode
+  539883307: LINE
+  1024640650: CotEditor
+  1091189122: Bear
   1333542190: 1Password 7
