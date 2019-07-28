@@ -6,88 +6,6 @@ readonly DIR="${0%/*}"
 readonly FILE="${0##*/}"
 readonly DIR_ABS="$PWD/$DIR"
 readonly FILE_ABS="$PWD/$DIR/$FILE"
-readonly CONFIG_ABS="$DIR_ABS/config.yml"
-
-function diff() {
-    local a=$(echo "$1" | sort -u)
-    local b=$(echo "$2" | sort -u)
-    local intersection=$(join <(echo "$a") <(echo "$b"))
-    cat <(echo "$a") <(echo "$intersection") | sort | uniq -u
-}
-
-function check_command() {
-    local command="$1"
-
-    if type "$command" >/dev/null 2>&1; then
-        return 0
-    else
-        return 1
-    fi
-}
-
-function confirm_formula() {
-    local formula="$1"
-
-    if ! brew list "$formula" >/dev/null 2>&1; then
-        brew install "$formula"
-    fi
-}
-
-function check_brew() {
-    if ! check_command "brew"; then
-        echo "'brew' was not found in \$PATH" >&2
-        echo "Please install it manually from https://brew.sh" >&2
-        exit 1
-    fi
-}
-
-function deactive_brew_analytics() {
-    echo "Deactivating Homebrew's analytics..."
-    brew analytics off
-}
-
-function install_brew_formulae() {
-    echo "Confirm yq is installed..."
-    confirm_formula "yq"
-
-    local repos=$(yq read "$CONFIG_ABS" "brew" | grep '^[^-]' | sed 's/:$//')
-    local required=""
-    local installed=$(brew list)
-
-    while read repo; do
-        required+=$(yq read "$CONFIG_ABS" "brew.$repo" | sed 's/- //')
-        required+="
-"
-    done <<EOS
-    $repos
-EOS
-    required=$(echo "$required" | sed 's/^$//')
-
-    local formulae=$(diff "$required" "$installed")
-    if [[ -n "$formulae" ]]; then
-        echo "Tapping Homebrew repositories..."
-        brew tap $repos
-        echo "Installing Homebrew formulae..."
-        brew install $formulae
-    else
-        echo "No additional Homebrew formula is required"
-    fi
-}
-
-function install_apps() {
-    echo "Confirm mas is installed..."
-    confirm_formula "mas"
-
-    local required=$(yq read "$CONFIG_ABS" "mas" | sed 's/:.*$//')
-    local installed=$(mas list | sed 's/ .*$//')
-    local apps=$(diff "$required" "$installed")
-    if [[ -n "$apps" ]]; then
-        echo "Installing Mac App Store apps..."
-        mas install $apps
-    else
-        echo "No additional Mac App Store app is required"
-    fi
-}
 
 function symlink() {
     local src="$1"
@@ -101,9 +19,9 @@ function symlink() {
         if [[ -f "$src/$item" ]]; then
             if [[ -e "$dist/$item" ]]; then
                 if [[ -L "$dist/$item" ]] && [[ "$dist/$item" -ef "$src/$item" ]]; then
-                    :
+                    : # already linked; do nothing
                 else
-                    echo "$dist/$item already exists. Skipping..."
+                    echo "\"$dist/$item\" already exists" >&2
                 fi
             else
                 mkdir -p "$dist"
@@ -112,23 +30,8 @@ function symlink() {
         elif [[ -d "$src/$item" ]]; then
             symlink "$src/$item" "$dist/$item"
         fi
-
     done
 }
 
-function main() {
-    if [[ $(uname) != "Darwin" ]]; then
-        echo "This script only runs on macOS" >&2
-        exit 1
-    fi
-
-    echo "Linking dotfiles..."
-    symlink "$DIR_ABS/home" "$HOME"
-
-    check_brew &&
-        deactive_brew_analytics &&
-        install_brew_formulae &&
-        install_apps
-}
-
-main
+symlink "$DIR_ABS/home" "$HOME"
+brew bundle --path="$DIR_ABS/Brewfile"
