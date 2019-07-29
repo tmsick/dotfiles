@@ -2,7 +2,7 @@
 
 Initialization suite for macOS system
 
-## Prerequisites
+## Prerequisite
 
 - [Homebrew](https://brew.sh) (which is **NOT** automatically installed in the installation script as its official installation method may change in the future)
 
@@ -14,6 +14,4 @@ cd <this repo>
 ./init
 ```
 
----
-
-**DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked in your system on installation.
+**DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked in your system when initializing.
