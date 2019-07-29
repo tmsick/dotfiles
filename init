@@ -1,6 +1,9 @@
 #!/bin/bash
 
-set -o errexit -o noclobber -o nounset -o pipefail
+set -o errexit
+set -o noclobber
+set -o nounset
+set -o pipefail
 
 readonly DIR="${0%/*}"
 readonly FILE="${0##*/}"
@@ -34,4 +37,9 @@ function symlink() {
 }
 
 symlink "$DIR_ABS/home" "$HOME"
-brew bundle --path="$DIR_ABS/Brewfile"
+
+brew analytics off &&
+    brew update &&
+    brew bundle --path="$DIR_ABS/Brewfile" &&
+    brew cleanup &&
+    brew doctor
