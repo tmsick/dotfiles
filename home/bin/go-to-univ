@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Usage: $ eval $(go-to-univ)
+
+readonly month=$(date '+%m')
+readonly root="$HOME/Documents/Univ"
+
+year=$(date '+%Y')
+season=""
+
+case "$month" in
+"01" | "02" | "03")
+    season="Fall"
+    ((year--))
+    ;;
+"04" | "05" | "06" | "07" | "08" | "09")
+    season="Spring"
+    ;;
+"10" | "11" | "12")
+    season="Fall"
+    ;;
+esac
+
+readonly dist="$root/$year/$season"
+
+if [[ -d "$dist" ]]; then
+    echo cd "$dist"
+fi
