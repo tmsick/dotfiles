@@ -30,6 +30,17 @@ brew 'tree'
 brew 'vim'
 brew 'yq'
 
+cask 'authy'
+cask 'clipy'
+cask 'docker'
+cask 'firefox'
+cask 'google-chrome'
+cask 'gpg-suite-no-mail'
+cask 'karabiner-elements'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'visual-studio-code'
+
 mas 'Kindle', id: 405399194
 mas 'Keynote', id: 409183694
 mas 'Pages', id: 409201541
