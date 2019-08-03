@@ -9,7 +9,7 @@ Initialization suite for macOS system
 ## Initializing the environment
 
 ```
-git clone <this repo> <wherever you like>
+git clone <this repo> <anywhere you like>
 cd <this repo>
 ./init
 ```
