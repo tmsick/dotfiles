@@ -11,7 +11,7 @@ Initialization suite for macOS system
 ```
 git clone <this repo> <anywhere you like>
 cd <this repo>
-./init
+./init.sh
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked in your system when initializing.
