@@ -33,7 +33,6 @@ brew 'vim'
 brew 'yq'
 
 cask 'authy'
-cask 'clipy'
 cask 'docker'
 cask 'firefox'
 cask 'google-chrome'
