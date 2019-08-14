@@ -15,4 +15,4 @@ status --is-interactive
 and source (rbenv init -|psub)
 
 # Dan Kogai's mv2trash (https://github.com/dankogai/osx-mv2trash)
-alias rm mv2trash
+alias "trash" "mv2trash"
