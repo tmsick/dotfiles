@@ -37,9 +37,3 @@ function symlink() {
 }
 
 symlink "$DIR_ABS/home" "$HOME"
-
-brew analytics off &&
-    brew update &&
-    brew bundle --path="$DIR_ABS/Brewfile" &&
-    brew cleanup &&
-    brew doctor
