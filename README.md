@@ -4,7 +4,7 @@ Initialization suite for macOS system
 
 ## Prerequisite
 
-- [Homebrew](https://brew.sh) (which is **NOT** automatically installed in the initialization scripts as its official installation method may change in the future)
+-   [Homebrew](https://brew.sh) (which is **NOT** automatically installed in the initialization scripts as its official installation method may change in the future)
 
 ## Initializing the environment
 
