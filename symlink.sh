@@ -24,7 +24,7 @@ function symlink() {
                 if [[ -L "$dist/$item" ]] && [[ "$dist/$item" -ef "$src/$item" ]]; then
                     : # already linked; do nothing
                 else
-                    echo "\"$dist/$item\" already exists" >&2
+                    echo "\"$dist/$item\" already exists; skipping..." >&2
                 fi
             else
                 mkdir -p "$dist"
