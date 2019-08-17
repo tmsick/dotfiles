@@ -1,5 +1,5 @@
 set -gx LANG "en_US.UTF-8"
-set -gx PIPENV_VENV_IN_PROJECT 1
+set -gx PIPENV_VENV_IN_PROJECT "1"
 set -gx GOPATH "$HOME/go"
 
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
