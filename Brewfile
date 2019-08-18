@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+tap 'heroku/brew'
+
 brew 'aspell'
 brew 'bash'
 brew 'cmake'
@@ -13,6 +15,7 @@ brew 'ghostscript'
 brew 'git'
 brew 'git-lfs'
 brew 'go'
+brew 'heroku'
 brew 'hub'
 brew 'imagemagick'
 brew 'jq'
