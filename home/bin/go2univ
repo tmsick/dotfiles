@@ -4,12 +4,12 @@
 
 set -Ceu -o pipefail
 
-readonly month="$(date '+%m')"
 readonly root="$HOME/Documents/Univ"
 
 year="$(date '+%Y')"
 season=""
 
+readonly month="$(date '+%m')"
 case "$month" in
 "01" | "02" | "03")
     season="Fall"
@@ -25,6 +25,18 @@ esac
 
 readonly dist="$root/$year/$season"
 
-if [[ -d "$dist" ]]; then
-    echo cd "$dist"
+if [[ -e "$dist" ]]; then
+    if [[ -d "$dist" ]]; then
+        echo cd "$dist"
+    else
+        echo "ERROR: $dist, which is not a directory, exists" >&2
+        exit 1
+    fi
+else
+    if mkdir -p "$dist"; then
+        echo cd "$dist"
+    else
+        echo "ERROR: Failed to make $dist" >&2
+        exit 1
+    fi
 fi
