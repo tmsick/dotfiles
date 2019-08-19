@@ -1,9 +1,6 @@
 #!/bin/bash
 
-set -o errexit
-set -o noclobber
-set -o nounset
-set -o pipefail
+set -Ceu -o pipefail
 
 readonly DIR="${0%/*}"
 readonly FILE="${0##*/}"
@@ -13,6 +10,7 @@ readonly FILE_ABS="$PWD/$DIR/$FILE"
 function symlink() {
     local src="$1"
     local dist="$2"
+    local item=""
 
     ls -A "$src" | while read item; do
         if [[ -f "$src/$item" ]] && [[ "$item" == ".DS_Store" ]]; then

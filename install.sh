@@ -1,9 +1,6 @@
 #!/bin/bash
 
-set -o errexit
-set -o noclobber
-set -o nounset
-set -o pipefail
+set -Ceu -o pipefail
 
 readonly DIR="${0%/*}"
 readonly FILE="${0##*/}"

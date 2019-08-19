@@ -2,10 +2,12 @@
 
 # Usage: $ eval $(go-to-univ)
 
-readonly month=$(date '+%m')
+set -Ceu -o pipefail
+
+readonly month="$(date '+%m')"
 readonly root="$HOME/Documents/Univ"
 
-year=$(date '+%Y')
+year="$(date '+%Y')"
 season=""
 
 case "$month" in
