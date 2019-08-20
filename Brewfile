@@ -65,3 +65,4 @@ mas 'LINE',                 id:   539_883_307
 mas 'CotEditor',            id: 1_024_640_650
 mas 'Bear',                 id: 1_091_189_122
 mas '1Password 7',          id: 1_333_542_190
+mas 'Grammarly for Safari', id: 1_462_114_288
