@@ -1,4 +1,5 @@
 <!-- macOS terminal profile based on Iceberg (https://cocopon.github.io/iceberg.vim/) -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -260,6 +261,24 @@
 	dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
+	<key>ShowActiveProcessArgumentsInTitle</key>
+	<true/>
+	<key>ShowActiveProcessInTitle</key>
+	<true/>
+	<key>ShowCommandKeyInTitle</key>
+	<false/>
+	<key>ShowDimensionsInTitle</key>
+	<false/>
+	<key>ShowRepresentedURLInTitle</key>
+	<true/>
+	<key>ShowRepresentedURLPathInTitle</key>
+	<false/>
+	<key>ShowShellCommandInTitle</key>
+	<false/>
+	<key>ShowTTYNameInTitle</key>
+	<false/>
+	<key>ShowWindowSettingsNameInTitle</key>
+	<false/>
 	<key>TextBoldColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
