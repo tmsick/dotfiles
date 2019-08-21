@@ -19,4 +19,4 @@ cd <this repo>
 ./install.sh
 ```
 
-**DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked in your system when initializing.
+**DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked in your system on initialization.
