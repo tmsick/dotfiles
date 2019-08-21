@@ -27,16 +27,16 @@ readonly dist="$root/$year/$season"
 
 if [[ -e "$dist" ]]; then
     if [[ -d "$dist" ]]; then
-        echo cd "$dist"
+        echo "cd '$dist'"
     else
-        echo "ERROR: $dist, which is not a directory, exists" >&2
+        echo "ERROR: '$dist', which is not a directory, exists" >&2
         exit 1
     fi
 else
     if mkdir -p "$dist"; then
-        echo cd "$dist"
+        echo "cd '$dist'"
     else
-        echo "ERROR: Failed to make $dist" >&2
+        echo "ERROR: Failed to make '$dist'" >&2
         exit 1
     fi
 fi
