@@ -21,39 +21,39 @@
 # SOFTWARE.
 
 function _git_branch_name
-  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+    echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
 end
 
 function _git_dirty
-  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+    echo (command git status -s --ignore-submodules=dirty ^/dev/null)
 end
 
 function fish_prompt
-  set -l last_status $status
+    set -l last_status $status
 
-  set -l yellow (set_color yellow)
-  set -l green (set_color green)
-  set -l red (set_color red)
-  set -l normal (set_color normal)
+    set -l yellow (set_color yellow)
+    set -l green (set_color green)
+    set -l red (set_color red)
+    set -l normal (set_color normal)
 
-  set -l cwd (basename (prompt_pwd))
+    set -l cwd (basename (prompt_pwd))
 
-  echo -n -s $cwd $normal
+    echo -n -s $cwd $normal
 
-  if [ (_git_branch_name) ]
-    set -l git_branch (_git_branch_name)
+    if [ (_git_branch_name) ]
+        set -l git_branch (_git_branch_name)
 
-    if [ (_git_dirty) ]
-      set git_info $yellow $git_branch
-    else
-      set git_info $green $git_branch
+        if [ (_git_dirty) ]
+            set git_info $yellow $git_branch
+        else
+            set git_info $green $git_branch
+        end
+        echo -n -s ' ' $git_info $normal
     end
-    echo -n -s ' ' $git_info $normal
-  end
 
-  if [ $last_status -ne 0 ]
-    echo -n -s $red
-  end
+    if [ $last_status -ne 0 ]
+        echo -n -s $red
+    end
 
-  echo -n -s ' $ ' $normal
+    echo -n -s ' $ ' $normal
 end
