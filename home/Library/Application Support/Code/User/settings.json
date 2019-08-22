@@ -4,6 +4,7 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveTimeout": 3000,
     "editor.minimap.enabled": false,
+    "editor.rulers": [80],
     "editor.wordWrap": "on",
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.clean.fileTypes": ["*.aux", "*.log"],
@@ -27,5 +28,5 @@
     "terminal.integrated.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontWeight": "bold",
     "vim.useSystemClipboard": true,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "material-icon-theme"
 }
