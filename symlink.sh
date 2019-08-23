@@ -9,6 +9,18 @@ readonly FILE="${0##*/}"
 readonly DIR_ABS="$PWD/$DIR"
 readonly FILE_ABS="$PWD/$DIR/$FILE"
 
+readonly RESET="$(printf '\033[m')"
+readonly GREEN="$(printf '\033[32m')"
+readonly YELLOW="$(printf '\033[33m')"
+
+function success() {
+    echo $GREEN"$@"$RESET
+}
+
+function warn() {
+    echo $YELLOW"$@"$RESET >&2
+}
+
 function symlink() {
     local status="0"
 
@@ -27,14 +39,14 @@ function symlink() {
                     [[ "$dist/$item" -ef "$src/$item" ]]; then
                     : # already linked and do nothing
                 else
-                    echo "WARNING: '$dist/$item' already exists. Skip to link" \
-                        "'$src/$item'" >&2
+                    warn "'$dist/$item' already exists." \
+                        "Skip to link '$src/$item'"
                     status="1"
                 fi
             else
                 if [[ -e "$dist" ]] && [[ ! -d "$dist" ]]; then
-                    echo "WARNING: '$dist', which is not a directory exists." \
-                        "Skip to link files under '$src'" >&2
+                    warn "'$dist', which is not a directory, exists." \
+                        "Skip to link files under '$src'"
                     return "1"
                 fi
 
@@ -51,4 +63,12 @@ function symlink() {
     return "$status"
 }
 
-symlink "$DIR_ABS/home" "$HOME"
+if symlink "$DIR_ABS/home" "$HOME"; then
+    success "Successfully linked all the dotfiles." \
+        'Now, consider running `fisher` to install Fisher packages.'
+    exit "0"
+else
+    warn "There was a problem(s) linking some dotfiles." \
+        "Consult warnings written above and solve them."
+    exit "1"
+fi
