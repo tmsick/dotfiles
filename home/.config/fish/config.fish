@@ -1,4 +1,5 @@
 set -gx LANG "en_US.UTF-8"
+set -gx XDG_CONFIG_HOME "$HOME/.config"
 set -gx HOMEBREW_PREFIX "/usr/local"
 set -gx HOMEBREW_CELLAR "/usr/local/Cellar"
 set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew"
