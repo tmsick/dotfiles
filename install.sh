@@ -29,4 +29,8 @@ else
     _status="1"
 fi
 
+# Install Fisher (https://github.com/jorgebucaran/fisher)
+curl "https://git.io/fisher" --create-dirs -sLo \
+    "$XDG_CONFIG_HOME/fish/functions/fisher.fish"
+
 exit "$_status"
