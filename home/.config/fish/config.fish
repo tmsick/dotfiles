@@ -5,7 +5,6 @@ set -gx HOMEBREW_CELLAR "/usr/local/Cellar"
 set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew"
 set -gx GOPATH "$HOME/go"
 set -gx PIPENV_VENV_IN_PROJECT "1"
-set -gx FZF_DEFAULT_OPTS "--ansi"
 
 set -q MANPATH
 or set MANPATH ''
