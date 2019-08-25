@@ -56,6 +56,7 @@ mas 'Kindle',               id:   405_399_194
 mas 'Keynote',              id:   409_183_694
 mas 'Pages',                id:   409_201_541
 mas 'Numbers',              id:   409_203_825
+mas 'Mactracker',           id:   430_255_202
 mas 'Magnet',               id:   441_258_766
 mas 'Microsoft Word',       id:   462_054_704
 mas 'Microsoft Excel',      id:   462_058_435
