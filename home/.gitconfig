@@ -13,4 +13,4 @@ clean = git-lfs clean -- %f
 smudge = git-lfs smudge -- %f
 
 [color]
-ui = always
+ui = auto
