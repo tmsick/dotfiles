@@ -27,6 +27,5 @@
     "ruby.format": "rubocop",
     "terminal.integrated.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontWeight": "bold",
-    "vim.useSystemClipboard": true,
     "workbench.iconTheme": "vscode-icons"
 }
