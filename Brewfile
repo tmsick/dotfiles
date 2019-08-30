@@ -63,6 +63,7 @@ mas 'Microsoft Excel',      id:   462_058_435
 mas 'Microsoft PowerPoint', id:   462_062_816
 mas 'Xcode',                id:   497_799_835
 mas 'LINE',                 id:   539_883_307
+mas 'Slack',                id:   803_453_959
 mas 'CotEditor',            id: 1_024_640_650
 mas 'Bear',                 id: 1_091_189_122
 mas '1Password 7',          id: 1_333_542_190
