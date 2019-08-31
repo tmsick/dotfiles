@@ -3,7 +3,6 @@
 tap 'heroku/brew'
 
 brew 'aspell'
-brew 'bash'
 brew 'cmake'
 brew 'coreutils'
 brew 'curl'
