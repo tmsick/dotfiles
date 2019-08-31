@@ -25,4 +25,4 @@ cd <this repo>
 
 ## Notes
 
-**DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked in your system on initialization.
+**DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
