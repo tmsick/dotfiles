@@ -66,5 +66,6 @@ mas 'Slack',                id:   803_453_959
 mas 'CotEditor',            id: 1_024_640_650
 mas 'Bear',                 id: 1_091_189_122
 mas '1Password 7',          id: 1_333_542_190
+mas 'Adblock Plus',         id: 1_432_731_683
 mas 'GhosteryLite',         id: 1_436_953_057
 mas 'Grammarly for Safari', id: 1_462_114_288
