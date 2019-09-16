@@ -4,6 +4,13 @@
 
 set -Ceu -o pipefail
 
+readonly RESET="$(printf '\033[m')"
+readonly RED="$(printf '\033[31m')"
+
+function error() {
+    echo $RED"$@"$RED >&2
+}
+
 readonly root="$HOME/Documents/Univ"
 
 year="$(date '+%Y')"
@@ -29,14 +36,14 @@ if [[ -e "$dist" ]]; then
     if [[ -d "$dist" ]]; then
         echo "cd '$dist'"
     else
-        echo "ERROR: '$dist', which is not a directory, exists" >&2
+        error "'$dist', which is not a directory, exists"
         exit 1
     fi
 else
     if mkdir -p "$dist"; then
         echo "cd '$dist'"
     else
-        echo "ERROR: Failed to make '$dist'" >&2
+        error "Failed to make '$dist'"
         exit 1
     fi
 fi
