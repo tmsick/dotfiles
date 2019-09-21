@@ -1,7 +1,7 @@
 [user]
 name = Tomoya Yoshioka
-email = tmsick.me@gmail.com
-signingkey = 73075EC8C9A9F23EF46BB1071A753C95128A5D05
+email = tomoya.y@icloud.com
+signingkey = 29B6837670D094111FB1200C5E1B7273D8E42DB7
 
 [commit]
 gpgsign = true
