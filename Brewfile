@@ -69,4 +69,5 @@ mas 'Bear',                 id: 1_091_189_122
 mas '1Password 7',          id: 1_333_542_190
 mas 'Adblock Plus',         id: 1_432_731_683
 mas 'GhosteryLite',         id: 1_436_953_057
+mas 'AdGuard for Safari',   id: 1_440_147_259
 mas 'Grammarly for Safari', id: 1_462_114_288
