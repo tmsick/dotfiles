@@ -40,6 +40,7 @@ brew 'vim'
 brew 'yq'
 
 cask 'authy'
+cask 'discord'
 cask 'docker'
 cask 'firefox'
 cask 'github'
