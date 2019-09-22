@@ -68,4 +68,3 @@ mas 'Slack',                id:   803_453_959
 mas 'Bear',                 id: 1_091_189_122
 mas '1Password 7',          id: 1_333_542_190
 mas 'AdGuard for Safari',   id: 1_440_147_259
-mas 'Grammarly for Safari', id: 1_462_114_288
