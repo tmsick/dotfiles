@@ -70,3 +70,4 @@ mas 'Slack',                id:   803_453_959
 mas 'Bear',                 id: 1_091_189_122
 mas '1Blocker',             id: 1_107_421_413
 mas '1Password 7',          id: 1_333_542_190
+mas 'Grammarly for Safari', id: 1_462_114_288
