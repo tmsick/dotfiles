@@ -68,4 +68,5 @@ mas 'Xcode',                id:   497_799_835
 mas 'LINE',                 id:   539_883_307
 mas 'Slack',                id:   803_453_959
 mas 'Bear',                 id: 1_091_189_122
+mas '1Blocker',             id: 1_107_421_413
 mas '1Password 7',          id: 1_333_542_190
