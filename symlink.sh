@@ -40,13 +40,13 @@ function symlink() {
                     : # already linked and do nothing
                 else
                     warn "'$dist/$item' already exists." \
-                        "Skip to link '$src/$item'"
+                        "Skip linking '$src/$item'"
                     status="1"
                 fi
             else
                 if [[ -e "$dist" ]] && [[ ! -d "$dist" ]]; then
                     warn "'$dist', which is not a directory, exists." \
-                        "Skip to link files under '$src'"
+                        "Skip linking files under '$src'"
                     return "1"
                 fi
 
