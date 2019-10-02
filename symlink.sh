@@ -10,6 +10,7 @@ readonly FILE_ABS="$PWD/$DIR/$FILE"
 readonly RESET="$(printf '\033[m')"
 readonly GREEN="$(printf '\033[32m')"
 readonly YELLOW="$(printf '\033[33m')"
+readonly RED="$(printf '\033[31m')"
 
 function success() {
     echo $GREEN"$@"$RESET
@@ -19,49 +20,98 @@ function warn() {
     echo $YELLOW"$@"$RESET >&2
 }
 
-function symlink() {
-    local status=0
+function error() {
+    echo $RED"$@"$RESET >&2
+}
 
-    local src="$1"
-    local dist="$2"
-    local item=""
+function print_help() {
+    cat <<EOS
+HELP TEXT SHOULD BE ADDED AFTERWARD
+EOS
+}
 
-    for item in $(IFS=$'\n' ls -A "$src"); do
+function dig() {
+    local type="$1"
+    local src="$2"
+    local dest="$3"
+
+    if [[ "$type" != "link" ]] && [[ "$type" != "unlink" ]]; then
+        error "An invalid type '$type' was given to an internal function 'dig'. Check out code around line $LINENO."
+        exit 100
+    fi
+
+    ls -A "$src" | while read item; do
+        # Skip this turn if the source file is .DS_Store
         if [[ -f "$src/$item" ]] && [[ "$item" == ".DS_Store" ]]; then
             continue
         fi
 
+        # If the pivot item is a regular file
         if [[ -f "$src/$item" ]]; then
-            if [[ -e "$dist/$item" ]]; then
-                if [[ -L "$dist/$item" ]] && [[ "$dist/$item" -ef "$src/$item" ]]; then
-                    : # already linked and do nothing
+
+            # If the destination is already occupied
+            if [[ -e "$dest/$item" ]]; then
+
+                # If the file is already linked
+                if [[ -L "$dest/$item" ]] && [[ "$dest/$item" -ef "$src/$item" ]]; then
+                    if [[ "$type" == "unlink" ]]; then
+                        unlink "$dest/$item"
+                    fi
+
+                # If something unknown occupies the destination
                 else
-                    warn "'$dist/$item' already exists. Skip linking '$src/$item'"
-                    status=1
-                fi
-            else
-                if [[ -e "$dist" ]] && [[ ! -d "$dist" ]]; then
-                    warn "'$dist', which is not a directory, exists. Skip linking files under '$src'"
-                    return 1
+                    warn "'$dest/$item' already exists. Skip linking '$src/$item'"
                 fi
 
-                mkdir -p "$dist"
-                ln -s "$src/$item" "$dist/$item"
+            # If the destination is vacant and linkage is required
+            elif [[ "$type" == "link" ]]; then
+                if mkdir -p "$dest" >/dev/null 2>&1; then
+                    ln -s "$src/$item" "$dest/$item"
+                else
+                    warn "Failed to make directory '$dest'. Skip linking files under '$src'"
+                    return
+                fi
             fi
+
+        # If the pivot item is a directory
         elif [[ -d "$src/$item" ]]; then
-            if ! symlink "$src/$item" "$dist/$item"; then
-                status=1
-            fi
+            dig "$type" "$src/$item" "$dest/$item"
+
+        # If the pivot item is something other than a regular file nor a directory
+        else
+            warn "'$src/$item', which is not a regular file, exists under '$src'"
         fi
     done
-
-    return $status
 }
 
-if symlink "$DIR_ABS/home" "$HOME"; then
-    success "Successfully linked all the dotfiles. Now, consider running $(fisher) to install Fisher packages."
-    exit 0
-else
-    warn "There was a problem(s) linking some dotfiles. Consult warnings written above and solve them."
-    exit 1
-fi
+function main() {
+    case $# in
+    0)
+        dig link "$DIR_ABS/home" "$HOME"
+        return
+        ;;
+    1)
+        local arg="$1"
+        case "$arg" in
+        help | -help | --help | -h)
+            print_help
+            return
+            ;;
+        --rm)
+            dig unlink "$DIR_ABS/home" "$HOME"
+            return
+            ;;
+        *)
+            print_help >&2
+            return 1
+            ;;
+        esac
+        ;;
+    *)
+        print_help >&2
+        return 1
+        ;;
+    esac
+}
+
+main "$@"
