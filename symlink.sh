@@ -2,8 +2,6 @@
 
 set -Ceu -o pipefail
 
-readonly IFS=$'\n'
-
 readonly DIR="${0%/*}"
 readonly FILE="${0##*/}"
 readonly DIR_ABS="$PWD/$DIR"
@@ -28,7 +26,7 @@ function symlink() {
     local dist="$2"
     local item=""
 
-    for item in $(ls -A "$src"); do
+    for item in $(IFS=$'\n' ls -A "$src"); do
         if [[ -f "$src/$item" ]] && [[ "$item" == ".DS_Store" ]]; then
             continue
         fi
