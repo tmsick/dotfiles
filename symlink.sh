@@ -51,21 +51,17 @@ function dig() {
 
         # If the pivot item is a regular file
         if [[ -f "$src/$item" ]]; then
-
             # If the destination is already occupied
             if [[ -e "$dest/$item" ]]; then
-
                 # If the file is already linked
                 if [[ -L "$dest/$item" ]] && [[ "$dest/$item" -ef "$src/$item" ]]; then
                     if [[ "$type" == "unlink" ]]; then
                         unlink "$dest/$item"
                     fi
-
                 # If something unknown occupies the destination
                 else
                     warn "'$dest/$item' already exists. Skip ${type}ing '$src/$item'"
                 fi
-
             # If the destination is vacant and linkage is required
             elif [[ "$type" == "link" ]]; then
                 if mkdir -p "$dest" >/dev/null 2>&1; then
@@ -75,11 +71,9 @@ function dig() {
                     return
                 fi
             fi
-
         # If the pivot item is a directory
         elif [[ -d "$src/$item" ]]; then
             dig "$type" "$src/$item" "$dest/$item"
-
         # If the pivot item is something other than a regular file nor a directory
         else
             warn "'$src/$item', which is not a regular file, exists under '$src'"
