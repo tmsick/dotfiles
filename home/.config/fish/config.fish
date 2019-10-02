@@ -26,9 +26,5 @@ set -g fish_user_paths \
 # GitHub's hub (https://github.com/github/hub)
 eval (hub alias -s)
 
-# rbenv (https://github.com/rbenv/rbenv)
-status --is-interactive
-and source (rbenv init -|psub)
-
 # Dan Kogai's mv2trash (https://github.com/dankogai/osx-mv2trash)
 alias "trash" "mv2trash"
