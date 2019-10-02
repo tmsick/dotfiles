@@ -24,9 +24,12 @@ function error() {
     echo $RED"$@"$RESET >&2
 }
 
-function print_help() {
+function print_usage() {
     cat <<EOS
-HELP TEXT SHOULD BE ADDED AFTERWARD
+Usage
+  - To link files:     ./$FILE
+  - To unlink files:   ./$FILE --rm
+  - To see this usage: ./$FILE --help
 EOS
 }
 
@@ -94,7 +97,7 @@ function main() {
         local arg="$1"
         case "$arg" in
         help | -help | --help | -h)
-            print_help
+            print_usage
             return
             ;;
         --rm)
@@ -102,13 +105,13 @@ function main() {
             return
             ;;
         *)
-            print_help >&2
+            print_usage >&2
             return 1
             ;;
         esac
         ;;
     *)
-        print_help >&2
+        print_usage >&2
         return 1
         ;;
     esac
