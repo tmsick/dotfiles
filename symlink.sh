@@ -63,7 +63,7 @@ function dig() {
 
                 # If something unknown occupies the destination
                 else
-                    warn "'$dest/$item' already exists. Skip linking '$src/$item'"
+                    warn "'$dest/$item' already exists. Skip ${type}ing '$src/$item'"
                 fi
 
             # If the destination is vacant and linkage is required
