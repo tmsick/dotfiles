@@ -18,6 +18,8 @@ set -g fish_user_paths \
     "$HOME/bin" \
     "$GOPATH/bin" \
     "$HOME/.cargo/bin" \
+    "/usr/local/opt/ruby/bin" \
+    "/usr/local/lib/ruby/gems/2.6.0/bin" \
     "/usr/local/opt/curl/bin" \
     "/usr/local/bin" \
     "/usr/local/sbin" \
