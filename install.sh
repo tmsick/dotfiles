@@ -20,20 +20,14 @@ function warn() {
 
 # Install Homebrew/Cask formulae and Mac App Store apps based on Brewfile
 readonly BREWFILE_PATH="$DIR_ABS/Brewfile"
-if brew analytics off && brew update && brew bundle --path="$BREWFILE_PATH" &&
-    brew cleanup && brew doctor; then
-    :
-else
-    warn "Failed to bundle brew. Try manually running" \
-        "\`brew bundle --path='$BREWFILE_PATH'\`"
+if ! (brew analytics off && brew update && brew bundle --path="$BREWFILE_PATH" && brew cleanup && brew doctor); then
+    warn "Failed to bundle brew. Try manually running \`brew bundle --path='$BREWFILE_PATH'\`"
     ((status += 2 ** 0))
 fi
 
 # Install Fisher (https://github.com/jorgebucaran/fisher)
 readonly FISHER_PATH="$XDG_CONFIG_HOME/fish/functions/fisher.fish"
-if curl "https://git.io/fisher" --create-dirs -sLo "$FISHER_PATH"; then
-    :
-else
+if ! curl "https://git.io/fisher" --create-dirs -sLo "$FISHER_PATH"; then
     warn "Failed to install Fisher."
     ((status += 2 ** 1))
 fi
@@ -42,18 +36,12 @@ fi
 readonly FZF_BIN="/usr/local/opt/fzf"
 readonly FZF_INIT_SCRIPT="$FZF_BIN/install"
 if [[ -x "$FZF_INIT_SCRIPT" ]]; then
-    if "$FZF_INIT_SCRIPT" --xdg --key-bindings --completion --no-update-rc \
-        --no-bash --no-zsh; then
-        :
-    else
-        warn "Failed to initialize fzf. Try manually running" \
-            "\`$FZF_INIT_SCRIPT\`"
+    if ! "$FZF_INIT_SCRIPT" --xdg --key-bindings --completion --no-update-rc --no-bash --no-zsh; then
+        warn "Failed to initialize fzf. Try manually running \`$FZF_INIT_SCRIPT\`"
         ((status += 2 ** 2))
     fi
 else
-    warn "Executable '$FZF_INIT_SCRIPT' not exists. Examine" \
-        "'https://github.com/junegunn/fzf' or re-install fzf and follow the" \
-        "instructions to finish installing fzf key bindings and completions."
+    warn "Executable '$FZF_INIT_SCRIPT' not exists. Examine 'https://github.com/junegunn/fzf' or re-install fzf and follow the instructions to finish installing fzf key bindings and completions."
     ((status += 2 ** 3))
 fi
 
