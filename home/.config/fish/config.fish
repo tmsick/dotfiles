@@ -30,3 +30,6 @@ eval (hub alias -s)
 
 # Dan Kogai's mv2trash (https://github.com/dankogai/osx-mv2trash)
 alias "trash" "mv2trash"
+
+# Go to univ dir of current semester
+alias "go2univ" "cd (univdir)"
