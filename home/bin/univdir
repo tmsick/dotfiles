@@ -1,0 +1,50 @@
+#!/bin/bash
+
+set -Ceu -o pipefail
+
+readonly DIR="${0%/*}"
+readonly FILE="${0##*/}"
+readonly DIR_ABS="$PWD/$DIR"
+readonly FILE_ABS="$PWD/$DIR/$FILE"
+
+readonly RED="$(printf '\033[31m')"
+readonly GREEN="$(printf '\033[32m')"
+readonly YELLOW="$(printf '\033[33m')"
+readonly BLUE="$(printf '\033[34m')"
+readonly BOLD="$(printf '\033[1m')"
+readonly RESET="$(printf '\033[m')"
+
+function success() {
+    echo $GREEN"$@"$RESET
+}
+
+function warn() {
+    echo $YELLOW"$@"$RESET >&2
+}
+
+function error() {
+    echo $RED"$@"$RESET >&2
+}
+
+# ============================== END OF HEADER =================================
+
+readonly DOC_ROOT="$HOME/Documents/Univ"
+
+year="$(date '+%Y')"
+month="$(date '+%m')"
+semester=""
+
+case "$month" in
+"01" | "02" | "03")
+    semester="Fall"
+    ((year--))
+    ;;
+"04" | "05" | "06" | "07" | "08" | "09")
+    semester="Spring"
+    ;;
+"10" | "11" | "12")
+    semester="Fall"
+    ;;
+esac
+
+echo "$DOC_ROOT/$year/$semester"
