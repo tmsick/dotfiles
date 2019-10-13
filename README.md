@@ -23,6 +23,12 @@ cd <this repo>
 ./symlink.sh
 ```
 
-## Notes
-
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
+
+## Manually installed apps
+
+| Name          | Installer URL                           | Reason                                      |
+| :------------ | :-------------------------------------- | :------------------------------------------ |
+| Google Chrome | https://www.google.com/chrome           | Auto-update fails if installed via Homebrew |
+| Go            | https://golang.org/dl                   | Official installer is recommended           |
+| Rust          | https://www.rust-lang.org/tools/install | Official installation script is recommended |
