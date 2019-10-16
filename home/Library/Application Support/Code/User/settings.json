@@ -28,5 +28,8 @@
     "terminal.integrated.fontFamily": "'Fira Mono', Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontWeight": "bold",
     "workbench.iconTheme": "material-icon-theme",
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    }
 }
