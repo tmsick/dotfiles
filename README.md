@@ -30,5 +30,4 @@ cd <this repo>
 | Name          | Installer URL                           | Reason                                      |
 | :------------ | :-------------------------------------- | :------------------------------------------ |
 | Google Chrome | https://www.google.com/chrome           | Auto-update fails if installed via Homebrew |
-| Go            | https://golang.org/dl                   | Official installer is recommended           |
 | Rust          | https://www.rust-lang.org/tools/install | Official installation script is recommended |
