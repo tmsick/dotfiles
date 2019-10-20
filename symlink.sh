@@ -33,13 +33,13 @@ Usage
 EOS
 }
 
-function dig() {
+function dig_dir() {
     local type="$1"
     local src="$2"
     local dest="$3"
 
     if [[ "$type" != "link" ]] && [[ "$type" != "unlink" ]]; then
-        error "An invalid type '$type' was given to an internal function 'dig'. Check out code around line $LINENO."
+        error "An invalid type '$type' was given to an internal function 'dig_dir'. Check out code around line $LINENO."
         exit 100
     fi
 
@@ -73,7 +73,7 @@ function dig() {
             fi
         # If the pivot item is a directory
         elif [[ -d "$src/$item" ]]; then
-            dig "$type" "$src/$item" "$dest/$item"
+            dig_dir "$type" "$src/$item" "$dest/$item"
         # If the pivot item is something other than a regular file nor a directory
         else
             warn "'$src/$item', which is not a regular file, exists under '$src'"
@@ -84,7 +84,7 @@ function dig() {
 function main() {
     case $# in
     0)
-        dig link "$DIR_ABS/home" "$HOME"
+        dig_dir link "$DIR_ABS/home" "$HOME"
         return
         ;;
     1)
@@ -95,7 +95,7 @@ function main() {
             return
             ;;
         --rm)
-            dig unlink "$DIR_ABS/home" "$HOME"
+            dig_dir unlink "$DIR_ABS/home" "$HOME"
             return
             ;;
         *)
