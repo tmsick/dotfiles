@@ -31,5 +31,8 @@
     "vim.useSystemClipboard": true,
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "files.associations": {
+        "*.rmd": "markdown"
     }
 }
