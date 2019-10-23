@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 
 tap 'heroku/brew'
+tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/core'
 
+brew 'aom'
 brew 'aspell'
+brew 'autoconf'
+brew 'brew-cask-completion'
+brew 'cairo'
 brew 'cmake'
 brew 'coreutils'
 brew 'curl'
@@ -11,37 +18,124 @@ brew 'doxygen'
 brew 'exiftool'
 brew 'ffmpeg'
 brew 'fish'
+brew 'flac'
+brew 'fontconfig'
+brew 'freetype'
+brew 'frei0r'
+brew 'fribidi'
 brew 'fzf'
+brew 'gcc'
 brew 'gdb'
+brew 'gdbm'
+brew 'gettext'
 brew 'ghostscript'
+brew 'giflib'
 brew 'git'
 brew 'git-lfs'
+brew 'glib'
+brew 'gmp'
+brew 'gnutls'
 brew 'go'
+brew 'graphite2'
+brew 'harfbuzz'
 brew 'heroku'
+brew 'heroku-node'
 brew 'hub'
+brew 'icu4c'
+brew 'ilmbase'
 brew 'imagemagick'
+brew 'isl'
+brew 'jpeg'
 brew 'jq'
+brew 'lame'
+brew 'leptonica'
+brew 'libass'
+brew 'libbluray'
+brew 'libde265'
+brew 'libevent'
+brew 'libffi'
+brew 'libheif'
+brew 'libidn2'
+brew 'libmpc'
+brew 'libogg'
+brew 'libomp'
+brew 'libpng'
+brew 'libsamplerate'
+brew 'libsndfile'
+brew 'libsoxr'
+brew 'libssh2'
+brew 'libtasn1'
+brew 'libtiff'
+brew 'libtool'
+brew 'libunistring'
+brew 'libvidstab'
+brew 'libvorbis'
+brew 'libvpx'
+brew 'libyaml'
+brew 'libzip'
+brew 'little-cms2'
+brew 'lua'
+brew 'lz4'
+brew 'lzo'
 brew 'mas'
+brew 'mhash'
+brew 'mpfr'
+brew 'ncurses'
+brew 'nettle'
 brew 'nkf'
 brew 'node'
+brew 'oniguruma'
+brew 'openblas'
+brew 'opencore-amr'
+brew 'openexr'
+brew 'openjpeg'
+brew 'openssl'
+brew 'openssl@1.1'
 brew 'openvpn'
+brew 'opus'
+brew 'p11-kit'
+brew 'pcre'
+brew 'pcre2'
 brew 'perl'
 brew 'pipenv'
+brew 'pixman'
+brew 'pkcs11-helper'
+brew 'pkg-config'
+brew 'popt'
 brew 'pypy3'
 brew 'python'
 brew 'r'
+brew 'readline'
 brew 'redis'
+brew 'rtmpdump'
+brew 'rubberband'
 brew 'ruby'
+brew 's-lang'
+brew 'sdl2'
+brew 'shared-mime-info'
+brew 'snappy'
+brew 'speex'
+brew 'sqlite'
 brew 'telnet'
+brew 'tesseract'
+brew 'theora'
 brew 'tig'
 brew 'tmux'
 brew 'tree'
+brew 'unbound'
+brew 'unibilium'
 brew 'vim'
+brew 'webp'
+brew 'x264'
+brew 'x265'
+brew 'xvid'
+brew 'xz'
 brew 'yq'
 
 cask 'authy'
 cask 'discord'
 cask 'docker'
+cask 'dotnet'
 cask 'editaro'
 cask 'firefox'
 cask 'github'
@@ -58,22 +152,17 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'visual-studio-code'
 
-mas 'Kindle',               id:   405_399_194
-mas 'Keynote',              id:   409_183_694
-mas 'Pages',                id:   409_201_541
-mas 'Numbers',              id:   409_203_825
-mas 'Mactracker',           id:   430_255_202
-mas 'The Unarchiver',       id:   425_424_353
-mas 'Magnet',               id:   441_258_766
-mas 'Microsoft Word',       id:   462_054_704
-mas 'Microsoft Excel',      id:   462_058_435
-mas 'Microsoft PowerPoint', id:   462_062_816
-mas 'Xcode',                id:   497_799_835
-mas 'LINE',                 id:   539_883_307
-mas 'Slack',                id:   803_453_959
-mas 'Bear',                 id: 1_091_189_122
-mas '1Password 7',          id: 1_333_542_190
-mas 'GhosteryLite',         id: 1_436_953_057
+mas 'Kindle', id: 405_399_194
+mas 'The Unarchiver', id: 425_424_353
+mas 'Magnet', id: 441_258_766
+mas 'Microsoft Word', id: 462_054_704
+mas 'Microsoft Excel', id: 462_058_435
+mas 'Microsoft PowerPoint', id: 462_062_816
+mas 'Xcode', id: 497_799_835
+mas 'LINE', id: 539_883_307
+mas 'Slack', id: 803_453_959
+mas '1Password 7', id: 1_333_542_190
+mas 'GhosteryLite', id: 1_436_953_057
 mas 'Grammarly for Safari', id: 1_462_114_288
-mas 'Save to Pocket',       id: 1_477_385_213
-mas 'Twitter',              id: 1_482_454_543
+mas 'Save to Pocket', id: 1_477_385_213
+mas 'Twitter', id: 1_482_454_543
