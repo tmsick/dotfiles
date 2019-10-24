@@ -34,6 +34,5 @@
     },
     "files.associations": {
         "*.rmd": "markdown"
-    },
-    "r.editor.tabSize": 4
+    }
 }
