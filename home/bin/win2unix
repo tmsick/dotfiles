@@ -1,0 +1,60 @@
+#!/bin/bash
+
+set -Ceu -o pipefail
+
+readonly SCRIPT_NAME="$(basename "$0")"
+readonly SCRIPT_DIR="$(dirname "$0")"
+readonly SCRIPT_NAME_ABS="$PWD/$SCRIPT_DIR/$SCRIPT_NAME"
+readonly SCRIPT_DIR_ABS="$PWD/$SCRIPT_DIR"
+
+readonly GREEN="$(printf '\033[32m')"
+readonly YELLOW="$(printf '\033[33m')"
+readonly RED="$(printf '\033[31m')"
+readonly RESET="$(printf '\033[m')"
+
+function success() {
+    echo $GREEN"$@"$RESET
+}
+
+function warn() {
+    echo $YELLOW"$@"$RESET >&2
+}
+
+function error() {
+    echo $RED"$@"$RESET >&2
+}
+
+# ============================== END OF HEADER =================================
+
+readonly TARGET_ENCODING="UTF-8"
+
+function print_usage() {
+    cat <<EOS
+Usage:
+    $SCRIPT_NAME file|dir
+EOS
+}
+
+function convert() {
+    local entry="$1"
+
+    if [[ -f "$entry" ]]; then
+        nkf --overwrite --oc="$TARGET_ENCODING" "$entry"
+        dos2unix "$entry"
+    elif [[ -d "$entry" ]]; then
+        ls "$entry" | while read child_entry; do
+            convert "$entry/$child_entry"
+        done
+    fi
+}
+
+function main() {
+    if [[ $# -ne 1 ]]; then
+        print_usage >&2
+        return 1
+    fi
+
+    convert "$@" >/dev/null 2>&1
+}
+
+main "$@"
