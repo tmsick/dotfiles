@@ -131,6 +131,7 @@ brew 'x264'
 brew 'x265'
 brew 'xvid'
 brew 'xz'
+brew 'yarn'
 brew 'yq'
 
 cask 'authy'
