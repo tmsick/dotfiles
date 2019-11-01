@@ -29,6 +29,5 @@ cd <this repo>
 
 | Name                  | Installer URL                                         | Reason                                      |
 | :-------------------- | :---------------------------------------------------- | :------------------------------------------ |
-| Google Chrome         | https://www.google.com/chrome                         | Auto-update fails if installed via Homebrew |
 | Rust                  | https://www.rust-lang.org/tools/install               | Official installation script is recommended |
 | .NET Core 2.1 Runtime | https://dotnet.microsoft.com/download/dotnet-core/2.1 | Not provided in Homebrew                    |
