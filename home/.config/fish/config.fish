@@ -26,6 +26,8 @@ set -g fish_user_paths \
     "/usr/local/lib/ruby/gems/2.6.0/bin" \
     # cURL
     "/usr/local/opt/curl/bin" \
+    # SQLite
+    "/usr/local/opt/sqlite/bin" \
     # Miscellaneous
     "$HOME/bin" \
     "/usr/local/bin" \
