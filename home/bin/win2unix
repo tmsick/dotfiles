@@ -38,9 +38,11 @@ EOS
 function convert() {
     local entry="$1"
 
-    if [[ -f "$entry" ]]; then
-        nkf --overwrite --oc="$TARGET_ENCODING" "$entry"
-        dos2unix "$entry"
+    if [[ -f "$entry" ]] && file -b "$entry" | cut -d "," -f 1 | grep "text$" >/dev/null; then
+        {
+            nkf --overwrite --oc="$TARGET_ENCODING" "$entry"
+            dos2unix "$entry"
+        } >/dev/null 2>&1
     elif [[ -d "$entry" ]]; then
         ls "$entry" | while read child_entry; do
             convert "$entry/$child_entry"
@@ -54,7 +56,7 @@ function main() {
         return 1
     fi
 
-    convert "$@" >/dev/null 2>&1
+    convert "$@"
 }
 
 main "$@"
