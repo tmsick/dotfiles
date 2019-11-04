@@ -5,6 +5,7 @@ set -gx HOMEBREW_PREFIX "/usr/local"
 set -gx HOMEBREW_CELLAR "/usr/local/Cellar"
 set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew"
 set -gx GOPATH "$HOME/go"
+set -gx DOCKER_HIDE_LEGACY_COMMANDS 1
 set -gx PIPENV_VENV_IN_PROJECT 1
 
 set -q MANPATH
