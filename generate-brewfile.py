@@ -3,6 +3,14 @@
 import subprocess
 
 
+def brew_repositories():
+    result = subprocess.run(["brew", "tap"], capture_output=True)
+    repositories = result.stdout.decode().split()
+    repositories.sort()
+    for repo in repositories:
+        yield repo
+
+
 def brew_formulae():
     result = subprocess.run(["brew", "list"], capture_output=True)
     formulae = {fml: False for fml in result.stdout.decode().split()}
@@ -46,6 +54,9 @@ def mas_apps():
 
 
 def main():
+    for repo in brew_repositories():
+        print("tap '{}'".format(repo))
+    print()
     for fml in brew_formulae():
         print("brew '{}'".format(fml))
     print()
