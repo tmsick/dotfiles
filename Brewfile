@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+tap 'heroku/brew'
+tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/cask-versions'
+tap 'homebrew/core'
+
 brew 'aspell'
 brew 'autoconf'
 brew 'brew-cask-completion'
