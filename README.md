@@ -27,7 +27,6 @@ cd <this repo>
 
 ## Manually installed apps
 
-| Name                  | Installer URL                                         | Reason                                      |
-| :-------------------- | :---------------------------------------------------- | :------------------------------------------ |
-| Rust                  | https://www.rust-lang.org/tools/install               | Official installation script is recommended |
-| .NET Core 2.1 Runtime | https://dotnet.microsoft.com/download/dotnet-core/2.1 | Not provided in Homebrew                    |
+| Name | Installer URL                           | Reason                                      |
+| :--- | :-------------------------------------- | :------------------------------------------ |
+| Rust | https://www.rust-lang.org/tools/install | Official installation script is recommended |
