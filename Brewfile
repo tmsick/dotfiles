@@ -9,6 +9,7 @@ tap 'teamookla/speedtest'
 
 brew 'aspell'
 brew 'autoconf'
+brew 'bash'
 brew 'brew-cask-completion'
 brew 'cmake'
 brew 'coreutils'
