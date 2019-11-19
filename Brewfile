@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-tap 'heroku/brew'
 tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
@@ -25,8 +24,6 @@ brew 'ghostscript'
 brew 'git'
 brew 'git-lfs'
 brew 'go'
-brew 'heroku'
-brew 'heroku-node'
 brew 'hub'
 brew 'imagemagick'
 brew 'jq'
