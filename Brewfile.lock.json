@@ -8,13 +8,13 @@
         "revision": "1a41629972a351085d297e2c336f8eda0dc771eb"
       },
       "homebrew/cask": {
-        "revision": "dbb7d8dc2af4cabcb15d1bfa7ea5af4ce6cc8dc3"
+        "revision": "598ff7c3b4aeffe482730b830706cd773c005c3a"
       },
       "homebrew/cask-versions": {
-        "revision": "42d696b80adf43b552b48d057ff4a8fefaec85dd"
+        "revision": "32ed1711bfc34aefd4d3f110fb545ee9a0f8f64d"
       },
       "homebrew/core": {
-        "revision": "64555220bfbf4a25598523c2e4d3a232560eaad7"
+        "revision": "2a80098bb503b9c38f76c82baffea67bc5ea9607"
       },
       "teamookla/speedtest": {
         "revision": "b79ea77017ea57c98658225883d7ecc3d4410fbd"
@@ -1012,6 +1012,27 @@
             }
           }
         }
+      },
+      "pandoc": {
+        "version": "2.7.3",
+        "bottle": {
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "files": {
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.7.3.mojave.bottle.tar.gz",
+              "sha256": "bb4246119de8f6f8769d4a7baf3127ed66df0edd69bb84c92b1bdeaa90064caf"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.7.3.high_sierra.bottle.tar.gz",
+              "sha256": "afe8cc21378449f87f55d10a36282018038e8ad9240b2c10cae28586760ea2e1"
+            },
+            "sierra": {
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.7.3.sierra.bottle.tar.gz",
+              "sha256": "3e738f0e5e5ea97b918c0f123de502119b8ca000654c4b67831e4af7998f394a"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1144,7 +1165,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.1.16",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "64555220bfbf4a25598523c2e4d3a232560eaad7",
+        "Homebrew/homebrew-core": "2a80098bb503b9c38f76c82baffea67bc5ea9607",
         "CLT": "11.2.0.0.1.1571444319",
         "Xcode": "11.2.1",
         "macOS": "10.15.1"
