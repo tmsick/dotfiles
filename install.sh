@@ -27,6 +27,18 @@ function init_brew() {
     fi
 }
 
+function make_fish_default_shell() {
+    if ! which fish; then
+        warn "Failed to set fish as the default shell. 'fish' cannot be found in \$PATH."
+        return 1
+    fi
+
+    local fish="$(which fish)"
+    if [[ "$SHELL" != "$fish" ]]; then
+        chsh -s "$fish"
+    fi
+}
+
 function install_fisher() {
     if ! curl "https://git.io/fisher" --create-dirs -sLo "$FISHER_PATH"; then
         warn "Failed to install Fisher."
@@ -48,6 +60,7 @@ function init_fzf() {
 
 function main() {
     init_brew
+    make_fish_default_shell
     install_fisher
     init_fzf
 }
