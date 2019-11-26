@@ -8,8 +8,6 @@ Initialization suite for macOS system
 
 ## Initializing the environment
 
-Before using this repo to initialize your environment, you might want to restore your SSH key and clone this repo with it for the sake of convenient pushing/pulling afterward. In that case, do so using GPG/SSH Keys Import Utility saved in 1Password first, then proceed to instructions below.
-
 You should run `install.sh` before running `symlink.sh` since some dotfiles symlinked in the latter depend on apps installed in the former.
 
 ```bash
