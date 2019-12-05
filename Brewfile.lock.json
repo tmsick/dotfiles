@@ -5,22 +5,22 @@
         "revision": "20980ed084f3633d6314ec2beb677dd5a2ff4218"
       },
       "homebrew/bundle": {
-        "revision": "923aabce8c1dc8f1839b88380ba5f3b8b2054dd3"
+        "revision": "2efa0de33f2885bfd567ba4fdb1ab91f1be8d06c"
       },
       "homebrew/cask": {
-        "revision": "6127054c1f8df680f5fa37bae3126e6e610e5ffc"
+        "revision": "d3d18a550675934ce252fcf378db5e038ac9bde8"
       },
       "homebrew/cask-versions": {
-        "revision": "caf946a7dee8bb4ca54d5c802dc4e650cfb37008"
+        "revision": "4e7e102f97028e94cb18a9860890dd82728d00f1"
       },
       "homebrew/core": {
-        "revision": "578f2a428ed8b49c12effaecc114ee087ece51f6"
+        "revision": "601282a18468ffe782d7397a07679f7dd4d91adb"
       },
       "teamookla/speedtest": {
         "revision": "b79ea77017ea57c98658225883d7ecc3d4410fbd"
       },
       "homebrew/cask-fonts": {
-        "revision": "fa725d59e23f22e371e6c0ba0eab67b43cb59d72"
+        "revision": "b506e52bfa56aa435a5d064f0e723095f139a614"
       }
     },
     "brew": {
@@ -422,22 +422,22 @@
         }
       },
       "imagemagick": {
-        "version": "7.0.9-6",
+        "version": "7.0.9-7",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-6.catalina.bottle.tar.gz",
-              "sha256": "ee96f35821b25aa1e0ae3c8163b471bb9a41bf353df98cf094321aeadf11bc27"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-7.catalina.bottle.tar.gz",
+              "sha256": "b4357805d8fd4f98c7f702f708a6aebc10e2d9638808efde3f1a4d262cb9f6f6"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-6.mojave.bottle.tar.gz",
-              "sha256": "a0c214b6fbb0173b12411520ac65770d3e9dccbd05936eecbd5024948743dfde"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-7.mojave.bottle.tar.gz",
+              "sha256": "64e887e23289a93bd191b437170ea74fa0affadee6c86c288b280de79431e540"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-6.high_sierra.bottle.tar.gz",
-              "sha256": "bf2f2ac585197477b4677ab3604fb212808b99fa0dc0f82a6c30c1f44953cdc1"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-7.high_sierra.bottle.tar.gz",
+              "sha256": "259f2bd4e49c45f6df92f0d5b3c40fb5d97f1c01f2b6018601c39064ea97416c"
             }
           }
         }
@@ -810,22 +810,22 @@
         }
       },
       "tmux": {
-        "version": "3.0",
+        "version": "3.0a",
         "bottle": {
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/tmux-3.0.catalina.bottle.tar.gz",
-              "sha256": "24bcd11bb53dbab31da4925e65937ae360e516532e6bc33e810ebd1097657d48"
+              "url": "https://homebrew.bintray.com/bottles/tmux-3.0a.catalina.bottle.tar.gz",
+              "sha256": "3d29caf7e2b87c9f1af575b4ec10af3e29c5de6979a8bd884153d9e8e1b69f20"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/tmux-3.0.mojave.bottle.tar.gz",
-              "sha256": "6218422cc4111b6328f2ca9cc69012769bcab08415e707b9076522a86938859f"
+              "url": "https://homebrew.bintray.com/bottles/tmux-3.0a.mojave.bottle.tar.gz",
+              "sha256": "6cfd3987dcda2901a3ed423138db7782ea88a993e1409c4ebb9d647b1c007e8a"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/tmux-3.0.high_sierra.bottle.tar.gz",
-              "sha256": "271471eb543a7ea4fd7d724f9bf19ff7f9b5159f362c4a486f161871d2298506"
+              "url": "https://homebrew.bintray.com/bottles/tmux-3.0a.high_sierra.bottle.tar.gz",
+              "sha256": "c7c42853ca6a3a5ad6ab6544defee14e450643f5ace274b9cf00d348e8525993"
             }
           }
         }
@@ -1031,7 +1031,7 @@
         "version": "2019.0508"
       },
       "paste": {
-        "version": "2.5.2,7"
+        "version": "2.5.3,8"
       },
       "r": {
         "version": "3.6.1"
@@ -1102,7 +1102,7 @@
       },
       "Slack": {
         "id": "803453959",
-        "version": "4.1.2"
+        "version": "4.2.0"
       },
       "Bear": {
         "id": "1091189122",
@@ -1126,7 +1126,11 @@
       },
       "Twitter": {
         "id": "1482454543",
-        "version": "8.2"
+        "version": "8.3.1"
+      },
+      "Evernote": {
+        "id": "406056744",
+        "version": "7.13"
       }
     }
   },
@@ -1135,7 +1139,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.0",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "578f2a428ed8b49c12effaecc114ee087ece51f6",
+        "Homebrew/homebrew-core": "601282a18468ffe782d7397a07679f7dd4d91adb",
         "CLT": "11.2.0.0.1.1571444319",
         "Xcode": "11.2.1",
         "macOS": "10.15.1"
