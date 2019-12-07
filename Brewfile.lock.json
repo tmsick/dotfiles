@@ -5,16 +5,16 @@
         "revision": "20980ed084f3633d6314ec2beb677dd5a2ff4218"
       },
       "homebrew/bundle": {
-        "revision": "2efa0de33f2885bfd567ba4fdb1ab91f1be8d06c"
+        "revision": "914c6634a0d9cb5fb30235a5d79739ce2302d711"
       },
       "homebrew/cask": {
-        "revision": "d3d18a550675934ce252fcf378db5e038ac9bde8"
+        "revision": "bc593062d3d62dbbd741eac57e52c85c2a73a01f"
       },
       "homebrew/cask-versions": {
-        "revision": "4e7e102f97028e94cb18a9860890dd82728d00f1"
+        "revision": "83b0cb22b5d546d483df8846a6b2c7a78167f812"
       },
       "homebrew/core": {
-        "revision": "601282a18468ffe782d7397a07679f7dd4d91adb"
+        "revision": "e0a03299424531b5773362ac9c3ccf903513fca1"
       },
       "teamookla/speedtest": {
         "revision": "b79ea77017ea57c98658225883d7ecc3d4410fbd"
@@ -981,22 +981,22 @@
         }
       },
       "pandoc": {
-        "version": "2.8.0.1",
+        "version": "2.8.1",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/pandoc-2.8.0.1.catalina.bottle.tar.gz",
-              "sha256": "0ad37daba22cb7eb8f8c7ea5d2a6c0a9dd4449e41dc25627e6e35d245bfa3589"
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.8.1.catalina.bottle.tar.gz",
+              "sha256": "56d67a7cfed18613811b8738f1300b558beb8a3caff1eec53043028b8fde1b4d"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/pandoc-2.8.0.1.mojave.bottle.tar.gz",
-              "sha256": "34f2c6a2b06880dde6f3d251bfca925f80c205909c1d1284b2e36ceabc9d433f"
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.8.1.mojave.bottle.tar.gz",
+              "sha256": "2c19a32faefbc83d0d1c0133170571b58a3a3884976642ce1dc12a94e5810d15"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/pandoc-2.8.0.1.high_sierra.bottle.tar.gz",
-              "sha256": "dfb2c37fa7ba156f31b996596ee7ef38f259d73e8fb71246d1c8efc65fc585b8"
+              "url": "https://homebrew.bintray.com/bottles/pandoc-2.8.1.high_sierra.bottle.tar.gz",
+              "sha256": "69a4880c389d4b0862731f312f422b751da851431635203f5b0aa33e38d2f5f5"
             }
           }
         }
@@ -1139,7 +1139,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.0",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "601282a18468ffe782d7397a07679f7dd4d91adb",
+        "Homebrew/homebrew-core": "e0a03299424531b5773362ac9c3ccf903513fca1",
         "CLT": "11.2.0.0.1.1571444319",
         "Xcode": "11.2.1",
         "macOS": "10.15.1"
