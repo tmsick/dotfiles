@@ -21,7 +21,7 @@ function warn() {
 }
 
 function init_brew() {
-    if ! (brew analytics off && brew update && brew bundle --path="$BREWFILE_PATH" && brew cleanup && brew doctor); then
+    if ! (brew update && brew bundle --path="$BREWFILE_PATH" && brew cleanup && brew doctor); then
         warn "Failed to bundle brew. Try manually running \`brew bundle --path='$BREWFILE_PATH'\`"
         return 1
     fi
