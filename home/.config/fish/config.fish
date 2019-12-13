@@ -45,3 +45,6 @@ thefuck --alias | source
 
 # Go to univ dir of current semester
 alias "go2univ" "cd (univdir)"
+
+# MacGPG included within GPGTools (https://gpgtools.org)
+alias gpg gpg2
