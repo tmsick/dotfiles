@@ -8,13 +8,13 @@
         "revision": "491e2fbd399d1467f3cfab7fe4c4f07b17bfab7f"
       },
       "homebrew/cask": {
-        "revision": "117a209024a70e5f4a40ee81d8c37e74b1febcb1"
+        "revision": "d5bcdb8552db340b8cefe4f013a3e89ad9d6e54a"
       },
       "homebrew/cask-versions": {
-        "revision": "94e50970db791fb9e5a5f6ede811a57286818aca"
+        "revision": "293c8b3309b5c06f4eb0824b8dab63b044f3f749"
       },
       "homebrew/core": {
-        "revision": "a9d3a2cfc6a8ef0f25b6aca1a6e77c00e18b203c"
+        "revision": "0ec3228bd07c5f35294d4c1b36d6160980823a21"
       },
       "teamookla/speedtest": {
         "revision": "b79ea77017ea57c98658225883d7ecc3d4410fbd"
@@ -1037,7 +1037,7 @@
         "version": "2.1.1-b60dc229"
       },
       "google-chrome": {
-        "version": "78.0.3904.87"
+        "version": "79.0.3945.79"
       },
       "gpg-suite-no-mail": {
         "version": "2018.5"
@@ -1052,7 +1052,7 @@
         "version": "2019.0508"
       },
       "paste": {
-        "version": "2.5.3,8"
+        "version": "2.5.4,11"
       },
       "r": {
         "version": "3.6.1"
@@ -1161,9 +1161,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.1-21-gaeefacc",
+        "HOMEBREW_VERSION": "2.2.1-37-g4973f67",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "a9d3a2cfc6a8ef0f25b6aca1a6e77c00e18b203c",
+        "Homebrew/homebrew-core": "0ec3228bd07c5f35294d4c1b36d6160980823a21",
         "CLT": "11.3.0.0.1.1574140115",
         "Xcode": "11.3",
         "macOS": "10.15.2"
