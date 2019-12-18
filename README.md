@@ -4,7 +4,7 @@ Initialization suite for macOS system
 
 ## Prerequisite
 
--   [Homebrew](https://brew.sh) (which is **NOT** automatically installed in the initialization scripts as its official installation method may change in the future)
+- [Homebrew](https://brew.sh) (which is **NOT** automatically installed in the initialization scripts as its official installation method may change in the future)
 
 ## Initializing the environment
 
@@ -25,6 +25,7 @@ cd <this repo>
 
 ## Manually installed apps
 
-| Name | Installer URL                           | Reason                                      |
-| :--- | :-------------------------------------- | :------------------------------------------ |
-| Rust | https://www.rust-lang.org/tools/install | Official installation script is recommended |
+| Name           | Installer URL                                           | Reason                                      |
+| :------------- | :------------------------------------------------------ | :------------------------------------------ |
+| Rust           | https://www.rust-lang.org/tools/install                 | Official installation script is recommended |
+| VirtualBox 6.0 | https://www.virtualbox.org/wiki/Download_Old_Builds_6_0 | Required by Vagrant                         |
