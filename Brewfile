@@ -71,7 +71,6 @@ cask 'rstudio'
 cask 'swimat'
 cask 'tor-browser'
 cask 'vagrant'
-cask 'virtualbox'
 cask 'visual-studio-code'
 
 mas 'Kindle', id: 405_399_194
