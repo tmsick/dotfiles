@@ -52,6 +52,7 @@ brew 'yarn'
 brew 'yq'
 
 cask 'authy'
+cask 'clipy'
 cask 'discord'
 cask 'docker'
 cask 'firefox'
