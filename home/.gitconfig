@@ -3,6 +3,9 @@ name = Tomoya Yoshioka
 email = tomoya.y@icloud.com
 signingkey = 29B6837670D094111FB1200C5E1B7273D8E42DB7
 
+[core]
+ignorecase = false
+
 [commit]
 gpgsign = true
 
