@@ -25,7 +25,6 @@ cd <this repo>
 
 ## Manually installed apps
 
-| Name           | Installer URL                                           | Reason                                      |
-| :------------- | :------------------------------------------------------ | :------------------------------------------ |
-| Rust           | https://www.rust-lang.org/tools/install                 | Official installation script is recommended |
-| VirtualBox 6.0 | https://www.virtualbox.org/wiki/Download_Old_Builds_6_0 | Required by Vagrant                         |
+| Name           | Installer URL                                           | Reason              |
+| :------------- | :------------------------------------------------------ | :------------------ |
+| VirtualBox 6.0 | https://www.virtualbox.org/wiki/Download_Old_Builds_6_0 | Required by Vagrant |
