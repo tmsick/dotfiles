@@ -5,22 +5,22 @@
         "revision": "20980ed084f3633d6314ec2beb677dd5a2ff4218"
       },
       "homebrew/bundle": {
-        "revision": "dc16c62efeaca298c6e3565663192fbe0081a6aa"
+        "revision": "af6d50ef44108e1fb35ed40d818974a2d6d5914b"
       },
       "homebrew/cask": {
-        "revision": "f4e994060b004e41c273816918a616bdb1f0e211"
+        "revision": "aed15e7429ffc55deb9924bde9036ad77ec14e16"
       },
       "homebrew/cask-versions": {
         "revision": "293c8b3309b5c06f4eb0824b8dab63b044f3f749"
       },
       "homebrew/core": {
-        "revision": "f2463cbba086689c872cddd3a8bc242976a603ff"
+        "revision": "7ac0257e057e3199cee67fdf0960216437f3ac69"
       },
       "teamookla/speedtest": {
         "revision": "b79ea77017ea57c98658225883d7ecc3d4410fbd"
       },
       "homebrew/cask-fonts": {
-        "revision": "d437ff8dd809d8aaf40de18e8948631553a54911"
+        "revision": "7b213ee5ddf324cc9f55203aaaa8fc11844260e0"
       }
     },
     "brew": {
@@ -180,13 +180,17 @@
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/doxygen-1.8.17.catalina.bottle.1.tar.gz",
+              "sha256": "e616dc31b1fa5fc8e4f1ff3102b049cfaa2e13f199de9e06123d4dbe33a75790"
+            },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/doxygen-1.8.17.mojave.bottle.tar.gz",
-              "sha256": "93006f901963b40b8f5a2732c6955e8c21a4ef1146d6ee65848037ecf2d39178"
+              "url": "https://homebrew.bintray.com/bottles/doxygen-1.8.17.mojave.bottle.1.tar.gz",
+              "sha256": "609bb888081320306742749bf91f4cfd17815bc8d3d4385ebe25932d1d97302e"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/doxygen-1.8.17.high_sierra.bottle.tar.gz",
-              "sha256": "512227291d4a0edcd18f183762fcc100b6d4c3960e55abe2ece5ab011f463316"
+              "url": "https://homebrew.bintray.com/bottles/doxygen-1.8.17.high_sierra.bottle.1.tar.gz",
+              "sha256": "a1054bedac664bf5edbcebd74606d6e67cb8cc8c64871206fc93728cca02d1e1"
             }
           }
         }
@@ -348,13 +352,17 @@
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/git-lfs-2.9.2.catalina.bottle.1.tar.gz",
+              "sha256": "2c6e5fac4c30b021c7b193e4e324df245e67caff2f6f8eaf59b7170475e95825"
+            },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/git-lfs-2.9.2.mojave.bottle.tar.gz",
-              "sha256": "584207acb926949f5c093d87d06e3e9deda2c78640041120d431f17bb5dad4c3"
+              "url": "https://homebrew.bintray.com/bottles/git-lfs-2.9.2.mojave.bottle.1.tar.gz",
+              "sha256": "dc6d138b8add71ea2cc9b6dc18401fac9e832afcaf4d267b7494615bc52e59fe"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/git-lfs-2.9.2.high_sierra.bottle.tar.gz",
-              "sha256": "b24483f15a987597f2b905b40882f3f89c69e478c01c434310d16c1145b161dd"
+              "url": "https://homebrew.bintray.com/bottles/git-lfs-2.9.2.high_sierra.bottle.1.tar.gz",
+              "sha256": "ef1874b898390008d6eb1b257d3d04d54ce5c89b9431e25b036a83588ed01fd5"
             }
           }
         }
@@ -1043,6 +1051,27 @@
             }
           }
         }
+      },
+      "cabal-install": {
+        "version": "3.0.0.0_1",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/cabal-install-3.0.0.0_1.catalina.bottle.tar.gz",
+              "sha256": "5605a9a7cef6e7615126345ba43b690f16c80aa853c31cc394b0376c847f6def"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/cabal-install-3.0.0.0_1.mojave.bottle.tar.gz",
+              "sha256": "07896a69965d55253b30aa20470090245ab523a6ee22efe6b10d3b0ffb4a16e4"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/cabal-install-3.0.0.0_1.high_sierra.bottle.tar.gz",
+              "sha256": "72616fee2252d33d00e79ecd1778f0f8abffd71e339482dda5927c10d2574746"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -1114,6 +1143,9 @@
       },
       "clipy": {
         "version": "1.2.1"
+      },
+      "microsoft-edge": {
+        "version": "79.0.309.68"
       }
     },
     "mas": {
@@ -1131,15 +1163,15 @@
       },
       "Microsoft Word": {
         "id": "462054704",
-        "version": "16.32"
+        "version": "16.33"
       },
       "Microsoft Excel": {
         "id": "462058435",
-        "version": "16.32"
+        "version": "16.33"
       },
       "Microsoft PowerPoint": {
         "id": "462062816",
-        "version": "16.32"
+        "version": "16.33"
       },
       "Xcode": {
         "id": "497799835",
@@ -1186,9 +1218,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.2-101-g5035485",
+        "HOMEBREW_VERSION": "2.2.3-13-g328e1f6",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "f2463cbba086689c872cddd3a8bc242976a603ff",
+        "Homebrew/homebrew-core": "7ac0257e057e3199cee67fdf0960216437f3ac69",
         "CLT": "11.3.1.0.1.1576735732",
         "Xcode": "11.3.1",
         "macOS": "10.15.2"
