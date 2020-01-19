@@ -23,9 +23,6 @@ set -g fish_user_paths \
     "/usr/local/go/bin" \
     # Rust
     "$HOME/.cargo/bin" \
-    # Ruby
-    "/usr/local/opt/ruby/bin" \
-    "/usr/local/lib/ruby/gems/2.6.0/bin" \
     # SQLite
     "/usr/local/opt/sqlite/bin" \
     # Miscellaneous
