@@ -1,89 +1,124 @@
-# frozen_string_literal: true
-
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/core'
-tap 'teamookla/speedtest'
-
-brew 'aspell'
-brew 'bash'
-brew 'brew-cask-completion'
-brew 'cabal-install'
-brew 'coreutils'
-brew 'dnsmasq'
-brew 'dos2unix'
-brew 'doxygen'
-brew 'exiftool'
-brew 'ffmpeg'
-brew 'fish'
-brew 'fzf'
-brew 'gdb'
-brew 'ghostscript'
-brew 'git'
-brew 'git-lfs'
-brew 'go'
-brew 'graphviz'
-brew 'haskell-stack'
-brew 'hub'
-brew 'imagemagick'
-brew 'jq'
-brew 'libssh2'
-brew 'libzip'
-brew 'mas'
-brew 'mhash'
-brew 'nkf'
-brew 'openssl'
-brew 'openvpn'
-brew 'pandoc'
-brew 'pipenv'
-brew 'popt'
-brew 'pypy3'
-brew 'r'
-brew 'rbenv'
-brew 'redis'
-brew 'rustup-init'
-brew 'speedtest'
-brew 'telnet'
-brew 'thefuck'
-brew 'tig'
-brew 'tmux'
-brew 'tree'
-brew 'unibilium'
-brew 'vim'
-brew 'yarn'
-brew 'yq'
-
-cask 'authy'
-cask 'clipy'
-cask 'discord'
-cask 'docker'
-cask 'firefox'
-cask 'font-cascadia'
-cask 'font-fira-code'
-cask 'font-fira-mono'
-cask 'github'
-cask 'google-chrome'
-cask 'gpg-suite-no-mail'
-cask 'gyazo'
-cask 'karabiner-elements'
-cask 'keybase'
-cask 'mactex-no-gui'
-cask 'microsoft-edge'
-cask 'rstudio'
-cask 'swimat'
-cask 'tor-browser'
-cask 'vagrant'
-cask 'visual-studio-code'
-
-mas 'Kindle', id: 405_399_194
-mas 'The Unarchiver', id: 425_424_353
-mas 'Magnet', id: 441_258_766
-mas 'Microsoft Word', id: 462_054_704
-mas 'Microsoft Excel', id: 462_058_435
-mas 'Microsoft PowerPoint', id: 462_062_816
-mas 'Xcode', id: 497_799_835
-mas 'LINE', id: 539_883_307
-mas 'Slack', id: 803_453_959
-mas 'Bear', id: 1_091_189_122
-mas '1Password 7', id: 1_333_542_190
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "teamookla/speedtest"
+brew "aspell"
+brew "autoconf"
+brew "bash"
+brew "brew-cask-completion"
+brew "cabal-install"
+brew "libpng"
+brew "freetype"
+brew "gdbm"
+brew "gettext"
+brew "libffi"
+brew "pcre"
+brew "readline"
+brew "sqlite"
+brew "xz"
+brew "python"
+brew "glib"
+brew "dnsmasq"
+brew "dos2unix"
+brew "exiftool"
+brew "gmp"
+brew "libevent"
+brew "libunistring"
+brew "libtasn1"
+brew "nettle"
+brew "p11-kit"
+brew "unbound"
+brew "icu4c"
+brew "jpeg"
+brew "libtiff"
+brew "little-cms2"
+brew "openjpeg"
+brew "webp"
+brew "x265"
+brew "ffmpeg"
+brew "pcre2"
+brew "fish"
+brew "fzf"
+brew "isl"
+brew "mpfr"
+brew "libmpc"
+brew "gcc"
+brew "gdb"
+brew "ghostscript"
+brew "git"
+brew "git-lfs"
+brew "go"
+brew "graphviz"
+brew "haskell-stack"
+brew "hub"
+brew "ilmbase"
+brew "libde265"
+brew "shared-mime-info"
+brew "libheif"
+brew "libomp"
+brew "libtool"
+brew "openexr"
+brew "imagemagick"
+brew "oniguruma"
+brew "jq"
+brew "libyaml"
+brew "lua"
+brew "mas"
+brew "ncurses"
+brew "nkf"
+brew "node"
+brew "openblas"
+brew "openvpn"
+brew "pandoc"
+brew "perl"
+brew "pipenv"
+brew "pkg-config"
+brew "pypy3"
+brew "r"
+brew "ruby-build"
+brew "rbenv"
+brew "redis"
+brew "ruby"
+brew "rustup-init"
+brew "telnet"
+brew "thefuck"
+brew "tig"
+brew "tmux"
+brew "tree"
+brew "vim"
+brew "yarn"
+brew "yq"
+brew "teamookla/speedtest/speedtest"
+cask "authy"
+cask "clipy"
+cask "discord"
+cask "docker"
+cask "firefox"
+cask "font-cascadia"
+cask "font-fira-code"
+cask "font-fira-mono"
+cask "github"
+cask "google-chrome"
+cask "gpg-suite-no-mail"
+cask "gyazo"
+cask "karabiner-elements"
+cask "keybase"
+cask "mactex-no-gui"
+cask "microsoft-edge"
+cask "rstudio"
+cask "swimat"
+cask "tor-browser"
+cask "vagrant"
+cask "visual-studio-code"
+mas "1Password 7", id: 1333542190
+mas "Bear", id: 1091189122
+mas "Kindle", id: 405399194
+mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Slack", id: 803453959
+mas "The Unarchiver", id: 425424353
+mas "Xcode", id: 497799835
