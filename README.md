@@ -8,16 +8,14 @@ Initialization suite for macOS system
 
 ## Initializing the environment
 
-You should run `install.sh` before running `symlink.sh` since some dotfiles symlinked in the latter depend on apps installed in the former.
-
 ```bash
 git clone <this repo> <anywhere you like>
 cd <this repo>
 
-# 1. to install Homebrew/Cask formulae and Mac App Store apps based on Brewfile
-./install.sh
+# to install Homebrew/Cask formulae and Mac App Store apps based on Brewfile
+brew bundle
 
-# 2. to symlink dotfiles
+# to symlink dotfiles
 ./symlink.sh
 ```
 
