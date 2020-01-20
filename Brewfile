@@ -7,7 +7,6 @@ tap 'homebrew/core'
 tap 'teamookla/speedtest'
 
 brew 'aspell'
-brew 'autoconf'
 brew 'bash'
 brew 'brew-cask-completion'
 brew 'cabal-install'
