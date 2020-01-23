@@ -19,16 +19,11 @@ set -gx INFOPATH "/usr/local/share/info" $INFOPATH
 
 set -g fish_user_paths \
     # Go
-    "$GOPATH/bin" \
-    "/usr/local/go/bin" \
+    "$GOPATH/bin" "/usr/local/go/bin" \
     # Rust
     "$HOME/.cargo/bin" \
-    # SQLite
-    "/usr/local/opt/sqlite/bin" \
     # Miscellaneous
-    "$HOME/bin" \
-    "/usr/local/bin" \
-    "/usr/local/sbin" \
+    "$HOME/bin" "/usr/local/bin" "/usr/local/sbin" \
     $fish_user_paths
 
 # GitHub's hub (https://github.com/github/hub)
