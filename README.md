@@ -6,7 +6,7 @@ Initialization suite for macOS system
 
 - [Homebrew](https://brew.sh)
 
-## Initializing the environment
+## Initialization
 
 ```bash
 git clone <this repo> <anywhere you like>
