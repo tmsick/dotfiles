@@ -40,7 +40,3 @@ alias "go2univ" "cd (univdir)"
 
 # MacGPG included within GPGTools (https://gpgtools.org)
 alias gpg gpg2
-
-# rbenv (https://github.com/rbenv/rbenv)
-status --is-interactive
-and source (rbenv init -|psub)
