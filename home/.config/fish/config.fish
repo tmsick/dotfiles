@@ -22,6 +22,8 @@ set -g fish_user_paths \
     "$GOPATH/bin" "/usr/local/go/bin" \
     # Rust
     "$HOME/.cargo/bin" \
+    # Ruby
+    "/usr/local/opt/ruby/bin" \
     # Miscellaneous
     "$HOME/bin" "/usr/local/bin" "/usr/local/sbin" \
     $fish_user_paths
