@@ -17,7 +17,7 @@ set -q INFOPATH
 or set INFOPATH ''
 set -gx INFOPATH "/usr/local/share/info" $INFOPATH
 
-set -g fish_user_paths \
+set paths_candidates \
     # Go
     "$GOPATH/bin" "/usr/local/go/bin" \
     # Rust
@@ -25,20 +25,30 @@ set -g fish_user_paths \
     # Ruby
     "/usr/local/opt/ruby/bin" \
     # Miscellaneous
-    "$HOME/bin" "/usr/local/bin" "/usr/local/sbin" \
-    $fish_user_paths
+    "$HOME/bin" "/usr/local/bin" "/usr/local/sbin"
+for p in $paths_candidates
+    if test -d "$p"
+        set -g fish_user_paths $fish_user_paths $p
+    end
+end
 
 # GitHub's hub (https://github.com/github/hub)
-eval (hub alias -s)
+if which hub >/dev/null
+    eval (hub alias -s)
+end
 
 # Dan Kogai's mv2trash (https://github.com/dankogai/osx-mv2trash)
-alias "trash" "mv2trash"
+if which mv2trash >/dev/null
+    alias trash mv2trash
+end
 
 # The Fuck (https://github.com/nvbn/thefuck)
-thefuck --alias | source
+if which thefuck >/dev/null
+    thefuck --alias | source
+end
 
 # Go to univ dir of current semester
-alias "go2univ" "cd (univdir)"
+alias go2univ "cd (univdir)"
 
 # MacGPG included within GPGTools (https://gpgtools.org)
 alias gpg gpg2
