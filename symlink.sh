@@ -2,100 +2,101 @@
 
 set -Ceu -o pipefail
 
-readonly DIR="${0%/*}"
-readonly FILE="${0##*/}"
-readonly DIR_ABS="$PWD/$DIR"
-readonly FILE_ABS="$PWD/$DIR/$FILE"
+# ============================== PATH VARIABLES ================================
+readonly SCRIPT_NAME="$(basename "$0")"
+readonly SCRIPT_DIR="$(dirname "$0")"
+readonly SCRIPT_NAME_ABS="$PWD/$SCRIPT_DIR/$SCRIPT_NAME"
+readonly SCRIPT_DIR_ABS="$PWD/$SCRIPT_DIR"
 
-readonly RESET="$(printf '\033[m')"
-readonly GREEN="$(printf '\033[32m')"
-readonly YELLOW="$(printf '\033[33m')"
-readonly RED="$(printf '\033[31m')"
+# ============================= PRINT FUNCTIONS ================================
+readonly __COLOR_SWITCH_GREEN__="$(printf '\033[32m')"
+readonly __COLOR_SWITCH_YELLOW__="$(printf '\033[33m')"
+readonly __COLOR_SWITCH_RED__="$(printf '\033[31m')"
+readonly __COLOR_SWITCH_RESET__="$(printf '\033[m')"
 
 function success() {
-    echo $GREEN"$@"$RESET
+    echo $__COLOR_SWITCH_GREEN__"$@"$__COLOR_SWITCH_RESET__
 }
-
 function warn() {
-    echo $YELLOW"$@"$RESET >&2
+    echo $__COLOR_SWITCH_YELLOW__"$@"$__COLOR_SWITCH_RESET__ >&2
+}
+function error() {
+    echo $__COLOR_SWITCH_RED__"$@"$__COLOR_SWITCH_RESET__ >&2
 }
 
-function error() {
-    echo $RED"$@"$RESET >&2
-}
+# ============================== END OF HEADER =================================
 
 function print_usage() {
     cat <<EOS
 Usage
-  - To link files:     ./$FILE
-  - To unlink files:   ./$FILE --rm
-  - To see this usage: ./$FILE --help
+    - To link files:     ./$SCRIPT_NAME
+    - To unlink files:   ./$SCRIPT_NAME --rm
+    - To see this usage: ./$SCRIPT_NAME --help
 EOS
 }
 
-function dig_dir() {
-    local type="$1"
-    local src="$2"
-    local dest="$3"
+function traverse() {
+    local src="$1"
+    local dest="$2"
+    local callback=$3
 
-    if [[ "$type" != "link" ]] && [[ "$type" != "unlink" ]]; then
-        error "An invalid type '$type' was given to an internal function 'dig_dir'. Check out code around line $LINENO."
-        exit 100
-    fi
-
-    ls -A "$src" | while read item; do
-        # Skip this turn if the source file is .DS_Store
-        if [[ -f "$src/$item" ]] && [[ "$item" == ".DS_Store" ]]; then
-            continue
-        fi
-
-        # If the pivot item is a regular file
+    for item in $(IFS=$'\n' ls -A "$src"); do
         if [[ -f "$src/$item" ]]; then
-            # If the destination is already occupied
-            if [[ -e "$dest/$item" ]]; then
-                # If the file is already linked
-                if [[ -L "$dest/$item" ]] && [[ "$dest/$item" -ef "$src/$item" ]]; then
-                    if [[ "$type" == "unlink" ]]; then
-                        unlink "$dest/$item"
-                    fi
-                # If something unknown occupies the destination
-                else
-                    warn "'$dest/$item' already exists. Skip ${type}ing '$src/$item'"
-                fi
-            # If the destination is vacant and linkage is required
-            elif [[ "$type" == "link" ]]; then
-                if mkdir -p "$dest" >/dev/null 2>&1; then
-                    ln -s "$src/$item" "$dest/$item"
-                else
-                    warn "Failed to make directory '$dest'. Skip linking files under '$src'"
-                    return
-                fi
-            fi
-        # If the pivot item is a directory
+            $callback "$src/$item" "$dest/$item"
         elif [[ -d "$src/$item" ]]; then
-            dig_dir "$type" "$src/$item" "$dest/$item"
-        # If the pivot item is something other than a regular file nor a directory
-        else
-            warn "'$src/$item', which is not a regular file, exists under '$src'"
+            traverse "$src/$item" "$dest/$item" $callback
         fi
     done
+}
+
+function __link__() {
+    local src="$1"
+    local dest="$2"
+
+    if [[ "$(basename "$src")" == ".DS_Store" ]]; then
+        return
+    fi
+
+    if [[ "$src" -ef "$dest" ]]; then
+        return
+    fi
+
+    if [[ -e "$dest" ]]; then
+        warn "'$dest' already exists. Skip linking '$src'."
+        return
+    fi
+
+    local dest_dir="$(dirname "$dest")"
+    if mkdir -p "$dest_dir"; then
+        ln -s "$src" "$dest"
+    else
+        warn "Failed to make dir '$dest_dir'. Skip linking '$src'."
+    fi
+}
+
+function __unlink__() {
+    local src="$1"
+    local dest="$2"
+
+    if [[ "$src" -ef "$dest" ]]; then
+        rm "$dest"
+    fi
 }
 
 function main() {
     case $# in
     0)
-        dig_dir link "$DIR_ABS/home" "$HOME"
+        traverse "$SCRIPT_DIR_ABS/home" "$HOME" __link__
         return
         ;;
     1)
-        local arg="$1"
-        case "$arg" in
+        case "$1" in
         help | -help | --help | -h)
             print_usage
             return
             ;;
         --rm)
-            dig_dir unlink "$DIR_ABS/home" "$HOME"
+            traverse "$SCRIPT_DIR_ABS/home" "$HOME" __unlink__
             return
             ;;
         *)
