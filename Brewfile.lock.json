@@ -8,7 +8,7 @@
         "revision": "677f39d62a8aefdcbc091f193af1f7ddbee0052d"
       },
       "homebrew/cask": {
-        "revision": "1806bbeeee3cd0a6c47f601af25f9da5520ee755"
+        "revision": "8eb6e073af1345e34488cc323b6ff04ba9a5c71b"
       },
       "homebrew/cask-versions": {
         "revision": "293c8b3309b5c06f4eb0824b8dab63b044f3f749"
@@ -2391,7 +2391,7 @@
       },
       "Twitter": {
         "id": "1482454543",
-        "version": "8.3.1"
+        "version": "8.8"
       },
       "Evernote": {
         "id": "406056744",
