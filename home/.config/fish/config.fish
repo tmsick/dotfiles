@@ -24,6 +24,7 @@ set paths_candidates \
     "$HOME/.cargo/bin" \
     # Ruby
     "/usr/local/opt/ruby/bin" \
+    "/usr/local/lib/ruby/gems/2.6.0/bin" \
     # Miscellaneous
     "$HOME/bin" "/usr/local/bin" "/usr/local/sbin"
 for p in $paths_candidates
