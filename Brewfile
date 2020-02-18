@@ -119,6 +119,7 @@ mas "Magnet", id: 441258766
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
+mas "Playgrounds", id: 1496833156
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "Twitter", id: 1482454543
