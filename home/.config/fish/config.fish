@@ -33,7 +33,9 @@ if which mv2trash >/dev/null
 end
 
 # rbenv (https://github.com/rbenv/rbenv)
-status --is-interactive && source (rbenv init -|psub)
+if which rbenv >/dev/null
+    status --is-interactive && source (rbenv init -|psub)
+end
 
 # The Fuck (https://github.com/nvbn/thefuck)
 if which thefuck >/dev/null
