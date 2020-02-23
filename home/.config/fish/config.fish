@@ -9,10 +9,6 @@ set -gx GOPATH "$HOME/go"
 set -gx DOCKER_HIDE_LEGACY_COMMANDS 1
 set -gx PIPENV_VENV_IN_PROJECT 1
 
-set -q MANPATH
-or set MANPATH ''
-set -gx MANPATH "/usr/local/share/man" $MANPATH
-
 set -q INFOPATH
 or set INFOPATH ''
 set -gx INFOPATH "/usr/local/share/info" $INFOPATH
