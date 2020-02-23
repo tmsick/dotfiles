@@ -22,9 +22,6 @@ set paths_candidates \
     "$GOPATH/bin" "/usr/local/go/bin" \
     # Rust
     "$HOME/.cargo/bin" \
-    # Ruby
-    "/usr/local/opt/ruby/bin" \
-    "/usr/local/lib/ruby/gems/2.7.0/bin" \
     # Miscellaneous
     "$HOME/bin" "/usr/local/bin" "/usr/local/sbin"
 for p in $paths_candidates
@@ -42,6 +39,9 @@ end
 if which mv2trash >/dev/null
     alias trash mv2trash
 end
+
+# rbenv (https://github.com/rbenv/rbenv)
+status --is-interactive && source (rbenv init -|psub)
 
 # The Fuck (https://github.com/nvbn/thefuck)
 if which thefuck >/dev/null
