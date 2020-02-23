@@ -17,7 +17,7 @@ set paths_candidates \
     # Miscellaneous
     "$HOME/bin" "/usr/local/bin" "/usr/local/sbin"
 for p in $paths_candidates
-    if test -d "$p"
+    if test -d $p
         set -g fish_user_paths $fish_user_paths $p
     end
 end
