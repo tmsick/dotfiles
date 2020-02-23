@@ -43,7 +43,11 @@ if which thefuck >/dev/null
 end
 
 # Go to univ dir of current semester
-alias go2univ "cd (univdir)"
+if which univdir >/dev/null
+    alias go2univ "cd (univdir)"
+end
 
 # MacGPG included within GPGTools (https://gpgtools.org)
-alias gpg gpg2
+if which gpg2 >/dev/null
+    alias gpg gpg2
+end
