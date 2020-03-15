@@ -20,9 +20,3 @@ brew bundle
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
-
-## Manually installed apps
-
-| Name           | Installer URL                                           | Reason                              |
-| :------------- | :------------------------------------------------------ | :---------------------------------- |
-| VirtualBox 6.0 | https://www.virtualbox.org/wiki/Download_Old_Builds_6_0 | This version is required by Vagrant |
