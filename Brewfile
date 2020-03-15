@@ -117,12 +117,15 @@ cask "vagrant"
 cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
 mas "Bear", id: 1091189122
+mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Playgrounds", id: 1496833156
 mas "Slack", id: 803453959
 mas "The Unarchiver", id: 425424353
