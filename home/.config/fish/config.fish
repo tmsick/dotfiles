@@ -37,6 +37,11 @@ if which rbenv >/dev/null
     status --is-interactive && source (rbenv init -|psub)
 end
 
+# nodenv (https://github.com/nodenv/nodenv)
+if which nodenv >/dev/null
+    status --is-interactive && source (nodenv init -|psub)
+end
+
 # The Fuck (https://github.com/nvbn/thefuck)
 if which thefuck >/dev/null
     thefuck --alias | source
