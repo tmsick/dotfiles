@@ -11,7 +11,7 @@
   gpgsign = true
 
 [core]
-  gnorecase = false
+  ignorecase = false
   excludesfile = ~/.gitignore_global
 
 [filter "lfs"]
