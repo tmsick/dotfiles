@@ -9,7 +9,7 @@ set -gx GOPATH "$HOME/go"
 set -gx DOCKER_HIDE_LEGACY_COMMANDS 1
 set -gx PIPENV_VENV_IN_PROJECT 1
 
-set paths_candidates \
+set -l paths_candidates \
     # Go
     "$GOPATH/bin" "/usr/local/go/bin" \
     # Rust
