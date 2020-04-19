@@ -139,5 +139,6 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Playgrounds", id: 1496833156
 mas "Slack", id: 803453959
+mas "Speedtest", id: 1153157709
 mas "Twitter", id: 1482454543
 mas "Xcode", id: 497799835
