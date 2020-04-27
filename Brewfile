@@ -132,6 +132,7 @@ mas "Bitdefender Virus Scanner", id: 500154009
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
+mas "Mactracker", id: 430255202
 mas "Magnet", id: 441258766
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
