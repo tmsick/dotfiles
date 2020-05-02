@@ -56,3 +56,8 @@ end
 if which gpg2 >/dev/null
     alias gpg gpg2
 end
+
+# Starship (https://starship.rs)
+if which starship >/dev/null
+    starship init fish | source
+end
