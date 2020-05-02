@@ -5,19 +5,19 @@
         "revision": "56f2fc5e57e4b1439bdec1e6bb2fd3b3ad51540d"
       },
       "heroku/brew": {
-        "revision": "432f1ecbe3c6ee05caaa14a83ad3c7c07850ffb4"
+        "revision": "6dcfb4be6a744ce4994234f0ecb96eb9ca429f97"
       },
       "homebrew/bundle": {
-        "revision": "7fcf1c3eb0bf5b7b2c329539970b495f39d0a532"
+        "revision": "d2780e333cb7e6783ebe5d7a29a1afa89c8acc12"
       },
       "homebrew/cask": {
-        "revision": "d42d36615424b0e9efe177e15742e32c9ff98328"
+        "revision": "22b5b16233ec492e73129c708334249d32cd64f5"
       },
       "homebrew/cask-fonts": {
         "revision": "f8551cec9eca212d72c0b5f559c0ae0365a9729f"
       },
       "homebrew/core": {
-        "revision": "433cedc2bd5e83f07ea826fefc90685dbb11a4b6"
+        "revision": "3f93ec1d587b8e299b38f05aad5e8dc509aadac4"
       },
       "homebrew/services": {
         "revision": "6e7ea0cff515df8b5d53a6e3066e16cf5e94d03a"
@@ -1593,22 +1593,22 @@
         }
       },
       "redis": {
-        "version": "6.0.0",
+        "version": "6.0.1",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.0.catalina.bottle.tar.gz",
-              "sha256": "14d80b2d8b9180359ef78fa1184197ca4e973524d36304cf7c262f100ab6d3fd"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.1.catalina.bottle.tar.gz",
+              "sha256": "75862c2ab5ea9f0e558e677d8c099c62f087b80f6e207814517938ce55abb310"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.0.mojave.bottle.tar.gz",
-              "sha256": "2b666c78695f4a067e1940ff6627d88bcf301c455683c8b5e65f4523be28409a"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.1.mojave.bottle.tar.gz",
+              "sha256": "8ed824ce30bde04609bdb15b4cecf73210b240675b3ca9cf59d35a77fb122eed"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.0.high_sierra.bottle.tar.gz",
-              "sha256": "be067b7dfef7f3a4885bf540296ef3a7616c48ec303711ee1d34ce3acafff17b"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.1.high_sierra.bottle.tar.gz",
+              "sha256": "dc0610e9b6d8725b0933ef24643ea8322d34aa9a8617976b54c93b6dfd776ab6"
             }
           }
         }
@@ -1937,7 +1937,28 @@
           }
         }
       },
-      "mongodb/brew/mongodb-community": null
+      "mongodb/brew/mongodb-community": null,
+      "starship": {
+        "version": "0.41.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/starship-0.41.0.catalina.bottle.tar.gz",
+              "sha256": "a94177ea27e842888066bd0cb9e38d0053fc6611449751627f9f8356ff92edfe"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/starship-0.41.0.mojave.bottle.tar.gz",
+              "sha256": "38c7147237a43f5d8b331b354a8cceea27b1bfb4e1e80da2f83fb720c3000327"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/starship-0.41.0.high_sierra.bottle.tar.gz",
+              "sha256": "c0c99306e85a9ae9ca13a94a33e61fc1241d7d458df8213e9489ed14e25796c8"
+            }
+          }
+        }
+      }
     },
     "cask": {
       "authy": {
@@ -2107,6 +2128,12 @@
         "options": {
           "full_name": "microsoft-teams"
         }
+      },
+      "font-fira-mono-for-powerline": {
+        "version": "latest",
+        "options": {
+          "full_name": "font-fira-mono-for-powerline"
+        }
       }
     },
     "mas": {
@@ -2187,9 +2214,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.14-31-gcdae58f",
+        "HOMEBREW_VERSION": "2.2.14-46-g330f1c1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "433cedc2bd5e83f07ea826fefc90685dbb11a4b6",
+        "Homebrew/homebrew-core": "3f93ec1d587b8e299b38f05aad5e8dc509aadac4",
         "CLT": "11.4.1.0.1.1586360307",
         "Xcode": "11.4.1",
         "macOS": "10.15.4"
