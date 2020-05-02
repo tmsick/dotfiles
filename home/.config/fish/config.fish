@@ -22,6 +22,17 @@ for p in $paths_candidates
     end
 end
 
+# pyenv bin have to be removed from $PATH when running brew
+# ref: https://github.com/pyenv/pyenv/issues/106
+if which brew >/dev/null && which pyenv >/dev/null
+    function brew
+        begin
+            set -lx PATH (printenv PATH | sed s!(pyenv root)/shims:!!)
+            command brew $argv
+        end
+    end
+end
+
 # GitHub's hub (https://github.com/github/hub)
 if which hub >/dev/null
     eval (hub alias -s)
@@ -32,14 +43,19 @@ if which mv2trash >/dev/null
     alias trash mv2trash
 end
 
+# pyenv (https://github.com/pyenv/pyenv)
+if which pyenv >/dev/null
+    status --is-interactive; and source (pyenv init -|psub)
+end
+
 # rbenv (https://github.com/rbenv/rbenv)
 if which rbenv >/dev/null
-    status --is-interactive && source (rbenv init -|psub)
+    status --is-interactive; and source (rbenv init -|psub)
 end
 
 # nodenv (https://github.com/nodenv/nodenv)
 if which nodenv >/dev/null
-    status --is-interactive && source (nodenv init -|psub)
+    status --is-interactive; and source (nodenv init -|psub)
 end
 
 # The Fuck (https://github.com/nvbn/thefuck)
