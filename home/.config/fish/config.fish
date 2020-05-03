@@ -15,7 +15,7 @@ set -l paths_candidates \
     # Rust
     "$HOME/.cargo/bin" \
     # Miscellaneous
-    "$HOME/bin" "/usr/local/bin" "/usr/local/sbin"
+    "$HOME/bin" "$HOME/.local/bin" "/usr/local/bin" "/usr/local/sbin"
 for p in $paths_candidates
     if test -d $p
         set -g fish_user_paths $fish_user_paths $p
