@@ -43,19 +43,9 @@ if which mv2trash >/dev/null
     alias trash mv2trash
 end
 
-# pyenv (https://github.com/pyenv/pyenv)
-if which pyenv >/dev/null
-    status --is-interactive; and source (pyenv init -|psub)
-end
-
-# rbenv (https://github.com/rbenv/rbenv)
-if which rbenv >/dev/null
-    status --is-interactive; and source (rbenv init -|psub)
-end
-
-# nodenv (https://github.com/nodenv/nodenv)
-if which nodenv >/dev/null
-    status --is-interactive; and source (nodenv init -|psub)
+# anyenv (https://github.com/anyenv/anyenv)
+if which anyenv >/dev/null
+    status --is-interactive; and source (anyenv init -|psub)
 end
 
 # The Fuck (https://github.com/nvbn/thefuck)
