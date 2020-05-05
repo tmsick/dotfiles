@@ -22,17 +22,6 @@ for p in $paths_candidates
     end
 end
 
-# pyenv bin have to be removed from $PATH when running brew
-# ref: https://github.com/pyenv/pyenv/issues/106
-if which brew >/dev/null && which pyenv >/dev/null
-    function brew
-        begin
-            set -lx PATH (printenv PATH | sed s!(pyenv root)/shims:!!)
-            command brew $argv
-        end
-    end
-end
-
 # GitHub's hub (https://github.com/github/hub)
 if which hub >/dev/null
     eval (hub alias -s)
@@ -41,11 +30,6 @@ end
 # Dan Kogai's mv2trash (https://github.com/dankogai/osx-mv2trash)
 if which mv2trash >/dev/null
     alias trash mv2trash
-end
-
-# anyenv (https://github.com/anyenv/anyenv)
-if which anyenv >/dev/null
-    status --is-interactive; and source (anyenv init -|psub)
 end
 
 # The Fuck (https://github.com/nvbn/thefuck)
@@ -66,4 +50,20 @@ end
 # Starship (https://starship.rs)
 if which starship >/dev/null
     starship init fish | source
+end
+
+# anyenv (https://github.com/anyenv/anyenv)
+if which anyenv >/dev/null
+    status --is-interactive; and source (anyenv init -|psub)
+end
+
+# pyenv bin have to be removed from $PATH when running brew
+# ref: https://github.com/pyenv/pyenv/issues/106
+if which brew >/dev/null && which pyenv >/dev/null
+    function brew
+        begin
+            set -lx PATH (printenv PATH | sed s!(pyenv root)/shims:!!)
+            command brew $argv
+        end
+    end
 end
