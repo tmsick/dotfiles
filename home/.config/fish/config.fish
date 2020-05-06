@@ -32,11 +32,6 @@ if which mv2trash >/dev/null
     alias trash mv2trash
 end
 
-# The Fuck (https://github.com/nvbn/thefuck)
-if which thefuck >/dev/null
-    thefuck --alias | source
-end
-
 # Go to univ dir of current semester
 if which univdir >/dev/null
     alias go2univ "cd (univdir)"
