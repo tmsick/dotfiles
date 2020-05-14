@@ -35,7 +35,7 @@ traverse() {
         if [[ -f "$src/$item" ]]; then
             "$cb" "$src/$item" "$dest/$item"
         elif [[ -d "$src/$item" ]]; then
-            traverse "$src/$item" "$dest/$item" "$cb"
+            "$FUNCNAME" "$src/$item" "$dest/$item" "$cb"
         fi
     done
     IFS=$ifs
