@@ -8,7 +8,7 @@ readonly SCRIPT_NAME_ABS="$PWD/$SCRIPT_DIR/$SCRIPT_NAME"
 readonly SCRIPT_DIR_ABS="$PWD/$SCRIPT_DIR"
 
 readonly DOTFILES_HOME="${DOTFILES_HOME:-"$HOME/.dotfiles"}"
-readonly TEMPLATE_PATH="$DOTFILES_HOME/snippets/bash-script-header.sh"
+readonly TEMPLATE_PATH="$DOTFILES_HOME/templates/bash-script-header.bash"
 
 function print_help() {
     cat <<EOS
