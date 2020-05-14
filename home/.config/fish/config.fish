@@ -25,11 +25,6 @@ if which hub >/dev/null
     eval (hub alias -s)
 end
 
-# Dan Kogai's mv2trash (https://github.com/dankogai/osx-mv2trash)
-if which mv2trash >/dev/null
-    alias trash mv2trash
-end
-
 # Go to univ dir of current semester
 if which univdir >/dev/null
     alias go2univ "cd (univdir)"
