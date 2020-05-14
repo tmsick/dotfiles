@@ -16,7 +16,7 @@ cd <this repo>
 brew bundle
 
 # to symlink dotfiles
-./symlink.sh
+./symlink.bash
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
