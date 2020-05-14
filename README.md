@@ -1,6 +1,6 @@
 # dotfiles
 
-Initialization suite for macOS system
+Initialization suite for macOS and Linux
 
 ## Prerequisite
 
@@ -17,6 +17,9 @@ brew bundle
 
 # to symlink dotfiles
 ./symlink.bash
+
+# to generate Brewfile based on your current system state (Python3 required)
+brew bundle dump --all --file=- | ./format-brewfile.py > Brewfile
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
