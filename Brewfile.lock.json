@@ -11,13 +11,13 @@
         "revision": "fb935cbb0e1eb7cc1eea4f274cbaf414dce49488"
       },
       "homebrew/cask": {
-        "revision": "046c87528e06155e48ada7203b845284ad04333d"
+        "revision": "44ef20f062498304e37b1e44c7ee22f1155e6044"
       },
       "homebrew/cask-fonts": {
-        "revision": "e2cf31c4691b00921066a078670a97706dbcc165"
+        "revision": "50d12b3d69d8c89fe49c8fcd48aa22418c9b6b2d"
       },
       "homebrew/core": {
-        "revision": "defc021c41115ee0370c8d0c46ba8119e0a8bf17"
+        "revision": "b267a1dbd6bfbe9b6a03e14043ee550b4f0d1f03"
       },
       "homebrew/services": {
         "revision": "c8fee02f479d20cf286c20babe696e56d8680205"
@@ -589,43 +589,43 @@
         }
       },
       "ilmbase": {
-        "version": "2.4.1",
+        "version": "2.5.1",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/ilmbase-2.4.1.catalina.bottle.1.tar.gz",
-              "sha256": "77fa3ade193f751b7301feae07da4f801adf693ddba02915778c77d142f03311"
+              "url": "https://homebrew.bintray.com/bottles/ilmbase-2.5.1.catalina.bottle.tar.gz",
+              "sha256": "4748d38413303488484f98d5fbb94bb90a3f2e6a7fc9830fe5ce12463ef6812b"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/ilmbase-2.4.1.mojave.bottle.1.tar.gz",
-              "sha256": "26209d6086178373e08d8ca6f5acf1c3b49e6896e1fa4eff0c06a3bd91f7b550"
+              "url": "https://homebrew.bintray.com/bottles/ilmbase-2.5.1.mojave.bottle.tar.gz",
+              "sha256": "c3645960e26293a38a9ed68996c21f9bdd00bf138c66a187d97b3be9a6f63247"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/ilmbase-2.4.1.high_sierra.bottle.1.tar.gz",
-              "sha256": "9d141246fae66f97b71e864f2c8b7264d5f317380f3872017dc52ea1efd3ea3d"
+              "url": "https://homebrew.bintray.com/bottles/ilmbase-2.5.1.high_sierra.bottle.tar.gz",
+              "sha256": "833b56397ee633635ae29f4b7c5f526590038cdda44bf1250fbee59bbada4013"
             }
           }
         }
       },
       "imagemagick": {
-        "version": "7.0.10-11",
+        "version": "7.0.10-12",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-11.catalina.bottle.tar.gz",
-              "sha256": "7e29dcc73c3f9cd58d6f147433fc84f93acc908ce83237d747d531f3e951144c"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-12.catalina.bottle.tar.gz",
+              "sha256": "99d6dfe5fe7fced1abe6b80840fba23389551f3e386266326d481fc7acb75f11"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-11.mojave.bottle.tar.gz",
-              "sha256": "f2e5ee2693d5b90320bc3b60f727f2125a967a8159f701b2d7d6a3d71f1088d9"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-12.mojave.bottle.tar.gz",
+              "sha256": "cc974461ec8b0e89fba44bdc9ddab914e63d3547305c34ffa6cb82f9bec028bd"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-11.high_sierra.bottle.tar.gz",
-              "sha256": "725dc997eef6695b0e29b6539453b8941fed31512fdf77a6bfbf4ae628a1d199"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-12.high_sierra.bottle.tar.gz",
+              "sha256": "4d97d184b56b76c76c4db6fd24acfba72176deba76c307cf1358376da6e0a65f"
             }
           }
         }
@@ -1229,22 +1229,22 @@
         }
       },
       "openexr": {
-        "version": "2.4.1",
+        "version": "2.5.1",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/openexr-2.4.1.catalina.bottle.tar.gz",
-              "sha256": "436a68a4101b82d9abe8f21045efa6d5912a4a6bb070614cc04a88487a0b8372"
+              "url": "https://homebrew.bintray.com/bottles/openexr-2.5.1.catalina.bottle.tar.gz",
+              "sha256": "47c325cb83311e1e25666d3863623682a077a8ee80ad10f1d659c1095650b5c4"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/openexr-2.4.1.mojave.bottle.tar.gz",
-              "sha256": "d9cfcbd95203891e434ed18ffba6cc7e3ccf30295258b9335fa75ab385e74311"
+              "url": "https://homebrew.bintray.com/bottles/openexr-2.5.1.mojave.bottle.tar.gz",
+              "sha256": "3ba3fbee2b8156d313b137701a8f43a971ecd11bd63c891348d061b03858358e"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/openexr-2.4.1.high_sierra.bottle.tar.gz",
-              "sha256": "834e89287ea987db4d6e392dd523c3ef193a991f44e015d54f7b40e1f49b48d0"
+              "url": "https://homebrew.bintray.com/bottles/openexr-2.5.1.high_sierra.bottle.tar.gz",
+              "sha256": "17dd7782b40a65432313638b9250afbb8cb0946bf442e8d46603f98c97fc0f2b"
             }
           }
         }
@@ -1935,22 +1935,22 @@
       },
       "mongodb/brew/mongodb-community": null,
       "starship": {
-        "version": "0.41.0",
+        "version": "0.41.3",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/starship-0.41.0.catalina.bottle.tar.gz",
-              "sha256": "a94177ea27e842888066bd0cb9e38d0053fc6611449751627f9f8356ff92edfe"
+              "url": "https://homebrew.bintray.com/bottles/starship-0.41.3.catalina.bottle.tar.gz",
+              "sha256": "49bf8bbd460536e5f7683cb6db865ecf40bca4d030a8c41d60ae9c43cc2d7f5f"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/starship-0.41.0.mojave.bottle.tar.gz",
-              "sha256": "38c7147237a43f5d8b331b354a8cceea27b1bfb4e1e80da2f83fb720c3000327"
+              "url": "https://homebrew.bintray.com/bottles/starship-0.41.3.mojave.bottle.tar.gz",
+              "sha256": "2c7da646a724e2e5cc2e40673e6f0502c604a531afd9e29799e09689a7a95ab6"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/starship-0.41.0.high_sierra.bottle.tar.gz",
-              "sha256": "c0c99306e85a9ae9ca13a94a33e61fc1241d7d458df8213e9489ed14e25796c8"
+              "url": "https://homebrew.bintray.com/bottles/starship-0.41.3.high_sierra.bottle.tar.gz",
+              "sha256": "3c94fc2e09b131b5ddf94fbf84efe5a6e9a2f6d925b0c9192331c3bf906ec840"
             }
           }
         }
@@ -2054,6 +2054,10 @@
             }
           }
         }
+      },
+      "ack": {
+        "version": "3.3.1",
+        "bottle": false
       }
     },
     "cask": {
@@ -2094,13 +2098,13 @@
         }
       },
       "font-cascadia": {
-        "version": "2004.30",
+        "version": "2005.15",
         "options": {
           "full_name": "font-cascadia"
         }
       },
       "font-cascadia-mono": {
-        "version": "2004.30",
+        "version": "2005.15",
         "options": {
           "full_name": "font-cascadia-mono"
         }
@@ -2202,7 +2206,7 @@
         }
       },
       "virtualbox": {
-        "version": "6.1.6,137129",
+        "version": "6.1.8,137981",
         "options": {
           "full_name": "virtualbox"
         }
@@ -2236,6 +2240,12 @@
         "options": {
           "full_name": "iterm2"
         }
+      },
+      "pycharm": {
+        "version": "2020.1.1,201.7223.92",
+        "options": {
+          "full_name": "pycharm"
+        }
       }
     },
     "mas": {
@@ -2265,7 +2275,7 @@
       },
       "Mactracker": {
         "id": "430255202",
-        "version": "7.9.1"
+        "version": "7.9.2"
       },
       "Magnet": {
         "id": "441258766",
@@ -2316,9 +2326,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.16-65-g56f0308",
+        "HOMEBREW_VERSION": "2.2.16-69-g9fcaa46",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "defc021c41115ee0370c8d0c46ba8119e0a8bf17",
+        "Homebrew/homebrew-core": "b267a1dbd6bfbe9b6a03e14043ee550b4f0d1f03",
         "CLT": "11.4.1.0.1.1586360307",
         "Xcode": "11.4.1",
         "macOS": "10.15.4"
