@@ -37,6 +37,10 @@ if which gpg2 >/dev/null
     alias gpg gpg2
 end
 
+if which tree >/dev/null
+    alias tree "tree -C"
+end
+
 # Starship (https://starship.rs)
 if which starship >/dev/null
     starship init fish | source
