@@ -8,16 +8,16 @@
         "revision": "f7fa3b71a7fd3b93dacd9c3b31d2e5f856ba8e3a"
       },
       "homebrew/bundle": {
-        "revision": "fb935cbb0e1eb7cc1eea4f274cbaf414dce49488"
+        "revision": "d7a2636c3974c4448cb55a8a51fe83ca57cbf1c2"
       },
       "homebrew/cask": {
-        "revision": "44ef20f062498304e37b1e44c7ee22f1155e6044"
+        "revision": "5d339f1cb417bcd155168b005961c709cccf9553"
       },
       "homebrew/cask-fonts": {
         "revision": "50d12b3d69d8c89fe49c8fcd48aa22418c9b6b2d"
       },
       "homebrew/core": {
-        "revision": "b267a1dbd6bfbe9b6a03e14043ee550b4f0d1f03"
+        "revision": "3926ce8e8713e6bec1c3e7dc1fcf651adb881d72"
       },
       "homebrew/services": {
         "revision": "c8fee02f479d20cf286c20babe696e56d8680205"
@@ -610,22 +610,22 @@
         }
       },
       "imagemagick": {
-        "version": "7.0.10-12",
+        "version": "7.0.10-13",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-12.catalina.bottle.tar.gz",
-              "sha256": "99d6dfe5fe7fced1abe6b80840fba23389551f3e386266326d481fc7acb75f11"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-13.catalina.bottle.tar.gz",
+              "sha256": "b10e8afca599ac07fecb3ff139d31937230a24461aed96df06da092cdf32e792"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-12.mojave.bottle.tar.gz",
-              "sha256": "cc974461ec8b0e89fba44bdc9ddab914e63d3547305c34ffa6cb82f9bec028bd"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-13.mojave.bottle.tar.gz",
+              "sha256": "a2285a4ebf17b064722af82aa7563a26806c799a436454e87bd32f7156a11aba"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-12.high_sierra.bottle.tar.gz",
-              "sha256": "4d97d184b56b76c76c4db6fd24acfba72176deba76c307cf1358376da6e0a65f"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.10-13.high_sierra.bottle.tar.gz",
+              "sha256": "ee94f9ed87751d73f9f9d58528ae22e13fb53a22adfe432fa65a3bfddff140ad"
             }
           }
         }
@@ -1589,22 +1589,22 @@
         }
       },
       "redis": {
-        "version": "6.0.1",
+        "version": "6.0.3",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.1.catalina.bottle.tar.gz",
-              "sha256": "75862c2ab5ea9f0e558e677d8c099c62f087b80f6e207814517938ce55abb310"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.3.catalina.bottle.tar.gz",
+              "sha256": "697a7d23ed18368d613ed1ee98e3acff2ee25bf0a467fea7eba2bba2bf318358"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.1.mojave.bottle.tar.gz",
-              "sha256": "8ed824ce30bde04609bdb15b4cecf73210b240675b3ca9cf59d35a77fb122eed"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.3.mojave.bottle.tar.gz",
+              "sha256": "c73516ff4a9049dc500901fc6288ddbc8da493fc44a04eebcce6d38aafeae753"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.1.high_sierra.bottle.tar.gz",
-              "sha256": "dc0610e9b6d8725b0933ef24643ea8322d34aa9a8617976b54c93b6dfd776ab6"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.3.high_sierra.bottle.tar.gz",
+              "sha256": "fd65764b4e0949911693d4004deae63e8bfe6831cf3f57c9defea2e47f98bbfc"
             }
           }
         }
@@ -2326,9 +2326,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.16-69-g9fcaa46",
+        "HOMEBREW_VERSION": "2.2.16-81-g95a8217",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "b267a1dbd6bfbe9b6a03e14043ee550b4f0d1f03",
+        "Homebrew/homebrew-core": "3926ce8e8713e6bec1c3e7dc1fcf651adb881d72",
         "CLT": "11.4.1.0.1.1586360307",
         "Xcode": "11.4.1",
         "macOS": "10.15.4"
