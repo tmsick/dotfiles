@@ -23,3 +23,15 @@ brew bundle dump --all --file=- | ./format-brewfile.py > Brewfile
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
+
+## Vim
+
+`.vimrc` in this repo uses [vim-plug](https://github.com/junegunn/vim-plug) as the plugin manager. Install it to use vim comfortably.
+
+## JetBrains IDE
+
+It is recommended to symlink `~/.vimrc` to `~/.ideavimrc` when you use IdeaVim on JetBrains IDEs.
+
+```bash
+ln -s ~/.vimrc ~/.ideavimrc
+```
