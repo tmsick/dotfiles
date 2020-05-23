@@ -74,14 +74,6 @@ noremap <c-j> <c-w><c-j>
 noremap <c-k> <c-w><c-k>
 noremap <c-l> <c-w><c-l>
 
-" Immediately add a closing quote or bracket in insert mode
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
-inoremap ` ``<esc>i
-inoremap ( ()<esc>i
-inoremap { {}<esc>i
-inoremap [ []<esc>i
-
 " Remove trailing whitespace automatically
 autocmd BufWritePre * %s/\s\+$//e
 
