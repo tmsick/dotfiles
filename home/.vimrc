@@ -1,14 +1,22 @@
 " Manage plugins with vim-plug
 call plug#begin()
-Plug 'airblade/vim-gitgutter'
+
+" Language support
+Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
+
+" Utilities
+Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'tomasiser/vim-code-dark'
 Plug 'vim-airline/vim-airline'
+
+" Theme
+Plug 'tomasiser/vim-code-dark'
+
 call plug#end()
 
 colorscheme codedark               " Change the color scheme
