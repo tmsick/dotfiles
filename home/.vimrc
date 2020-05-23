@@ -1,50 +1,101 @@
-set fenc=utf-8
+" Manage plugins with vim-plug
+call plug#begin()
+Plug 'airblade/vim-gitgutter'
+Plug 'dag/vim-fish'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'mbbill/undotree'
+Plug 'preservim/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tomasiser/vim-code-dark'
+Plug 'vim-airline/vim-airline'
+call plug#end()
 
-" Detect filetype from filename
-" Enable indent and plugin for each filetype
-" (http://vim-jp.org/vimdoc-ja/filetype.html)
-filetype indent plugin on
+colorscheme codedark               " Change the color scheme
+syntax on                          " Enable syntax highlighting
+filetype plugin indent on          " Enable file type based indentation
 
-" Show darkgray line number
-set number
-highlight LineNr ctermfg=darkgray
+" General text editing
+set backspace=indent,eol,start     " Fix backspace behavior on most terminals
+set clipboard=unnamed,unnamedplus  " Copy into system (*, +) register
+set colorcolumn=80                 " Draw vertical line at the column <n>
+set cursorline                     " Highlight the line where the cursor is in
+set laststatus=2                   " Always display the status line
+set relativenumber                 " Show relative numbers based on the line the cursor is in
+set scrolloff=5                    " Show at least <n> lines above and below the cursor, except the beginning or the end of a file
+set showcmd                        " Show last command in the status line
+set showmatch                      " Highlight matching parenthesis, bracket, or brace
+set wildmenu                       " Enable enhanced tab autocomplete
+set wildmode=list:longest,full     " Complete till longest string, then open the wildmenu
 
-" Make no swap files
-set noswapfile
+" Search and matching
+set hlsearch                       " Highlight matchings
+set ignorecase                     " Do case-insensitive search
+set incsearch                      " Search incrementally
+set nowrapscan                     " Do not go back to the top when searching
+set smartcase                      " When the search text contains uppercase characters, do case-sensitive search
 
-" Show cursor's current row and col
-set ruler
+" Indentation
+set autoindent                     " Respect indentation when starting a new line
+set expandtab                      " Use soft tabs
+set shiftwidth=4                   " Number of spaces to use for autoindent
+set tabstop=4                      " Number of spaces a tab is counted for
 
-" Show currently inputting command
-set showcmd
+" Folding
+set foldmethod=indent              " Fold code based on indentation
+" Keep every fold open when startup
+autocmd BufRead * normal zR
 
-" Enable syntax highlight
-syntax on
+" Make some whitespace characters visible
+set list
+set listchars=tab:\\_,trail:_
 
-" Show corresponding parenthese(bracket, brace) when closing them
-set showmatch
+" Swap file
+set swapfile
+if !isdirectory(expand("$HOME/.vim/swap"))
+    call mkdir(expand("$HOME/.vim/swap"), "p")
+endif
+set directory=$HOME/.vim/swap//
 
-" Use system native clipboard
-set clipboard+=unnamed
+" Set up persistent undo across all files
+set undofile
+if !isdirectory(expand("$HOME/.vim/undo"))
+    call mkdir(expand("$HOME/.vim/undo"), "p")
+endif
+set undodir=$HOME/.vim/undo
 
-" Use 2 spaces instead of hard tab
-set expandtab
-set tabstop=2
+" Spell checking
+set spell
+set spelllang=en
 
-" Ignore case on searching if search string consists only of lowercase letters
-set smartcase
+" Fast split navigation with <Ctrl> + hjkl
+noremap <c-h> <c-w><c-h>
+noremap <c-j> <c-w><c-j>
+noremap <c-k> <c-w><c-k>
+noremap <c-l> <c-w><c-l>
 
-" Enable auto indent
-set autoindent
+" Immediately add a closing quote or bracket in insert mode
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
+inoremap ` ``<esc>i
+inoremap ( ()<esc>i
+inoremap { {}<esc>i
+inoremap [ []<esc>i
 
-" Enable smart indent
-set smartindent
+" Remove trailing whitespace automatically
+autocmd BufWritePre * %s/\s\+$//e
 
-" Set auto-indent as 2 spaces
-set shiftwidth=2
+let mapleader = ','  " Map the leader key to a comma
 
-" Go back to the top of the file if get to the bottom when searching
-set wrapscan
+" NERD Commenter
+let g:NERDSpaceDelims = 1  " Add a space after a comment delimiter
 
-" Enable incremental search
-set incsearch
+" fzf
+set rtp+=/usr/local/opt/fzf
+noremap <leader>f :Files<cr>
+
+" NERDTree
+noremap <leader>n :NERDTreeToggle<cr>
+
+" Undotree
+noremap <leader>u :UndotreeToggle<cr>
