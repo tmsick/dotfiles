@@ -13,9 +13,15 @@ set -gx PIPENV_VENV_IN_PROJECT 1
 
 set -l paths_candidates \
     # Go
-    "$GOPATH/bin" "/usr/local/go/bin" \
+    $GOPATH/bin \
+    "/usr/local/go/bin" \
+    # fzf
+    "/usr/local/opt/fzf/bin" \
     # Miscellaneous
-    "$HOME/bin" "$HOME/.local/bin" "/usr/local/bin" "/usr/local/sbin"
+    "$HOME/bin" \
+    "$HOME/.local/bin" \
+    "/usr/local/bin" \
+    "/usr/local/sbin"
 for p in $paths_candidates
     if test -d $p
         set -g fish_user_paths $fish_user_paths $p
