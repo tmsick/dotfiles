@@ -101,7 +101,8 @@ autocmd BufWritePre * %s/\s\+$//e
 let mapleader = ','  " Map the leader key to a comma
 
 " NERD Commenter
-let g:NERDSpaceDelims = 1  " Add a space after a comment delimiter
+let g:NERDDefaultAlign = 'start'  " Align comment delimiter at the beginning of lines
+let g:NERDSpaceDelims = 1         " Add a space after a comment delimiter
 
 " fzf
 set runtimepath+=/usr/local/opt/fzf
