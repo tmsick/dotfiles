@@ -18,7 +18,7 @@ set -l paths_candidates \
     # fzf
     "/usr/local/opt/fzf/bin" \
     # Miscellaneous
-    "$HOME/bin" \
+    "$DOTFILES_HOME/bin" \
     "$HOME/.local/bin" \
     "/usr/local/bin" \
     "/usr/local/sbin"
