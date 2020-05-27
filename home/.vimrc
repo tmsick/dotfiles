@@ -38,16 +38,17 @@ filetype plugin indent on          " Enable file type based indentation
 " General text editing
 set backspace=indent,eol,start     " Fix backspace behavior on most terminals
 set clipboard=unnamed,unnamedplus  " Copy into system (*, +) register
-set colorcolumn=80                 " Draw vertical line at the column <n>
+set colorcolumn=80,100,120         " Draw vertical line at the column <n>
 set cursorline                     " Highlight the line where the cursor is in
 set laststatus=2                   " Always display the status line
 set relativenumber                 " Show relative numbers based on the line the cursor is in
 set scrolloff=5                    " Show at least <n> lines above and below the cursor, except the beginning or the end of a file
 set showcmd                        " Show last command in the status line
 set showmatch                      " Highlight matching parenthesis, bracket, or brace
+set signcolumn=yes                 " Always show sign column
+set termguicolors                  " Use true color
 set wildmenu                       " Enable enhanced tab autocomplete
 set wildmode=list:longest,full     " Complete till longest string, then open the wildmenu
-set signcolumn=yes
 
 " Search and matching
 set hlsearch                       " Highlight matchings
