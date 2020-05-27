@@ -1,28 +1,28 @@
 [alias]
-    br = branch
-    cm = commit
-    co = checkout
-    st = status
+br = branch
+cm = commit
+co = checkout
+st = status
 
 [color]
-    ui = auto
+ui = auto
 
 [commit]
-    gpgsign = true
+gpgsign = true
 
 [core]
-    excludesfile = ~/.gitignore_global
+excludesfile = ~/.gitignore_global
 
 [filter "lfs"]
-    required = true
-    process = git-lfs filter-process
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-
-[user]
-    name = Tomoya Yoshioka
-    email = tomoya.y@icloud.com
-    signingkey = 29B6837670D094111FB1200C5E1B7273D8E42DB7
+required = true
+process = git-lfs filter-process
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
 
 [url "git@github.com:"]
-    InsteadOf = https://github.com/
+InsteadOf = https://github.com/
+
+[user]
+name = Tomoya Yoshioka
+email = tomoya.y@icloud.com
+signingkey = 29B6837670D094111FB1200C5E1B7273D8E42DB7
