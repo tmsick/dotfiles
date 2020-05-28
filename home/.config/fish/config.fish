@@ -6,9 +6,7 @@ set -gx HOMEBREW_CELLAR "/usr/local/Cellar"
 set -gx HOMEBREW_NO_ANALYTICS 1
 set -gx HOMEBREW_PREFIX "/usr/local"
 set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew"
-set -gx INFOPATH "/usr/local/share/info" $INFOPATH
 set -gx LANG "en_US.UTF-8"
-set -gx MANPATH "/usr/local/share/man" $MANPATH
 set -gx PIPENV_VENV_IN_PROJECT 1
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
