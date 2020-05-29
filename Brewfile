@@ -149,6 +149,7 @@ mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Paste", id: 967805235
 mas "Playgrounds", id: 1496833156
 mas "Slack", id: 803453959
 mas "Speedtest", id: 1153157709
