@@ -38,7 +38,7 @@ filetype plugin indent on          " Enable file type based indentation
 " General text editing
 set backspace=indent,eol,start     " Fix backspace behavior on most terminals
 set clipboard=unnamed,unnamedplus  " Copy into system (*, +) register
-set colorcolumn=80,100,120         " Draw vertical line at the column <n>
+set colorcolumn=80                 " Draw vertical line at the column <n>
 set cursorline                     " Highlight the line where the cursor is in
 set laststatus=2                   " Always display the status line
 set relativenumber                 " Show relative numbers based on the line the cursor is in
