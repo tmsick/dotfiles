@@ -30,6 +30,11 @@ end
 # GitHub's hub (https://github.com/github/hub)
 if which hub >/dev/null
     eval (hub alias -s)
+
+    # gitsh (https://github.com/thoughtbot/gitsh)
+    if which gitsh >/dev/null
+        alias gitsh "gitsh --git '/usr/bin/env hub'"
+    end
 end
 
 # Go to univ dir of current semester
