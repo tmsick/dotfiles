@@ -1,0 +1,26 @@
+#!/usr/bin/ruby
+
+keys = []
+values = []
+
+ARGF.each do |line|
+  line.chomp!
+
+  key = line.split.first
+  value = []
+
+  if keys.include? key
+    value = values.last
+  else
+    keys << key
+    values << value
+  end
+
+  value << line
+end
+
+values.each do |value|
+  value.sort.each do |line|
+    puts line
+  end
+end

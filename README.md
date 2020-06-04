@@ -18,8 +18,8 @@ brew bundle
 # to symlink dotfiles
 ./symlink.bash
 
-# to generate Brewfile based on your current system state (Python3 required)
-brew bundle dump --all --file=- | ./format-brewfile.py > Brewfile
+# to generate Brewfile based on the current system's state
+brew bundle dump --all --file=- | ./format-brewfile > Brewfile
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
