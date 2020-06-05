@@ -1,6 +1,6 @@
 # dotfiles
 
-Initialization suite for macOS and Linux
+Initialization suite for macOS
 
 ## Prerequisite
 
