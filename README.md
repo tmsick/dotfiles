@@ -9,17 +9,21 @@ Initialization suite for macOS
 ## Initialization
 
 ```bash
-git clone <this repo> <anywhere you like>
-cd <this repo>
+$ git clone <this repo> <anywhere you like>
+$ cd <this repo>
 
 # to install Homebrew/Cask formulae and Mac App Store apps based on Brewfile
-brew bundle
+$ brew bundle
 
 # to symlink dotfiles
-./symlink.bash
+#
+# if you are initializing a vanilla macOS, it is recommended that you install
+# brew dependencies before symlinking files, as many configs depend on apps
+# installed via brew
+$ ./symlink.bash
 
 # to generate Brewfile based on the current system's state
-brew bundle dump --all --file=- | ./format-brewfile > Brewfile
+$ brew bundle dump --all --file=- | ./format-brewfile > Brewfile
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
@@ -39,7 +43,7 @@ Set up appropriate TERMINFO on `~/.terminfo` referring:
 The below code might work well but use it with caution.
 
 ```bash
-mkdir -p ~/.terminfo &&
+$ mkdir -p ~/.terminfo &&
   cd ~/.terminfo &&
   curl -O https://invisible-island.net/datafiles/current/terminfo.src.gz &&
   gzip -d terminfo.src.gz &&
@@ -52,5 +56,5 @@ mkdir -p ~/.terminfo &&
 It is recommended to symlink `~/.vimrc` to `~/.ideavimrc` when you use IdeaVim on JetBrains IDEs.
 
 ```bash
-ln -s ~/.vimrc ~/.ideavimrc
+$ ln -s ~/.vimrc ~/.ideavimrc
 ```
