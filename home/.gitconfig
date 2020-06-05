@@ -1,21 +1,11 @@
 # vim: set noexpandtab:
 
 [alias]
-	ad  = add
-	br  = branch
-	cl  = clean
-	cm  = commit
-	co  = checkout
-	df  = diff
-	ds  = diff --staged
-	lg  = log --oneline --graph
-	mg  = merge
-	pl  = pull
-	ps  = push
-	rb  = rebase
-	rmc = rm --cached
-	rs  = reset
-	st  = status --short
+	br = branch
+	cm = commit
+	co = checkout
+	lg = log --oneline
+	st = status -s
 
 [color]
 	ui = auto
@@ -26,10 +16,14 @@
 [core]
 	excludesfile = ~/.gitignore_global
 
+[gitsh]
+	defaultCommand = status -s
+	prompt         = "(gitsh) %D %c%B%#%w"
+
 [url "git@github.com:"]
 	InsteadOf = https://github.com/
 
 [user]
 	email      = tomoya.y@icloud.com
-	name       = "Tomoya Yoshioka"
+	name       = Tomoya Yoshioka
 	signingkey = 29B6837670D094111FB1200C5E1B7273D8E42DB7
