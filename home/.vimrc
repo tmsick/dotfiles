@@ -22,13 +22,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" Language Server
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/vim-lsp'
-
 call plug#end()
 
 syntax on                          " Enable syntax highlighting
@@ -121,9 +114,6 @@ noremap <leader>n :NERDTreeToggle<cr>
 
 " Undotree
 noremap <leader>u :UndotreeToggle<cr>
-
-" vim-lsp
-noremap <leader>b :LspDefinition<cr>
 
 " vim-gitgutter
 highlight GitGutterAdd    guifg=#009900 ctermfg=2
