@@ -31,7 +31,6 @@ Plug 'prabirshrestha/vim-lsp'
 
 call plug#end()
 
-colorscheme dracula                " Change the color scheme
 syntax on                          " Enable syntax highlighting
 filetype plugin indent on          " Enable file type based indentation
 
@@ -46,9 +45,17 @@ set scrolloff=5                    " Show at least <n> lines above and below the
 set showcmd                        " Show last command in the status line
 set showmatch                      " Highlight matching parenthesis, bracket, or brace
 set signcolumn=yes                 " Always show sign column
-set termguicolors                  " Use true color
 set wildmenu                       " Enable enhanced tab autocomplete
 set wildmode=list:longest,full     " Complete till longest string, then open the wildmenu
+
+" Color
+" ref: https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
+" ref: https://gist.github.com/iawaknahc/9a10c5610e14bc13c6a29547c5f5b987
+" ref: https://github.com/vim/vim/issues/993
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors                  " Use true color
+colorscheme dracula                " Change the color scheme
 
 " Search and matching
 set hlsearch                       " Highlight matchings
