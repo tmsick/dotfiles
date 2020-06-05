@@ -14,6 +14,8 @@ set -l paths_candidates \
     # Go
     $GOPATH/bin \
     "/usr/local/go/bin" \
+    # Ruby
+    "/usr/local/opt/ruby/bin" \
     # fzf
     "/usr/local/opt/fzf/bin" \
     # Miscellaneous
@@ -54,20 +56,4 @@ end
 # Starship (https://starship.rs)
 if which starship >/dev/null
     starship init fish | source
-end
-
-# anyenv (https://github.com/anyenv/anyenv)
-if which anyenv >/dev/null
-    status --is-interactive; and source (anyenv init -|psub)
-end
-
-# pyenv bin have to be removed from $PATH when running brew
-# ref: https://github.com/pyenv/pyenv/issues/106
-if which brew >/dev/null && which pyenv >/dev/null
-    function brew
-        begin
-            set -lx PATH (printenv PATH | sed s!(pyenv root)/shims:!!)
-            command brew $argv
-        end
-    end
 end

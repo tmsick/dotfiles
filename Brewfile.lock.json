@@ -5,22 +5,22 @@
         "revision": "ad8497aa91d1ffe3206609f824153fe109f9a37b"
       },
       "heroku/brew": {
-        "revision": "ac20372d572c8bfcf64e2530b9d3bb2e62acd501"
+        "revision": "2fbdd513b72119e373505ef0c9047a8090cae7d6"
       },
       "homebrew/bundle": {
-        "revision": "28b0663f70b4956dc9cd10798f636eaaa3750fa3"
+        "revision": "8baa3666ecdcdd74a85047058895c13cc7139f6c"
       },
       "homebrew/cask": {
-        "revision": "9e916f289c2e7aa82a4f78e0be248ac36c8ef0d8"
+        "revision": "012798c187bb8d39ad3aa1eba9c5d84e4f816c3e"
       },
       "homebrew/cask-fonts": {
-        "revision": "66f4fa5bf8ecb33f5c8221484fe5ff7854bc91e5"
+        "revision": "f4b55455cdd8d1d2ea9f56edee74aff89c2b6a0d"
       },
       "homebrew/core": {
-        "revision": "d043c3bc993728c0c2f05ebb13f8515640aeef26"
+        "revision": "300c16a0ee7e2ceaf7c7a05281397ff5aff2b2a9"
       },
       "homebrew/services": {
-        "revision": "54b01cad7e354402e12e0ddd58971eba1d94e5e7"
+        "revision": "d2df55c36f67d10cd78bc58c84ac03e0c574d437"
       },
       "itchyny/tap": {
         "revision": "756ab7ee4af85495d147be7132619f75995cb187"
@@ -2202,22 +2202,22 @@
         }
       },
       "deno": {
-        "version": "1.0.4",
+        "version": "1.0.5",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/deno-1.0.4.catalina.bottle.tar.gz",
-              "sha256": "803606b5dad648da0d9aee2c9b3c5b262bb59e732af4c50f95b46a1a65d16a64"
+              "url": "https://homebrew.bintray.com/bottles/deno-1.0.5.catalina.bottle.tar.gz",
+              "sha256": "1b20fe4c0a21b395d65a51277103139667113adfd960bbb2491755119f769bd9"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/deno-1.0.4.mojave.bottle.tar.gz",
-              "sha256": "905f05864c98ac6b3bf18918f6b59dfaf2714c35d201177e5fe6308976555824"
+              "url": "https://homebrew.bintray.com/bottles/deno-1.0.5.mojave.bottle.tar.gz",
+              "sha256": "8165e85cbe6e9f508413999aee3272c32f0c3a1ab758303830044620157ec57a"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/deno-1.0.4.high_sierra.bottle.tar.gz",
-              "sha256": "49feaa443f8e3f44b6112b303a6316e66005935cd9ebb283e2a2c2439bcd4211"
+              "url": "https://homebrew.bintray.com/bottles/deno-1.0.5.high_sierra.bottle.tar.gz",
+              "sha256": "60c7d9ae23303ff31f97d2b2e450f71753fc6393120a83d26721eef29e5e1431"
             }
           }
         }
@@ -2555,9 +2555,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.3.0-37-g49324ad",
+        "HOMEBREW_VERSION": "2.3.0-53-g13caf6e",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "d043c3bc993728c0c2f05ebb13f8515640aeef26",
+        "Homebrew/homebrew-core": "300c16a0ee7e2ceaf7c7a05281397ff5aff2b2a9",
         "CLT": "1103.0.32.62",
         "Xcode": "11.5",
         "macOS": "10.15.5"
