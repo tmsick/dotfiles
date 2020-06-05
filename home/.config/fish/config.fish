@@ -10,7 +10,7 @@ set -gx LANG "en_US.UTF-8"
 set -gx PIPENV_VENV_IN_PROJECT 1
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
-set -l paths_candidates \
+set -g fish_user_paths \
     # Go
     $GOPATH/bin \
     "/usr/local/go/bin" \
@@ -23,37 +23,11 @@ set -l paths_candidates \
     "$HOME/.local/bin" \
     "/usr/local/bin" \
     "/usr/local/sbin"
-for p in $paths_candidates
-    if test -d $p
-        set -g fish_user_paths $fish_user_paths $p
-    end
-end
 
-# GitHub's hub (https://github.com/github/hub)
-if which hub >/dev/null
-    eval (hub alias -s)
+alias gitsh "gitsh --git '/usr/bin/env hub'"
+alias go2univ "cd (univdir)"
+alias gpg gpg2
+alias hub git
+alias tree "tree -C"
 
-    # gitsh (https://github.com/thoughtbot/gitsh)
-    if which gitsh >/dev/null
-        alias gitsh "gitsh --git '/usr/bin/env hub'"
-    end
-end
-
-# Go to univ dir of current semester
-if which univdir >/dev/null
-    alias go2univ "cd (univdir)"
-end
-
-# MacGPG included within GPGTools (https://gpgtools.org)
-if which gpg2 >/dev/null
-    alias gpg gpg2
-end
-
-if which tree >/dev/null
-    alias tree "tree -C"
-end
-
-# Starship (https://starship.rs)
-if which starship >/dev/null
-    starship init fish | source
-end
+starship init fish | source
