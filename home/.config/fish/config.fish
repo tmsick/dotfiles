@@ -24,10 +24,10 @@ set -g fish_user_paths \
     "/usr/local/bin" \
     "/usr/local/sbin"
 
+alias git hub
 alias gitsh "gitsh --git '/usr/bin/env hub'"
 alias go2univ "cd (univdir)"
 alias gpg gpg2
-alias hub git
 alias tree "tree -C"
 
 starship init fish | source
