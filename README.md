@@ -51,6 +51,14 @@ $ mkdir -p ~/.terminfo &&
   rm terminfo.src*
 ```
 
+## iStats
+
+It is recommended to install [iStats](https://github.com/Chris911/iStats) to `/usr/local/bin`.
+
+```bash
+$ gem install iStats -n /usr/local/bin
+```
+
 ## JetBrains IDE
 
 It is recommended to symlink `~/.vimrc` to `~/.ideavimrc` when you use IdeaVim on JetBrains IDEs.
