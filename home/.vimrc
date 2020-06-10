@@ -7,13 +7,11 @@ Plug 'dag/vim-fish'
 
 " Utilities
 Plug 'airblade/vim-gitgutter'
-Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdcommenter'
-Plug 'scrooloose/nerdtree'
 
 " vim-airline
 Plug 'vim-airline/vim-airline'
@@ -108,9 +106,6 @@ let g:NERDSpaceDelims = 1         " Add a space after a comment delimiter
 " fzf
 set runtimepath+=/usr/local/opt/fzf
 noremap <leader>f :Files<cr>
-
-" NERDTree
-noremap <leader>n :NERDTreeToggle<cr>
 
 " Undotree
 noremap <leader>u :UndotreeToggle<cr>
