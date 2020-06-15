@@ -22,7 +22,8 @@ set -g fish_user_paths \
     "$DOTFILES_HOME/bin" \
     "$HOME/.local/bin" \
     "/usr/local/bin" \
-    "/usr/local/sbin"
+    "/usr/local/sbin" \
+    $fish_user_paths
 
 alias git hub
 alias gitsh "gitsh --git '/usr/bin/env hub'"
