@@ -25,6 +25,10 @@ set -g fish_user_paths \
     "/usr/local/sbin" \
     $fish_user_paths
 
+set -g fish_function_path \
+    "$DOTFILES_HOME/fish/functions" \
+    $fish_function_path
+
 alias git hub
 alias gitsh "gitsh --git '/usr/bin/env hub'"
 alias go2univ "cd (univdir)"
