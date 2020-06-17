@@ -11,7 +11,7 @@
         "revision": "256f6724887c7c8e2cb793b94b13a44d03b69c79"
       },
       "homebrew/cask": {
-        "revision": "4e35fe96337d50692339e1f32045531c148a5882"
+        "revision": "73c5959a59149a2a049a01edc7b63718289b87b2"
       },
       "homebrew/cask-fonts": {
         "revision": "0726e43401a9d67d40b74ece50f3b5e982795f01"
@@ -2472,6 +2472,12 @@
         "version": "latest",
         "options": {
           "full_name": "spotify"
+        }
+      },
+      "0xed": {
+        "version": "1.1.4",
+        "options": {
+          "full_name": "0xed"
         }
       }
     },
