@@ -18,6 +18,8 @@ set -g fish_user_paths \
     "/usr/local/opt/ruby/bin" \
     # fzf
     "/usr/local/opt/fzf/bin" \
+    # MacGPG
+    "/usr/local/MacGPG2/bin" \
     # Miscellaneous
     "$DOTFILES_HOME/bin" \
     "$HOME/.local/bin" \
@@ -32,7 +34,6 @@ set -g fish_function_path \
 alias git hub
 alias gitsh "gitsh --git '/usr/bin/env hub'"
 alias go2univ "cd (univdir)"
-alias gpg gpg2
 alias tree "tree -C"
 
 starship init fish | source
