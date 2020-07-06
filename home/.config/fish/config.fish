@@ -8,6 +8,7 @@ set -gx HOMEBREW_PREFIX "/usr/local"
 set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew"
 set -gx LANG "en_US.UTF-8"
 set -gx PIPENV_VENV_IN_PROJECT 1
+set -gx PIPENV_VERBOSITY -1
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 set -g fish_user_paths \
