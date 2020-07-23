@@ -77,13 +77,6 @@ if !isdirectory(expand("$HOME/.vim/swap"))
 endif
 set directory=$HOME/.vim/swap//
 
-" Set up persistent undo across all files
-set undofile
-if !isdirectory(expand("$HOME/.vim/undo"))
-    call mkdir(expand("$HOME/.vim/undo"), "p")
-endif
-set undodir=$HOME/.vim/undo
-
 " Spell checking
 set spell
 set spelllang=en_us
