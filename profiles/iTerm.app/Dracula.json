@@ -6,7 +6,7 @@
     "Blue Component" : 1,
     "Red Component" : 1
   },
-  "Rows" : 50,
+  "Rows" : 40,
   "Ansi 11 Color" : {
     "Green Component" : 0.98039215686274506,
     "Blue Component" : 0.5490196078431373,
@@ -363,7 +363,7 @@
     "Blue Component" : 0.77647058823529413,
     "Red Component" : 1
   },
-  "Columns" : 160,
+  "Columns" : 120,
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
   "Custom Directory" : "Advanced",
