@@ -26,9 +26,6 @@
 	defaultCommand = status -s
 	prompt         = "(gitsh) %D %c%B%#%w"
 
-[url "git@github.com:"]
-	InsteadOf = https://github.com/
-
 [user]
 	email      = tomoya.y@icloud.com
 	name       = Tomoya Yoshioka
