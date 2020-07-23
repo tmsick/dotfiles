@@ -26,7 +26,7 @@ $ ./symlink.bash
 $ brew bundle dump --all --file=- | ./format-brewfile > Brewfile
 ```
 
-**DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warnings.
+**DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warning.
 
 ## Vim
 
@@ -34,7 +34,7 @@ $ brew bundle dump --all --file=- | ./format-brewfile > Brewfile
 
 ## Vim on tmux
 
-Set up appropriate TERMINFO on `~/.terminfo` referring:
+Set up appropriate TERMINFO in `~/.terminfo/` referring:
 
 - https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
 - https://gist.github.com/iawaknahc/9a10c5610e14bc13c6a29547c5f5b987
