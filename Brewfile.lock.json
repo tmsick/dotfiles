@@ -8,19 +8,19 @@
         "revision": "73895eaeed3fb0b3cd90d3dfddb8cfe4178084b1"
       },
       "homebrew/bundle": {
-        "revision": "b7a2b79e71ba9487adf72203dc8c683f9890dddc"
+        "revision": "538ffcbd24561213480e6f32a9ec087c91b25862"
       },
       "homebrew/cask": {
-        "revision": "4351f5f4175f559d2176d76e733f15dcb3bb4bcf"
+        "revision": "ccae745af3603b49ace426ec49e088f5c9390a74"
       },
       "homebrew/cask-fonts": {
-        "revision": "c248bf634ce620b7704808ce7a5b57b14a9fe4d5"
+        "revision": "45270c52e8b346c7bc26209c15f2d65d59b7317a"
       },
       "homebrew/core": {
-        "revision": "483623629723225ca05533156860a6865fb2d8b5"
+        "revision": "beb15f225707b878f1e670e4f115301b20ef4078"
       },
       "homebrew/services": {
-        "revision": "240e418ee2448548557ce3ecc43fb4aa28fbbe81"
+        "revision": "60367a866d3ec0067773a112d8de82f966c0ada0"
       },
       "itchyny/tap": {
         "revision": "756ab7ee4af85495d147be7132619f75995cb187"
@@ -35,7 +35,7 @@
         "revision": "54a65f770be6f19540a89dd3bc698b33a75f3386"
       },
       "homebrew/cask-versions": {
-        "revision": "849eccfef6eab08cd2d066e7c3f03939a231420c"
+        "revision": "7c1191a6e8085e28040aa16c73db8bfdf024e588"
       }
     },
     "brew": {
@@ -810,22 +810,22 @@
         }
       },
       "libomp": {
-        "version": "10.0.0",
+        "version": "10.0.1",
         "bottle": {
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/libomp-10.0.0.catalina.bottle.tar.gz",
-              "sha256": "0ea757dbea7bf12141ef1d209d2f3b59919baa0caa0482d7ea6ae9c2dfed2382"
+              "url": "https://homebrew.bintray.com/bottles/libomp-10.0.1.catalina.bottle.tar.gz",
+              "sha256": "8545af588b2b210708b56669365cea97eb80941fe455e69f54ad85f3bb5bc18c"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/libomp-10.0.0.mojave.bottle.tar.gz",
-              "sha256": "aecd306b605763dbd06c73b5d470c924643b48c051f06d8a4e70be705052c8ee"
+              "url": "https://homebrew.bintray.com/bottles/libomp-10.0.1.mojave.bottle.tar.gz",
+              "sha256": "d410b199fed539dbd15de8f8fe98efc47067beca8d4271c0874ddc404567f65c"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/libomp-10.0.0.high_sierra.bottle.tar.gz",
-              "sha256": "ddfbe1ab7c6dafc45c787d6b4ae19fffb6465bbc0aef007b728cb98ba0d6d2b1"
+              "url": "https://homebrew.bintray.com/bottles/libomp-10.0.1.high_sierra.bottle.tar.gz",
+              "sha256": "549d7af3d026fa160c96adfbda70b2ce4cd5f21710041d78bce4c1946b9bc2ec"
             }
           }
         }
@@ -1897,22 +1897,22 @@
       },
       "mongodb/brew/mongodb-community": null,
       "starship": {
-        "version": "0.44.0",
+        "version": "0.44.0_1",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/starship-0.44.0.catalina.bottle.tar.gz",
-              "sha256": "b421825645ddabfdb25559d2db0293fff3823c00d42e56343fd80a103ece3879"
+              "url": "https://homebrew.bintray.com/bottles/starship-0.44.0_1.catalina.bottle.tar.gz",
+              "sha256": "a2d50878f224a8af2e0ab1e990d90166f7b4a02a82ebedc9acaa0a0443e04e4a"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/starship-0.44.0.mojave.bottle.tar.gz",
-              "sha256": "ca22a2ed29177cebaeae173fb783c4c66448582f1ab8becc847276c1c3b9eb6d"
+              "url": "https://homebrew.bintray.com/bottles/starship-0.44.0_1.mojave.bottle.tar.gz",
+              "sha256": "ff2ec8fa902206c5514b384db12bc36558987d55b335aeb3fddeafae416b5168"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/starship-0.44.0.high_sierra.bottle.tar.gz",
-              "sha256": "76f716ed29e6fbb85a5342ff36e6d0af4d14d35a7fec513a72e2b8d57fe30465"
+              "url": "https://homebrew.bintray.com/bottles/starship-0.44.0_1.high_sierra.bottle.tar.gz",
+              "sha256": "7955bc1b29268a4975f23d1312216cf71f50a9e05a82360cfb12a199831496d9"
             }
           }
         }
@@ -2537,6 +2537,12 @@
         "options": {
           "full_name": "visual-studio-code-insiders"
         }
+      },
+      "goland": {
+        "version": "2020.2.1,202.6397.124",
+        "options": {
+          "full_name": "goland"
+        }
       }
     },
     "mas": {
@@ -2598,7 +2604,7 @@
       },
       "Slack": {
         "id": "803453959",
-        "version": "4.7.0"
+        "version": "4.8.0"
       },
       "Speedtest": {
         "id": "1153157709",
@@ -2606,7 +2612,7 @@
       },
       "Twitter": {
         "id": "1482454543",
-        "version": "8.29"
+        "version": "8.30"
       },
       "Xcode": {
         "id": "497799835",
@@ -2635,7 +2641,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.4.9",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "483623629723225ca05533156860a6865fb2d8b5",
+        "Homebrew/homebrew-core": "beb15f225707b878f1e670e4f115301b20ef4078",
         "CLT": "1103.0.32.62",
         "Xcode": "11.6",
         "macOS": "10.15.6"
