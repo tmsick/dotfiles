@@ -8,19 +8,19 @@
         "revision": "73895eaeed3fb0b3cd90d3dfddb8cfe4178084b1"
       },
       "homebrew/bundle": {
-        "revision": "3e9ebe1c94b361c05178cb69af3de0802272125f"
+        "revision": "2e75b89fde37b586ddc8ed1c87df21533a50a50e"
       },
       "homebrew/cask": {
-        "revision": "3c3ee478ee9195724d33a4e0d6bfa01d13f3edd6"
+        "revision": "9f7b1bdaa217fd02e5e21d51f833af1ac86c07e0"
       },
       "homebrew/cask-fonts": {
         "revision": "7b8e417102f22f2ec8adab20ad8c92d9c1e66ecf"
       },
       "homebrew/core": {
-        "revision": "bbea9bfcf721026fe3f29d939482846f0c0ce057"
+        "revision": "e81b89ee1df2f4daada9890565119be0e09253a1"
       },
       "homebrew/services": {
-        "revision": "5794bf15f276cc1d0f0830556081bf6b2f8640dc"
+        "revision": "671e81160fbf81409bdbcf7b193f7ba273b41515"
       },
       "itchyny/tap": {
         "revision": "756ab7ee4af85495d147be7132619f75995cb187"
@@ -35,7 +35,7 @@
         "revision": "54a65f770be6f19540a89dd3bc698b33a75f3386"
       },
       "homebrew/cask-versions": {
-        "revision": "a8bcd262f917056f4a1f156843a867a5a19399c7"
+        "revision": "bba7695d0741567f0cb17f58251a06114249aa6f"
       }
     },
     "brew": {
@@ -2389,7 +2389,7 @@
         }
       },
       "microsoft-edge": {
-        "version": "81.0.416.64",
+        "version": "84.0.522.59",
         "options": {
           "full_name": "microsoft-edge"
         }
@@ -2543,6 +2543,12 @@
         "options": {
           "full_name": "goland"
         }
+      },
+      "microsoft-auto-update": {
+        "version": "4.26.20081000",
+        "options": {
+          "full_name": "microsoft-auto-update"
+        }
       }
     },
     "mas": {
@@ -2641,7 +2647,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.4.11",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "bbea9bfcf721026fe3f29d939482846f0c0ce057",
+        "Homebrew/homebrew-core": "e81b89ee1df2f4daada9890565119be0e09253a1",
         "CLT": "1103.0.32.62",
         "Xcode": "11.6",
         "macOS": "10.15.6"
