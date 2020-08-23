@@ -8,16 +8,16 @@
         "revision": "43de466d82a7ae152fa2f6fc3b0ae6598129ad38"
       },
       "homebrew/bundle": {
-        "revision": "9f44499b36fd4dca63d804ad49af6bff9d6c5588"
+        "revision": "f3e71a7f18132d734bd8e9167f1481fefe97acb0"
       },
       "homebrew/cask": {
-        "revision": "8ec49f5745f84313b2c91adc09f99698264c35ab"
+        "revision": "70c2bf3293cf42d3c8a048b05518c6ff496c3327"
       },
       "homebrew/cask-fonts": {
-        "revision": "7f708028ae41ec7051cdb4aafd27293b7fa9496b"
+        "revision": "815944ad70d5932b51c16ec58bd9e0648ce99e2f"
       },
       "homebrew/core": {
-        "revision": "a117e4fe1f2d4bc1d4ef49ab261493b654e3ec9a"
+        "revision": "81b050b975c7e3eb6b4822f4c1d57c5830f1cbeb"
       },
       "homebrew/services": {
         "revision": "a2c3e50e4d1ac0e5f948f7d7fe17281fe1d18f32"
@@ -35,7 +35,7 @@
         "revision": "54a65f770be6f19540a89dd3bc698b33a75f3386"
       },
       "homebrew/cask-versions": {
-        "revision": "b9980e5cbc2d85c765e01aa8fc52124fd2912f56"
+        "revision": "a0732a8b47f7717643669ef6a82722aed98cce43"
       }
     },
     "brew": {
@@ -2348,7 +2348,7 @@
     },
     "cask": {
       "authy": {
-        "version": "1.8.2",
+        "version": "1.7.1",
         "options": {
           "full_name": "authy"
         }
@@ -2366,19 +2366,19 @@
         }
       },
       "discord": {
-        "version": "0.0.257",
+        "version": "0.0.255",
         "options": {
           "full_name": "discord"
         }
       },
       "docker": {
-        "version": "2.3.0.3,45519",
+        "version": "2.1.0.1,37199",
         "options": {
           "full_name": "docker"
         }
       },
       "firefox": {
-        "version": "78.0.2",
+        "version": "68.0.1",
         "options": {
           "full_name": "firefox"
         }
@@ -2408,19 +2408,19 @@
         }
       },
       "github": {
-        "version": "2.5.3-f26bc4fa",
+        "version": "2.1.1-b60dc229",
         "options": {
           "full_name": "github"
         }
       },
       "google-chrome": {
-        "version": "84.0.4147.89",
+        "version": "83.0.4103.97",
         "options": {
           "full_name": "google-chrome"
         }
       },
       "gpg-suite-no-mail": {
-        "version": "2020.1",
+        "version": "2018.5",
         "options": {
           "full_name": "gpg-suite-no-mail"
         }
@@ -2432,7 +2432,7 @@
         }
       },
       "insomnia": {
-        "version": "2020.3.3",
+        "version": "7.1.1",
         "options": {
           "full_name": "insomnia"
         }
@@ -2450,13 +2450,13 @@
         }
       },
       "mactex-no-gui": {
-        "version": "2020.0407",
+        "version": "2019.0508.upgrading",
         "options": {
           "full_name": "mactex-no-gui"
         }
       },
       "microsoft-edge": {
-        "version": "84.0.522.59",
+        "version": "84.0.522.63",
         "options": {
           "full_name": "microsoft-edge"
         }
@@ -2468,19 +2468,19 @@
         }
       },
       "rubymine": {
-        "version": "2020.1.4,201.8743.13",
+        "version": "2020.1,201.6668.156",
         "options": {
           "full_name": "rubymine"
         }
       },
       "skype": {
-        "version": "8.62.0.85",
+        "version": "8.56.0.106",
         "options": {
           "full_name": "skype"
         }
       },
       "tor-browser": {
-        "version": "9.5.1",
+        "version": "8.5.4",
         "options": {
           "full_name": "tor-browser"
         }
@@ -2492,19 +2492,19 @@
         }
       },
       "virtualbox": {
-        "version": "6.1.12,139181",
+        "version": null,
         "options": {
           "full_name": "virtualbox"
         }
       },
       "visual-studio-code": {
-        "version": "1.47.2",
+        "version": "1.45.1",
         "options": {
           "full_name": "visual-studio-code"
         }
       },
       "zoomus": {
-        "version": "5.1.28648.0705",
+        "version": "4.6.19273.0402",
         "options": {
           "full_name": "zoomus"
         }
@@ -2522,19 +2522,19 @@
         }
       },
       "iterm2": {
-        "version": "3.3.12",
+        "version": "3.3.9",
         "options": {
           "full_name": "iterm2"
         }
       },
       "pycharm": {
-        "version": "2020.1.4,201.8743.11",
+        "version": "2020.1.1,201.7223.92",
         "options": {
           "full_name": "pycharm"
         }
       },
       "atom": {
-        "version": "1.49.0",
+        "version": "1.47.0",
         "options": {
           "full_name": "atom"
         }
@@ -2606,7 +2606,7 @@
         }
       },
       "goland": {
-        "version": "2020.2.1,202.6397.124",
+        "version": "2020.2.2,202.6948.9",
         "options": {
           "full_name": "goland"
         }
@@ -2712,9 +2712,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.13",
+        "HOMEBREW_VERSION": "2.4.13-65-g129fd33",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "a117e4fe1f2d4bc1d4ef49ab261493b654e3ec9a",
+        "Homebrew/homebrew-core": "81b050b975c7e3eb6b4822f4c1d57c5830f1cbeb",
         "CLT": "1103.0.32.62",
         "Xcode": "11.6",
         "macOS": "10.15.6"
