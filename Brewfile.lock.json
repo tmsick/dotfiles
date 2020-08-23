@@ -11,7 +11,7 @@
         "revision": "f3e71a7f18132d734bd8e9167f1481fefe97acb0"
       },
       "homebrew/cask": {
-        "revision": "98344879aff9b8423cb03ef540e3cfc6c49606ff"
+        "revision": "2f64602cbb1ad803e642a6c9ef67a8a453523d23"
       },
       "homebrew/cask-fonts": {
         "revision": "815944ad70d5932b51c16ec58bd9e0648ce99e2f"
@@ -35,7 +35,7 @@
         "revision": "54a65f770be6f19540a89dd3bc698b33a75f3386"
       },
       "homebrew/cask-versions": {
-        "revision": "a0732a8b47f7717643669ef6a82722aed98cce43"
+        "revision": "773f9035899f6e055060fa06b354e5a2740b5aa9"
       }
     },
     "brew": {
@@ -2362,6 +2362,27 @@
             "high_sierra": {
               "url": "https://homebrew.bintray.com/bottles/pyenv-1.2.20.high_sierra.bottle.tar.gz",
               "sha256": "608b5e27568abc7c326c0bb066cf6d188c829362dd0dff718a04a44e9082f82a"
+            }
+          }
+        }
+      },
+      "n": {
+        "version": "6.7.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/n-6.7.0.catalina.bottle.tar.gz",
+              "sha256": "dbd70d6eeb53d38588d27d22ee4e3b6f05129dc7f97bc0449f52113c0a12b1b4"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/n-6.7.0.mojave.bottle.tar.gz",
+              "sha256": "dbd70d6eeb53d38588d27d22ee4e3b6f05129dc7f97bc0449f52113c0a12b1b4"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/n-6.7.0.high_sierra.bottle.tar.gz",
+              "sha256": "dbd70d6eeb53d38588d27d22ee4e3b6f05129dc7f97bc0449f52113c0a12b1b4"
             }
           }
         }

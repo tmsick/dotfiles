@@ -7,13 +7,16 @@ set -gx HOMEBREW_NO_ANALYTICS 1
 set -gx HOMEBREW_PREFIX "/usr/local"
 set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew"
 set -gx LANG "en_US.UTF-8"
+set -gx N_PREFIX "$HOME/n"
 set -gx PIPENV_VENV_IN_PROJECT 1
 set -gx PIPENV_VERBOSITY -1
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 set -g fish_user_paths \
+    # tj/n
+    "$N_PREFIX/bin" \
     # Go
-    $GOPATH/bin \
+    "$GOPATH/bin" \
     "/usr/local/go/bin" \
     # fzf
     "/usr/local/opt/fzf/bin" \
