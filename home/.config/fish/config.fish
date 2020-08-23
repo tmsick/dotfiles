@@ -38,3 +38,18 @@ alias go2univ "cd (univdir)"
 alias tree "tree -C"
 
 starship init fish | source
+
+if which pyenv >/dev/null
+    status --is-interactive; and source (pyenv init -|psub)
+
+    # pyenv bin have to be removed from $PATH when running brew
+    # ref: https://github.com/pyenv/pyenv/issues/106
+    if which brew >/dev/null
+        function brew
+            begin
+                set -lx PATH (printenv PATH | sed s!(pyenv root)/shims:!!)
+                command brew $argv
+            end
+        end
+    end
+end
