@@ -53,3 +53,7 @@ if which pyenv >/dev/null
         end
     end
 end
+
+if which rbenv >/dev/null
+    status --is-interactive; and source (rbenv init -|psub)
+end

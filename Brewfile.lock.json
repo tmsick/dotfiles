@@ -17,7 +17,7 @@
         "revision": "815944ad70d5932b51c16ec58bd9e0648ce99e2f"
       },
       "homebrew/core": {
-        "revision": "829f856a00f25f42aad5ea07aeac1db87655e31c"
+        "revision": "67537dcb88edee9d87d4d36f06f11b95649d6c28"
       },
       "homebrew/services": {
         "revision": "a2c3e50e4d1ac0e5f948f7d7fe17281fe1d18f32"
@@ -2369,7 +2369,7 @@
     },
     "cask": {
       "authy": {
-        "version": "1.7.1",
+        "version": "1.8.2",
         "options": {
           "full_name": "authy"
         }
@@ -2387,19 +2387,19 @@
         }
       },
       "discord": {
-        "version": "0.0.255",
+        "version": "0.0.257",
         "options": {
           "full_name": "discord"
         }
       },
       "docker": {
-        "version": "2.1.0.1,37199",
+        "version": "2.3.0.3,45519",
         "options": {
           "full_name": "docker"
         }
       },
       "firefox": {
-        "version": "68.0.1",
+        "version": "78.0.2",
         "options": {
           "full_name": "firefox"
         }
@@ -2429,19 +2429,19 @@
         }
       },
       "github": {
-        "version": "2.1.1-b60dc229",
+        "version": "2.5.3-f26bc4fa",
         "options": {
           "full_name": "github"
         }
       },
       "google-chrome": {
-        "version": "83.0.4103.97",
+        "version": "84.0.4147.89",
         "options": {
           "full_name": "google-chrome"
         }
       },
       "gpg-suite-no-mail": {
-        "version": "2018.5",
+        "version": "2020.1",
         "options": {
           "full_name": "gpg-suite-no-mail"
         }
@@ -2453,7 +2453,7 @@
         }
       },
       "insomnia": {
-        "version": "7.1.1",
+        "version": "2020.3.3",
         "options": {
           "full_name": "insomnia"
         }
@@ -2471,13 +2471,13 @@
         }
       },
       "mactex-no-gui": {
-        "version": "2019.0508.upgrading",
+        "version": "2020.0407",
         "options": {
           "full_name": "mactex-no-gui"
         }
       },
       "microsoft-edge": {
-        "version": "84.0.522.63",
+        "version": "84.0.522.59",
         "options": {
           "full_name": "microsoft-edge"
         }
@@ -2489,19 +2489,19 @@
         }
       },
       "rubymine": {
-        "version": "2020.1,201.6668.156",
+        "version": "2020.1.4,201.8743.13",
         "options": {
           "full_name": "rubymine"
         }
       },
       "skype": {
-        "version": "8.56.0.106",
+        "version": "8.62.0.85",
         "options": {
           "full_name": "skype"
         }
       },
       "tor-browser": {
-        "version": "8.5.4",
+        "version": "9.5.1",
         "options": {
           "full_name": "tor-browser"
         }
@@ -2513,19 +2513,19 @@
         }
       },
       "virtualbox": {
-        "version": null,
+        "version": "6.1.12,139181",
         "options": {
           "full_name": "virtualbox"
         }
       },
       "visual-studio-code": {
-        "version": "1.45.1",
+        "version": "1.47.2",
         "options": {
           "full_name": "visual-studio-code"
         }
       },
       "zoomus": {
-        "version": "4.6.19273.0402",
+        "version": "5.1.28648.0705",
         "options": {
           "full_name": "zoomus"
         }
@@ -2543,19 +2543,19 @@
         }
       },
       "iterm2": {
-        "version": "3.3.9",
+        "version": "3.3.12",
         "options": {
           "full_name": "iterm2"
         }
       },
       "pycharm": {
-        "version": "2020.1.1,201.7223.92",
+        "version": "2020.1.4,201.8743.11",
         "options": {
           "full_name": "pycharm"
         }
       },
       "atom": {
-        "version": "1.47.0",
+        "version": "1.49.0",
         "options": {
           "full_name": "atom"
         }
@@ -2627,7 +2627,7 @@
         }
       },
       "goland": {
-        "version": "2020.2.2,202.6948.9",
+        "version": "2020.2.1,202.6397.124",
         "options": {
           "full_name": "goland"
         }
@@ -2733,9 +2733,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.13-65-g129fd33",
+        "HOMEBREW_VERSION": "2.4.13",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "829f856a00f25f42aad5ea07aeac1db87655e31c",
+        "Homebrew/homebrew-core": "67537dcb88edee9d87d4d36f06f11b95649d6c28",
         "CLT": "1103.0.32.62",
         "Xcode": "11.6",
         "macOS": "10.15.6"
