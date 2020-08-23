@@ -15,8 +15,6 @@ set -g fish_user_paths \
     # Go
     $GOPATH/bin \
     "/usr/local/go/bin" \
-    # Ruby
-    "/usr/local/opt/ruby/bin" \
     # fzf
     "/usr/local/opt/fzf/bin" \
     # MacGPG
