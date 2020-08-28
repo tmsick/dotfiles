@@ -149,6 +149,7 @@ cask "tor-browser"
 cask "vagrant"
 cask "virtualbox"
 cask "visual-studio-code"
+cask "wireshark"
 cask "zoomus"
 mas "1Password 7", id: 1333542190
 mas "Bear", id: 1091189122
