@@ -13,7 +13,7 @@ $ git clone <this repo> <anywhere you like>
 $ cd <this repo>
 
 # to install Homebrew/Cask formulae and Mac App Store apps based on Brewfile
-$ brew bundle
+$ brew bundle --all --no-lock
 
 # to symlink dotfiles
 #
