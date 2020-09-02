@@ -9,8 +9,8 @@ ARGF.each do |line|
   key = line.split.first
   value = []
 
-  if keys.include? key
-    value = values.last
+  if index = keys.index(key)
+    value = values[index]
   else
     keys << key
     values << value
