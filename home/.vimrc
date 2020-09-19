@@ -7,7 +7,6 @@ Plug 'dag/vim-fish'
 
 " Utilities
 Plug 'airblade/vim-gitgutter'
-Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
@@ -28,7 +27,6 @@ filetype plugin indent on          " Enable file type based indentation
 " General text editing
 set backspace=indent,eol,start     " Fix backspace behavior on most terminals
 set clipboard=unnamed,unnamedplus  " Copy into system (*, +) register
-set colorcolumn=80                 " Draw vertical line at the column <n>
 set cursorline                     " Highlight the line where the cursor is in
 set laststatus=2                   " Always display the status line
 set relativenumber                 " Show relative numbers based on the line the cursor is in
@@ -39,13 +37,7 @@ set signcolumn=yes                 " Always show sign column
 set wildmenu                       " Enable enhanced tab autocomplete
 set wildmode=list:longest,full     " Complete till longest string, then open the wildmenu
 
-" Color
-" ref: https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
-" ref: https://gist.github.com/iawaknahc/9a10c5610e14bc13c6a29547c5f5b987
-" ref: https://github.com/vim/vim/issues/993
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors                  " Use true color
+" Color Scheme
 colorscheme dracula                " Change the color scheme
 
 " Search and matching
@@ -76,10 +68,6 @@ if !isdirectory(expand("$HOME/.vim/swap"))
     call mkdir(expand("$HOME/.vim/swap"), "p")
 endif
 set directory=$HOME/.vim/swap//
-
-" Spell checking
-set spell
-set spelllang=en_us
 
 " Fast split navigation with <Ctrl> + hjkl
 noremap <c-h> <c-w><c-h>
