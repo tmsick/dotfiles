@@ -26,6 +26,12 @@
 	defaultCommand = status -s
 	prompt         = "(gitsh) %D %c%B%#%w"
 
+[init]
+	defaultBranch = master
+
+[tag]
+	forceSignAnnotated = true
+
 [user]
 	email      = tomoya.y@icloud.com
 	name       = Tomoya Yoshioka
