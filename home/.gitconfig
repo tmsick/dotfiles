@@ -27,7 +27,7 @@
 	prompt         = "(gitsh) %D %c%B%#%w"
 
 [init]
-	defaultBranch = master
+	defaultBranch = main
 
 [tag]
 	forceSignAnnotated = true
