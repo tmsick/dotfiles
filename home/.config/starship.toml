@@ -1,5 +1,8 @@
 [cmd_duration]
 disabled = true
 
+[aws]
+disabled = true
+
 [gcloud]
 disabled = true
