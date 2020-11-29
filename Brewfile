@@ -92,7 +92,7 @@ brew "pstree"
 brew "pyenv"
 brew "pypy3"
 brew "python@3.7"
-brew "python@3.8", link: true
+brew "python@3.8"
 brew "r"
 brew "rbenv"
 brew "readline"
