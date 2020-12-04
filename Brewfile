@@ -152,7 +152,7 @@ cask "virtualbox"
 cask "visual-studio-code"
 cask "vivaldi"
 cask "wireshark"
-cask "zoomus"
+cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Bear", id: 1091189122
 mas "CotEditor", id: 1024640650
