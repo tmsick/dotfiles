@@ -150,6 +150,7 @@ cask "tor-browser"
 cask "vagrant"
 cask "virtualbox"
 cask "visual-studio-code"
+cask "webstorm"
 cask "wireshark"
 cask "zoom"
 mas "1Password 7", id: 1333542190
