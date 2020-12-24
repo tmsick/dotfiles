@@ -1,3 +1,8 @@
+==> Auto-updated Homebrew!
+==> Updated Casks
+Updated 1 cask.
+Updated 1 tap (homebrew/cask).
+
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -124,7 +129,6 @@ cask "chromedriver"
 cask "docker"
 cask "firefox"
 cask "github"
-cask "gitkraken"
 cask "goland"
 cask "google-chrome"
 cask "google-cloud-sdk"
