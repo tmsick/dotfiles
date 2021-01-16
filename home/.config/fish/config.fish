@@ -35,7 +35,6 @@ set -g fish_function_path \
 
 alias git hub
 alias gitsh "gitsh --git '/usr/bin/env hub'"
-alias go2univ "cd (univdir)"
 alias tree "tree -C"
 
 starship init fish | source
