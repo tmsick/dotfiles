@@ -3,12 +3,12 @@ function ghq
     set -l len_argv (count $argv)
     set -l first_arg $argv[1]
 
-    if ! which ghq >/dev/null
+    if ! which -s ghq
         echo "'ghq' not found in \$PATH" >&2
         return 1
     end
 
-    if ! which $fuzzy_finder >/dev/null
+    if ! which -s $fuzzy_finder
         command ghq $argv
         return
     end
