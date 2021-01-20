@@ -1,59 +1,34 @@
-set -gx DOCKER_HIDE_LEGACY_COMMANDS 1
-set -gx DOTFILES_HOME "$HOME/.dotfiles"
-set -gx EDITOR vim
-set -gx GOPATH "$HOME/go"
-set -gx HOMEBREW_CELLAR "/usr/local/Cellar"
-set -gx HOMEBREW_NO_ANALYTICS 1
-set -gx HOMEBREW_PREFIX "/usr/local"
-set -gx HOMEBREW_REPOSITORY "/usr/local/Homebrew"
-set -gx LANG "en_US.UTF-8"
-set -gx N_PREFIX "$HOME/n"
-set -gx PIPENV_VENV_IN_PROJECT 1
-set -gx PIPENV_VERBOSITY -1
-set -gx XDG_CONFIG_HOME "$HOME/.config"
+set -x DOCKER_HIDE_LEGACY_COMMANDS 1
+set -x DOTFILES_HOME "$HOME/.dotfiles"
+set -x EDITOR vim
+set -x GOPATH "$HOME/go"
+set -x HOMEBREW_CELLAR "/usr/local/Cellar"
+set -x HOMEBREW_NO_ANALYTICS 1
+set -x HOMEBREW_PREFIX "/usr/local"
+set -x HOMEBREW_REPOSITORY "/usr/local/Homebrew"
+set -x LANG "en_US.UTF-8"
+set -x N_PREFIX "$HOME/n"
+set -x PIPENV_VENV_IN_PROJECT 1
+set -x PIPENV_VERBOSITY -1
+set -x XDG_CONFIG_HOME "$HOME/.config"
 
-set -g fish_user_paths \
+set -p fish_user_paths \
+    # MacGPG2
+    "/usr/local/MacGPG2/bin" \
     # tj/n
     "$N_PREFIX/bin" \
-    # Go
+    # Golang
     "$GOPATH/bin" \
     "/usr/local/go/bin" \
     # fzf
     "/usr/local/opt/fzf/bin" \
-    # MacGPG
-    "/usr/local/MacGPG2/bin" \
     # Miscellaneous
     "$DOTFILES_HOME/bin" \
     "$HOME/.local/bin" \
-    "/usr/local/bin" \
-    "/usr/local/sbin" \
-    $fish_user_paths
+    "/usr/local/sbin"
+set -p fish_function_path "$DOTFILES_HOME/fish/functions"
 
-set -g fish_function_path \
-    "$DOTFILES_HOME/fish/functions" \
-    $fish_function_path
-
-alias git hub
-alias gitsh "gitsh --git '/usr/bin/env hub'"
-alias tree "tree -C"
-
-starship init fish | source
-
-if which pyenv >/dev/null
-    status --is-interactive; and source (pyenv init -|psub)
-
-    # pyenv bin have to be removed from $PATH when running brew
-    # ref: https://github.com/pyenv/pyenv/issues/106
-    if which brew >/dev/null
-        function brew
-            begin
-                set -lx PATH (printenv PATH | sed s!(pyenv root)/shims:!!)
-                command brew $argv
-            end
-        end
-    end
-end
-
-if which rbenv >/dev/null
-    status --is-interactive; and source (rbenv init -|psub)
-end
+which -s hub && alias git hub
+which -s starship && starship init fish | source
+which -s pyenv && status --is-interactive; and source (pyenv init -|psub)
+which -s rbenv && status --is-interactive; and source (rbenv init -|psub)
