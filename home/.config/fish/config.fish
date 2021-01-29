@@ -17,6 +17,10 @@ set -p fish_user_paths \
     "/usr/local/MacGPG2/bin" \
     # tj/n
     "$N_PREFIX/bin" \
+    # Python
+    "/usr/local/opt/python@3.9/bin" \
+    "/usr/local/opt/python@3.8/bin" \
+    "/usr/local/opt/python@3.7/bin" \
     # Golang
     "$GOPATH/bin" \
     "/usr/local/go/bin" \
@@ -24,11 +28,15 @@ set -p fish_user_paths \
     "/usr/local/opt/fzf/bin" \
     # Miscellaneous
     "$DOTFILES_HOME/bin" \
-    "$HOME/.local/bin" \
     "/usr/local/sbin"
+
 set -p fish_function_path "$DOTFILES_HOME/fish/functions"
 
-which -s hub && alias git hub
-which -s starship && starship init fish | source
-which -s pyenv && status --is-interactive; and source (pyenv init -|psub)
-which -s rbenv && status --is-interactive; and source (rbenv init -|psub)
+# Starship (https://starship.rs)
+starship init fish | source
+
+# GitHub's hub (https://github.com/github/hub)
+alias git hub
+
+# rbenv (https://github.com/rbenv/rbenv)
+source (rbenv init -|psub)
