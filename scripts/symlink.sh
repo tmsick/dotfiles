@@ -25,34 +25,37 @@ EOS
 }
 
 traverse() {
-    local src=$1
-    local dest=$2
-    local cb=$3
+    local src="$1"
+    local dest="$2"
+    local cb="$3"
 
     local ifs=$IFS
     IFS=$'\n'
-    for item in $(command ls -A "$src"); do
+    for item in $(IFS=$'\n' command ls -A "$src"); do
         if [[ -f "$src/$item" ]]; then
             "$cb" "$src/$item" "$dest/$item"
         elif [[ -d "$src/$item" ]]; then
-            "$FUNCNAME" "$src/$item" "$dest/$item" "$cb"
+            "${FUNCNAME[1]}" "$src/$item" "$dest/$item" "$cb"
         fi
     done
     IFS=$ifs
 }
 
 __link__() {
-    local src=$1
-    local dest=$2
+    local src="$1"
+    local dest="$2"
+
+    echo "$src" "$dest"
+    return
 
     test "$src" -ef "$dest" && return
 
-    if [[ -e $dest ]]; then
+    if [[ -e "$dest" ]]; then
         warn "$dest already exists. skip linking $src"
         return
     fi
 
-    local dest_dir=${dest%/*}
+    local dest_dir="${dest%/*}"
     if mkdir -p "$dest_dir" 2>/dev/null; then
         ln -s "$src" "$dest"
     else
@@ -61,16 +64,16 @@ __link__() {
 }
 
 __unlink__() {
-    local src=$1
-    local dest=$2
+    local src="$1"
+    local dest="$2"
 
-    if [[ $src -ef $dest ]]; then
+    if [[ "$src" -ef "$dest" ]]; then
         rm "$dest"
     fi
 }
 
 main() {
-    local home=$SCRIPT_DIR/home
+    local home="$SCRIPT_DIR/home"
 
     case $# in
     0)
