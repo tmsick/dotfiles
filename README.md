@@ -20,7 +20,7 @@ $ brew bundle --all --no-lock
 # if you are initializing a vanilla macOS, it is recommended that you install
 # brew dependencies before symlinking files, as many configs depend on apps
 # installed via brew
-$ ./symlink.bash
+$ ./scripts/symlink.sh
 
 # to generate Brewfile based on the current system's state
 $ brew bundle dump --all --file=- | ./format-brewfile > Brewfile
