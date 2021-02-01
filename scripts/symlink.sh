@@ -7,6 +7,7 @@ set -o errexit \
 
 readonly SCRIPT_NAME="${0##*/}"
 readonly SCRIPT_DIR=$(cd "${0%/*}" && pwd)
+readonly DOTFILES_HOME=${DOTFILES_HOME:-"$HOME/.dotfiles"}
 
 readonly __ansi_reset__=$(printf '\033[0m')
 readonly __ansi_fg_yellow__=$(printf '\033[33m')
@@ -35,7 +36,7 @@ traverse() {
         if [[ -f "$src/$item" ]]; then
             "$cb" "$src/$item" "$dest/$item"
         elif [[ -d "$src/$item" ]]; then
-            "${FUNCNAME[1]}" "$src/$item" "$dest/$item" "$cb"
+            "${FUNCNAME[0]}" "$src/$item" "$dest/$item" "$cb"
         fi
     done
     IFS=$ifs
@@ -44,9 +45,6 @@ traverse() {
 __link__() {
     local src="$1"
     local dest="$2"
-
-    echo "$src" "$dest"
-    return
 
     test "$src" -ef "$dest" && return
 
@@ -73,7 +71,7 @@ __unlink__() {
 }
 
 main() {
-    local home="$SCRIPT_DIR/home"
+    local home="$DOTFILES_HOME/home"
 
     case $# in
     0)
