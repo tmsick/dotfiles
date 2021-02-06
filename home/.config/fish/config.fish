@@ -7,7 +7,6 @@ set -x HOMEBREW_NO_ANALYTICS 1
 set -x HOMEBREW_PREFIX "/usr/local"
 set -x HOMEBREW_REPOSITORY "/usr/local/Homebrew"
 set -x LANG "en_US.UTF-8"
-set -x N_PREFIX "$HOME/n"
 set -x PIPENV_VENV_IN_PROJECT 1
 set -x PIPENV_VERBOSITY -1
 set -x XDG_CONFIG_HOME "$HOME/.config"
@@ -15,8 +14,6 @@ set -x XDG_CONFIG_HOME "$HOME/.config"
 set -p fish_user_paths \
     # MacGPG2
     "/usr/local/MacGPG2/bin" \
-    # tj/n
-    "$N_PREFIX/bin" \
     # Python
     "/usr/local/opt/python@3.9/bin" \
     "/usr/local/opt/python@3.8/bin" \
@@ -38,5 +35,8 @@ starship init fish | source
 # GitHub's hub (https://github.com/github/hub)
 alias git hub
 
+# nodenv (https://github.com/nodenv/nodenv)
+status --is-interactive; and source (nodenv init -|psub)
+
 # rbenv (https://github.com/rbenv/rbenv)
-source (rbenv init -|psub)
+status --is-interactive; and source (rbenv init -|psub)
