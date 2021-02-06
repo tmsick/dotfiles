@@ -40,3 +40,6 @@ status --is-interactive; and source (nodenv init -|psub)
 
 # rbenv (https://github.com/rbenv/rbenv)
 status --is-interactive; and source (rbenv init -|psub)
+
+# https://github.com/fish-shell/fish-shell/issues/6270#issuecomment-548515306
+function __fish_describe_command; end
