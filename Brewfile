@@ -154,6 +154,7 @@ mas "1Password 7", id: 1333542190
 mas "Bear", id: 1091189122
 mas "CotEditor", id: 1024640650
 mas "Developer", id: 640199958
+mas "GoodNotes", id: 1444383602
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
