@@ -156,7 +156,6 @@ mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
 mas "Mactracker", id: 430255202
 mas "Magnet", id: 441258766
-mas "Notability", id: 736189492
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
