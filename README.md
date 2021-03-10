@@ -4,7 +4,7 @@ Initialization suite for macOS
 
 ## Prerequisite
 
-- [Homebrew](https://brew.sh)
+-   [Homebrew](https://brew.sh)
 
 ## Initialization
 
@@ -20,10 +20,10 @@ $ brew bundle --all --no-lock
 # if you are initializing a vanilla macOS, it is recommended that you install
 # brew dependencies before symlinking files, as many configs depend on apps
 # installed via brew
-$ ./scripts/symlink.sh
+$ ./scripts/symlink.py
 
-# to generate Brewfile based on the current system's state
-$ brew bundle dump --all --file=- | ./format-brewfile > Brewfile
+# to generate Brewfile based on the current system state
+$ brew update && brew bundle dump --all --file=- | ./scripts/format_brewfile.py > Brewfile
 ```
 
 **DO NOT** place junk files under `home` directory as all files in it are regarded as valid config files and are symlinked on initialization without any warning.
@@ -36,9 +36,9 @@ $ brew bundle dump --all --file=- | ./format-brewfile > Brewfile
 
 Set up appropriate TERMINFO in `~/.terminfo/` referring:
 
-- https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
-- https://gist.github.com/iawaknahc/9a10c5610e14bc13c6a29547c5f5b987
-- https://github.com/vim/vim/issues/993
+-   https://apple.stackexchange.com/questions/266333/how-to-show-italic-in-vim-in-iterm2
+-   https://gist.github.com/iawaknahc/9a10c5610e14bc13c6a29547c5f5b987
+-   https://github.com/vim/vim/issues/993
 
 The below code might work well but use it with caution.
 
