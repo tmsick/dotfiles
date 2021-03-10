@@ -25,6 +25,7 @@ def traverse(src: Path, dest: Path):
             else:
                 print("{} already exists.".format(dest), file=sys.stderr)
         else:
+            dest.parent.mkdir(parents=True, exist_ok=True)
             dest.symlink_to(src)
     elif src.is_dir():
         for item in src.iterdir():
