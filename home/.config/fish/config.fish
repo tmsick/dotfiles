@@ -43,3 +43,6 @@ status --is-interactive; and source (rbenv init -|psub)
 
 # https://github.com/fish-shell/fish-shell/issues/6270#issuecomment-548515306
 function __fish_describe_command; end
+
+# Google Cloud SDK installed via Homebrew cask
+source (brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
