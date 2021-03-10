@@ -7,7 +7,7 @@ import sys
 
 
 def main() -> int:
-    # Parser args
+    # Parse args
     argparse.ArgumentParser(description="Symlink dotfiles.").parse_args()
 
     # Execute
