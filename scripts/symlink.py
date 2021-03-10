@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+
+from pathlib import Path
+import argparse
+import os
+import sys
+
+
+def main() -> int:
+    # Parser args
+    argparse.ArgumentParser(description="Symlink dotfiles.").parse_args()
+
+    # Execute
+    dotfiles = Path(os.getenv("DOTFILES_HOME", "~/.dotfiles")).expanduser()
+    virtualhome = dotfiles.joinpath("home")
+    traverse(virtualhome, Path.home())
+    return 0
+
+
+def traverse(src: Path, dest: Path):
+    if src.is_file():
+        if dest.exists():
+            if dest.is_symlink() and dest.samefile(src):
+                pass
+            else:
+                print("{} already exists.".format(dest), file=sys.stderr)
+        else:
+            dest.symlink_to(src)
+    elif src.is_dir():
+        for item in src.iterdir():
+            traverse(item, dest.joinpath(item.name))
+    else:
+        print("{} is not a file nor a directory.".format(src), file=sys.stderr)
+
+
+if __name__ == "__main__":
+    exit(main())
