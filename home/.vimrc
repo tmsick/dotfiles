@@ -6,7 +6,11 @@ Plug 'cespare/vim-toml'
 Plug 'dag/vim-fish'
 
 " Utilities
-Plug 'airblade/vim-gitgutter'
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
@@ -34,6 +38,7 @@ set scrolloff=5                    " Show at least <n> lines above and below the
 set showcmd                        " Show last command in the status line
 set showmatch                      " Highlight matching parenthesis, bracket, or brace
 set signcolumn=yes                 " Always show sign column
+set updatetime=100                 " Default updatetime 4000ms is not good for async update
 set wildmenu                       " Enable enhanced tab autocomplete
 set wildmode=list:longest,full     " Complete till longest string, then open the wildmenu
 
@@ -78,7 +83,7 @@ noremap <c-l> <c-w><c-l>
 " Remove trailing whitespace automatically
 autocmd BufWritePre * %s/\s\+$//e
 
-let mapleader = ','  " Map the leader key to a comma
+" let mapleader = ','  " Map the leader key to a comma
 
 " NERD Commenter
 let g:NERDDefaultAlign = 'start'  " Align comment delimiter at the beginning of lines
