@@ -24,7 +24,6 @@ set -p fish_user_paths \
     # fzf
     "/usr/local/opt/fzf/bin" \
     # Miscellaneous
-    "$DOTFILES_HOME/bin" \
     "/usr/local/sbin"
 
 set -p fish_function_path "$DOTFILES_HOME/fish/functions"
