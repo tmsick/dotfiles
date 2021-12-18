@@ -1,0 +1,32 @@
+# vim: set noexpandtab:
+
+[alias]
+	co = checkout
+	lg = log --abbrev-commit --graph --relative-date
+	st = status
+
+[color]
+	ui = auto
+
+[commit]
+	gpgsign = true
+
+[init]
+	defaultBranch = main
+
+[pull]
+	ff = only
+
+[tag]
+	gpgSign = true
+
+[user]
+	email = tomoya.y@icloud.com
+	name = Tomoya Yoshioka
+	signingkey = E3EB51DDA6F415878400B3BB39FB6C28B0AFE917
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
