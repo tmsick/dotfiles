@@ -154,6 +154,7 @@ cask "yubico-yubikey-manager"
 cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Bear", id: 1091189122
+mas "Bitdefender Virus Scanner", id: 500154009
 mas "CotEditor", id: 1024640650
 mas "Developer", id: 640199958
 mas "GoodNotes", id: 1444383602
