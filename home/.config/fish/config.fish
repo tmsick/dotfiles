@@ -62,4 +62,8 @@ if status is-interactive
 
     # Ignore case when searching with less
     alias less "less -i"
+
+    # Python
+    alias python python3
+    alias pip pip3
 end
