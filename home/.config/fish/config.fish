@@ -11,31 +11,23 @@ if status is-interactive
     set -x LANG "en_US.UTF-8"
     set -x PIPENV_VENV_IN_PROJECT 1
     set -x PIPENV_VERBOSITY -1
+    set -x POETRY_VIRTUALENVS_IN_PROJECT 1
     set -x XDG_CONFIG_HOME "$HOME/.config"
 
-    set -l brew_prefix (brew --prefix)
-    set -l brew_caskroom (brew --caskroom)
-
-    set -a fish_user_paths \
+    fish_add_path -P \
         # MacGPG2
-        "$brew_prefix/MacGPG2/bin" \
+        "$HOMEBREW_PREFIX/MacGPG2/bin" \
         # Java
-        "$brew_prefix/opt/openjdk/bin" \
-        # Python
-        "$brew_prefix/opt/python/libexec/bin" \
-        "$brew_prefix/opt/python@3.10/bin" \
-        "$brew_prefix/opt/python@3.9/bin" \
-        "$brew_prefix/opt/python@3.8/bin" \
-        "$HOME/Library/Python/3.10/bin" \
-        "$HOME/Library/Python/3.9/bin" \
-        "$HOME/Library/Python/3.8/bin" \
+        "$HOMEBREW_PREFIX/opt/openjdk/bin" \
+        # Python Poetry
+        "$HOME/.poetry/bin" \
         # Golang
         "$GOPATH/bin" \
-        "$brew_prefix/go/bin" \
+        "$HOMEBREW_PREFIX/go/bin" \
         # fzf
-        "$brew_prefix/opt/fzf/bin" \
+        "$HOMEBREW_PREFIX/opt/fzf/bin" \
         # Miscellaneous
-        "$brew_prefix/sbin"
+        "$HOMEBREW_PREFIX/sbin"
 
     set -a fish_function_path "$DOTFILES_HOME/fish/functions"
 
@@ -53,7 +45,7 @@ if status is-interactive
     end
 
     # Google Cloud SDK installed via Homebrew cask
-    source "$brew_caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+    source (/usr/local/bin/brew --caskroom)"/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
     # For some reason Google Cloud SDK doesn't work properly with Python 3.10
     set -x CLOUDSDK_PYTHON (which python3.9)
 
@@ -62,8 +54,4 @@ if status is-interactive
 
     # Ignore case when searching with less
     alias less "less -i"
-
-    # Python
-    alias python python3
-    alias pip pip3
 end
