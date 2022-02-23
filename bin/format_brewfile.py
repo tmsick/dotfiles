@@ -4,7 +4,6 @@ Format Brewfile. If Brewfile is not given as an argument, this script reads
 stdin, format that, and output to stdout.
 """
 
-from collections import OrderedDict
 from pathlib import Path
 import argparse
 import sys
@@ -14,9 +13,7 @@ def main() -> int:
     # Parse args
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("file", type=str, nargs="?", help="Brewfile to format")
-    parser.add_argument(
-        "-w", "--write", action="store_true", help="overwrite the given Brewfile"
-    )
+    parser.add_argument("-w", "--write", action="store_true", help="overwrite the given Brewfile")
     args = parser.parse_args()
 
     # Prepare input and output
@@ -38,25 +35,23 @@ def main() -> int:
 
 
 def format(path_in: Path, path_out: Path):
-    od = OrderedDict()
+    sections = []
 
-    # Read
     with path_in.open() as f:
-        for line in f.readlines():
+        for line in f:
             key, *_ = line.split()
-            if key in od:
-                od[key].append(line)
+            for name, entries in sections:
+                if name == key:
+                    entries.append(line)
+                    break
             else:
-                od[key] = [line]
+                sections.append((key, [line]))
 
-    # Sort
-    lines = []
-    for val in od.values():
-        lines += sorted(val)
-
-    # Write
     with path_out.open(mode="w") as f:
-        f.writelines(lines)
+        for _, entries in sections:
+            entries.sort()
+            for line in entries:
+                print(line, end="", file=f)
 
 
 if __name__ == "__main__":
