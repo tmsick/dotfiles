@@ -14,7 +14,7 @@ if status is-interactive
     set -x POETRY_VIRTUALENVS_IN_PROJECT 1
     set -x XDG_CONFIG_HOME "$HOME/.config"
 
-    fish_add_path -P \
+    fish_add_path -P --move \
         # MacGPG2
         "$HOMEBREW_PREFIX/MacGPG2/bin" \
         # Java
