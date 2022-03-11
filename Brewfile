@@ -174,5 +174,6 @@ mas "Pages", id: 409201541
 mas "Paste", id: 967805235
 mas "Playgrounds", id: 1496833156
 mas "Slack", id: 803453959
+mas "TestFlight", id: 899247664
 mas "Xcode", id: 497799835
 mas "辞書 by 物書堂", id: 1380563956
