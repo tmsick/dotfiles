@@ -11,6 +11,9 @@
 [commit]
 	gpgsign = true
 
+[core]
+	quotepath = false
+
 [init]
 	defaultBranch = main
 
