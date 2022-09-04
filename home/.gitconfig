@@ -2,7 +2,7 @@
 
 [alias]
 	co = checkout
-	lg = log --abbrev-commit --graph --relative-date
+	lg = log --graph --relative-date
 	st = status
 
 [color]
@@ -10,12 +10,17 @@
 
 [commit]
 	gpgsign = true
+	template = /Users/tomoya/.stCommitMsg
 
 [core]
 	quotepath = false
+	excludesfile = /Users/tomoya/.gitignore_global
 
 [init]
 	defaultBranch = main
+
+[log]
+	abbrevCommit = true
 
 [pull]
 	ff = only
@@ -33,3 +38,14 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[merge]
+	tool = vscode
+
+[mergetool]
+	prompt = false
+	keepBackup = false
+
+[mergetool "vscode"]
+	cmd = '/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code' \"$MERGED\"
+	trustExitCode = false
