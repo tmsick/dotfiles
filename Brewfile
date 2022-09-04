@@ -40,7 +40,9 @@ brew "gh"
 brew "ghostscript"
 brew "ghq"
 brew "git"
+brew "git-flow"
 brew "git-lfs"
+brew "glab"
 brew "glib"
 brew "gmp"
 brew "go"
@@ -52,7 +54,7 @@ brew "heroku/brew/heroku"
 brew "icu4c"
 brew "imagemagick"
 brew "isl"
-brew "jpeg"
+brew "jpeg", link: true
 brew "jq"
 brew "libde265"
 brew "libevent"
@@ -91,7 +93,7 @@ brew "pcre"
 brew "pcre2"
 brew "perl"
 brew "pkg-config"
-brew "postgresql"
+brew "plantuml"
 brew "pstree"
 brew "pwgen"
 brew "python@3.10"
@@ -119,54 +121,30 @@ brew "xz"
 brew "ykman"
 brew "yq"
 cask "1password-cli"
-cask "atom"
-cask "authy"
-cask "bitwarden"
-cask "chromedriver"
-cask "discord"
 cask "font-cascadia-code"
 cask "font-cascadia-code-pl"
 cask "font-cascadia-mono"
 cask "font-cascadia-mono-pl"
 cask "font-noto-sans-cjk-jp"
 cask "font-noto-serif-cjk-jp"
-cask "github"
-cask "google-chrome"
-cask "google-cloud-sdk"
-cask "gpg-suite"
-cask "hex-fiend"
-cask "karabiner-elements"
-cask "keybase"
-cask "logitech-options"
-cask "microsoft-auto-update"
-cask "microsoft-edge"
-cask "multipass"
 cask "ngrok"
-cask "owasp-zap"
-cask "pgadmin4"
 cask "powershell"
-cask "safari-technology-preview"
-cask "tor-browser"
 cask "vagrant"
-cask "virtualbox"
-cask "visual-studio-code"
-cask "wireshark"
 cask "yubico-authenticator"
 cask "yubico-yubikey-manager"
 cask "yubico-yubikey-personalization-gui"
 cask "yubico-yubikey-piv-manager"
-cask "zoom"
-mas "1Password 7", id: 1333542190
+mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
 mas "Bitdefender Virus Scanner", id: 500154009
 mas "CotEditor", id: 1024640650
 mas "Developer", id: 640199958
 mas "GoodNotes", id: 1444383602
+mas "Hex Fiend", id: 1342896380
 mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
 mas "Mactracker", id: 430255202
-mas "Magnet", id: 441258766
 mas "Notability", id: 360593530
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
