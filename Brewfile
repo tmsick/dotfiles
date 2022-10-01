@@ -127,6 +127,7 @@ cask "font-cascadia-mono"
 cask "font-cascadia-mono-pl"
 cask "font-noto-sans-cjk-jp"
 cask "font-noto-serif-cjk-jp"
+cask "google-cloud-sdk"
 cask "ngrok"
 cask "powershell"
 cask "vagrant"
@@ -136,7 +137,6 @@ cask "yubico-yubikey-personalization-gui"
 cask "yubico-yubikey-piv-manager"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
-mas "Bitdefender Virus Scanner", id: 500154009
 mas "CotEditor", id: 1024640650
 mas "Developer", id: 640199958
 mas "GoodNotes", id: 1444383602
