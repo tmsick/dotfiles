@@ -46,7 +46,7 @@ if status is-interactive
     end
 
     # Google Cloud SDK installed via Homebrew cask
-    # source (/usr/local/bin/brew --caskroom)"/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+    source (/usr/local/bin/brew --caskroom)"/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
     # For some reason Google Cloud SDK doesn't work properly with Python 3.10
     # set -x CLOUDSDK_PYTHON (which python3.9)
 
