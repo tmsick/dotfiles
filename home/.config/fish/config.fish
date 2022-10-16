@@ -1,14 +1,13 @@
 if status is-interactive
+    # Set PATH, MANPATH, etc., for Homebrew.
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+    set -x BAT_THEME Dracula
     set -x CLICOLOR 1
     set -x DOCKER_HIDE_LEGACY_COMMANDS 1
     set -x DOTFILES_HOME "$HOME/.dotfiles"
     set -x EDITOR vim
     set -x GOPATH "$HOME/go"
-    # set -x GPG_TTY (tty)
-    set -x HOMEBREW_CELLAR /usr/local/Cellar
-    set -x HOMEBREW_NO_ANALYTICS 1
-    set -x HOMEBREW_PREFIX /usr/local
-    set -x HOMEBREW_REPOSITORY /usr/local/Homebrew
     set -x LANG "en_US.UTF-8"
     set -x PIPENV_VENV_IN_PROJECT 1
     set -x PIPENV_VERBOSITY -1
@@ -46,9 +45,7 @@ if status is-interactive
     end
 
     # Google Cloud SDK installed via Homebrew cask
-    source (/usr/local/bin/brew --caskroom)"/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
-    # For some reason Google Cloud SDK doesn't work properly with Python 3.10
-    # set -x CLOUDSDK_PYTHON (which python3.9)
+    source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
     # direnv (https://github.com/direnv/direnv)
     direnv hook fish | source
