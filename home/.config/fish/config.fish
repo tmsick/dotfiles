@@ -15,6 +15,8 @@ if status is-interactive
     set -x XDG_CONFIG_HOME "$HOME/.config"
 
     fish_add_path -P --move \
+        # General
+        "$HOME/.local/bin" \
         # MacGPG2
         "$HOMEBREW_PREFIX/MacGPG2/bin" \
         # Java
