@@ -72,6 +72,7 @@ brew "libyaml"
 brew "little-cms2"
 brew "lua"
 brew "mas"
+brew "mkcert"
 brew "mpfr"
 brew "ncdu"
 brew "ncurses"
@@ -139,7 +140,6 @@ mas "Developer", id: 640199958
 mas "GoodNotes", id: 1444383602
 mas "Hex Fiend", id: 1342896380
 mas "Keynote", id: 409183694
-mas "Kindle", id: 405399194
 mas "LINE", id: 539883307
 mas "Mactracker", id: 430255202
 mas "Notability", id: 360593530
