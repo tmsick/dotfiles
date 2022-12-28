@@ -12,20 +12,20 @@ if status is-interactive
     set -x PIPENV_VENV_IN_PROJECT 1
     set -x PIPENV_VERBOSITY -1
     set -x POETRY_VIRTUALENVS_IN_PROJECT 1
+    set -x PYENV_ROOT "$HOME/.pyenv"
     set -x XDG_CONFIG_HOME "$HOME/.config"
 
     fish_add_path -P --move \
         # General
         "$HOME/.local/bin" \
         # MacGPG2
-        "$HOMEBREW_PREFIX/MacGPG2/bin" \
+        /usr/local/MacGPG2/bin \
         # Java
         "$HOMEBREW_PREFIX/opt/openjdk/bin" \
-        # Python Poetry
-        "$HOME/.poetry/bin" \
+        # pyenv
+        "$PYENV_ROOT/bin" \
         # Golang
         "$GOPATH/bin" \
-        "$HOMEBREW_PREFIX/go/bin" \
         # fzf
         "$HOMEBREW_PREFIX/opt/fzf/bin" \
         # Miscellaneous
@@ -42,12 +42,15 @@ if status is-interactive
     # rbenv (https://github.com/rbenv/rbenv)
     source (rbenv init -|psub)
 
+    # pyenv (https://github.com/pyenv/pyenv)
+    pyenv init - | source
+
     # https://github.com/fish-shell/fish-shell/issues/6270#issuecomment-548515306
-    function __fish_describe_command
-    end
+    # function __fish_describe_command
+    # end
 
     # Google Cloud SDK installed via Homebrew cask
-    source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+    # source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
     # direnv (https://github.com/direnv/direnv)
     direnv hook fish | source
