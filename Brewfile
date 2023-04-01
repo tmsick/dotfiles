@@ -14,7 +14,6 @@ brew "ack"
 brew "asciinema"
 brew "aspell"
 brew "autoconf"
-brew "awscli"
 brew "azure-cli"
 brew "bash"
 brew "bash-completion"
@@ -49,6 +48,7 @@ brew "gmp"
 brew "go"
 brew "graphviz"
 brew "harfbuzz"
+brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/vault"
 brew "heroku/brew/heroku"
@@ -139,13 +139,16 @@ cask "yubico-yubikey-personalization-gui"
 cask "yubico-yubikey-piv-manager"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
+mas "Bitwarden", id: 1352778147
 mas "CotEditor", id: 1024640650
 mas "Developer", id: 640199958
+mas "FANTASIAN", id: 1517339045
 mas "GoodNotes", id: 1444383602
 mas "Hex Fiend", id: 1342896380
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Mactracker", id: 430255202
+mas "Mini Metro+", id: 1550663539
 mas "Notability", id: 360593530
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
