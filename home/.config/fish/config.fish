@@ -20,8 +20,6 @@ if status is-interactive
         "$HOME/.local/bin" \
         # MacGPG2
         /usr/local/MacGPG2/bin \
-        # Java
-        "$HOMEBREW_PREFIX/opt/openjdk/bin" \
         # pyenv
         "$PYENV_ROOT/bin" \
         # Golang
