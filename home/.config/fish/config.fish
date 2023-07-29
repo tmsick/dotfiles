@@ -7,7 +7,6 @@ if status is-interactive
     set -x DOCKER_HIDE_LEGACY_COMMANDS 1
     set -x DOTFILES_HOME "$HOME/.dotfiles"
     set -x EDITOR vim
-    set -x GOPATH "$HOME/go"
     set -x LANG "en_US.UTF-8"
     set -x PIPENV_VENV_IN_PROJECT 1
     set -x PIPENV_VERBOSITY -1
@@ -23,7 +22,7 @@ if status is-interactive
         # pyenv
         "$PYENV_ROOT/bin" \
         # Golang
-        "$GOPATH/bin" \
+        "$HOME/go/bin" \
         # fzf
         "$HOMEBREW_PREFIX/opt/fzf/bin" \
         # Miscellaneous
