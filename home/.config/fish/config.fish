@@ -1,6 +1,6 @@
 if status is-interactive
     # Set PATH, MANPATH, etc., for Homebrew.
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval (/opt/homebrew/bin/brew shellenv)
 
     set -x BAT_THEME Dracula
     set -x CLICOLOR 1
