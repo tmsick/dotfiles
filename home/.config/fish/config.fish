@@ -14,21 +14,17 @@ if status is-interactive
     set -x PYENV_ROOT "$HOME/.pyenv"
     set -x XDG_CONFIG_HOME "$HOME/.config"
 
-    fish_add_path -P --move \
-        # General
-        "$HOME/.local/bin" \
-        # MacGPG2
-        /usr/local/MacGPG2/bin \
-        # pyenv
-        "$PYENV_ROOT/bin" \
-        # Golang
-        "$HOME/go/bin" \
-        # fzf
-        "$HOMEBREW_PREFIX/opt/fzf/bin" \
-        # Miscellaneous
-        "$HOMEBREW_PREFIX/sbin"
-
     set -a fish_function_path "$DOTFILES_HOME/fish/functions"
+
+    fish_add_path -pm "$HOMEBREW_PREFIX/sbin"
+    fish_add_path -pm "$HOME/.local/bin"
+    fish_add_path -pm "$PYENV_ROOT/bin"
+    fish_add_path -pm "$HOME/go/bin"
+    fish_add_path -pm "$HOMEBREW_PREFIX/opt/fzf/bin"
+
+    alias less "less -i"
+    alias vim nvim
+    alias cat bat
 
     # Starship (https://starship.rs)
     starship init fish | source
@@ -42,16 +38,6 @@ if status is-interactive
     # pyenv (https://github.com/pyenv/pyenv)
     pyenv init - | source
 
-    # https://github.com/fish-shell/fish-shell/issues/6270#issuecomment-548515306
-    # function __fish_describe_command
-    # end
-
-    # Google Cloud SDK installed via Homebrew cask
-    # source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
-
     # direnv (https://github.com/direnv/direnv)
     direnv hook fish | source
-
-    # Ignore case when searching with less
-    alias less "less -i"
 end
