@@ -140,7 +140,7 @@
 	<key>BackgroundAlphaInactive</key>
 	<real>0.5</real>
 	<key>BackgroundBlur</key>
-	<real>0.803985364794646</real>
+	<real>0.5</real>
 	<key>BackgroundBlurInactive</key>
 	<real>0.90304433713468268</real>
 	<key>BackgroundColor</key>
@@ -148,7 +148,7 @@
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
 	AAGGoF8QD05TS2V5ZWRBcmNoaXZlctEICVRyb290gAGjCwwTVSRudWxs0w0ODxARElVO
 	U1JHQlxOU0NvbG9yU3BhY2VWJGNsYXNzTxA0MC4xMTc2NTgxMTU5IDAuMTIyMTUyNzIz
-	NCAwLjE1OTc3ODM3MTUgMC43OTc3MDM4NjA5ABABgALSFBUWF1okY2xhc3NuYW1lWCRj
+	NCAwLjE1OTc3ODM3MTUgMC45MDEwOTU4NzI1ABABgALSFBUWF1okY2xhc3NuYW1lWCRj
 	bGFzc2VzV05TQ29sb3KiFhhYTlNPYmplY3QIERokKTI3SUxRU1ddZGp3frW3ub7J0trd
 	AAAAAAAAAQEAAAAAAAAAGQAAAAAAAAAAAAAAAAAAAOY=
 	</data>
@@ -210,11 +210,11 @@
 	<key>VisualBellOnlyWhenMuted</key>
 	<false/>
 	<key>columnCount</key>
-	<integer>200</integer>
+	<integer>160</integer>
 	<key>name</key>
 	<string>Dracula</string>
 	<key>rowCount</key>
-	<integer>80</integer>
+	<integer>50</integer>
 	<key>shellExitAction</key>
 	<integer>1</integer>
 	<key>type</key>
