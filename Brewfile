@@ -44,6 +44,7 @@ brew "glib"
 brew "gmp"
 brew "go"
 brew "graphviz"
+brew "grpcurl"
 brew "harfbuzz"
 brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
@@ -96,6 +97,7 @@ brew "pipx"
 brew "pkg-config"
 brew "plantuml"
 brew "postgresql@14"
+brew "protobuf"
 brew "pstree"
 brew "pwgen"
 brew "pyenv"
@@ -120,6 +122,7 @@ brew "vim"
 brew "watch"
 brew "webp"
 brew "wget"
+brew "wimlib"
 brew "x265"
 brew "xz"
 brew "ykman"
@@ -135,19 +138,14 @@ cask "google-cloud-sdk"
 cask "ngrok"
 cask "yubico-authenticator"
 cask "yubico-yubikey-manager"
-cask "yubico-yubikey-personalization-gui"
-cask "yubico-yubikey-piv-manager"
 mas "1Password for Safari", id: 1569813296
-mas "Bitwarden", id: 1352778147
 mas "CotEditor", id: 1024640650
 mas "Developer", id: 640199958
-mas "FANTASIAN", id: 1517339045
-mas "GoodNotes", id: 1444383602
+mas "Goodnotes", id: 1444383602
 mas "Hex Fiend", id: 1342896380
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Mactracker", id: 430255202
-mas "Mini Metro+", id: 1550663539
 mas "Notability", id: 360593530
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -158,6 +156,7 @@ mas "TestFlight", id: 899247664
 mas "Xcode", id: 497799835
 mas "辞書 by 物書堂", id: 1380563956
 vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
 vscode "GitHub.remotehub"
 vscode "GitLab.gitlab-workflow"
 vscode "PKief.material-icon-theme"
@@ -165,7 +164,6 @@ vscode "Vue.volar"
 vscode "Vue.vscode-typescript-vue-plugin"
 vscode "bmalehorn.vscode-fish"
 vscode "bradlc.vscode-tailwindcss"
-vscode "bungcip.better-toml"
 vscode "dbaeumer.vscode-eslint"
 vscode "denoland.vscode-deno"
 vscode "eamodio.gitlens"
@@ -197,9 +195,9 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-repositories"
 vscode "ms-vscode.remote-server"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "ms-vsliveshare.vsliveshare-pack"
 vscode "rome.rome"
 vscode "rust-lang.rust-analyzer"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "svelte.svelte-vscode"
+vscode "tamasfe.even-better-toml"
 vscode "vscodevim.vim"
