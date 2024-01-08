@@ -7,33 +7,33 @@ import os
 import sys
 
 
-def main() -> int:
+def _main() -> int:
     # Parse args
     argparse.ArgumentParser(description=__doc__).parse_args()
 
     # Execute
     dotfiles = Path(os.getenv("DOTFILES_HOME", "~/.dotfiles")).expanduser()
-    virtualhome = dotfiles.joinpath("home")
-    traverse(virtualhome, Path.home())
+    virtualhome = dotfiles.joinpath("__home__")
+    _traverse(virtualhome, Path.home())
     return 0
 
 
-def traverse(src: Path, dest: Path):
+def _traverse(src: Path, dest: Path):
     if src.is_file():
         if dest.exists():
             if dest.is_symlink() and dest.samefile(src):
                 pass
             else:
-                print("{} already exists.".format(dest), file=sys.stderr)
+                print(f"{dest} already exists.", file=sys.stderr)
         else:
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.symlink_to(src)
     elif src.is_dir():
         for item in src.iterdir():
-            traverse(item, dest.joinpath(item.name))
+            _traverse(item, dest.joinpath(item.name))
     else:
-        print("{} is not a file nor a directory.".format(src), file=sys.stderr)
+        print(f"{src} is not a file nor a directory.", file=sys.stderr)
 
 
 if __name__ == "__main__":
-    exit(main())
+    exit(_main())

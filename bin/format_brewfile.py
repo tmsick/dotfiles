@@ -5,15 +5,18 @@ stdin, format that, and output to stdout.
 """
 
 from pathlib import Path
+from typing import List, Tuple
 import argparse
 import sys
 
 
-def main() -> int:
+def _main() -> int:
     # Parse args
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("file", type=str, nargs="?", help="Brewfile to format")
-    parser.add_argument("-w", "--write", action="store_true", help="overwrite the given Brewfile")
+    parser.add_argument(
+        "-w", "--write", action="store_true", help="overwrite the given Brewfile"
+    )
     args = parser.parse_args()
 
     # Prepare input and output
@@ -26,16 +29,16 @@ def main() -> int:
             if args.write:
                 path_out = path_file
         else:
-            print("File {} does not exist.".format(args.file), file=sys.stderr)
+            print(f"File {args.file} does not exist.", file=sys.stderr)
             return 1
 
     # Execute
-    format(path_in, path_out)
+    _format(path_in, path_out)
     return 0
 
 
-def format(path_in: Path, path_out: Path):
-    sections = []
+def _format(path_in: Path, path_out: Path):
+    sections: List[Tuple[str, List[str]]] = []
 
     with path_in.open() as f:
         for line in f:
@@ -55,4 +58,4 @@ def format(path_in: Path, path_out: Path):
 
 
 if __name__ == "__main__":
-    exit(main())
+    exit(_main())
