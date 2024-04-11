@@ -137,6 +137,7 @@ cask "google-cloud-sdk"
 cask "ngrok"
 cask "yubico-authenticator"
 mas "1Password for Safari", id: 1569813296
+mas "Bear", id: 1091189122
 mas "CotEditor", id: 1024640650
 mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
@@ -162,7 +163,6 @@ vscode "dbaeumer.vscode-eslint"
 vscode "denoland.vscode-deno"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
-vscode "firefox-devtools.vscode-firefox-debug"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.remotehub"
@@ -199,7 +199,6 @@ vscode "peterj.proto"
 vscode "pkief.material-icon-theme"
 vscode "redhat.java"
 vscode "redhat.vscode-xml"
-vscode "rome.rome"
 vscode "rust-lang.rust-analyzer"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "svelte.svelte-vscode"
