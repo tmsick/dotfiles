@@ -45,4 +45,7 @@ if status is-interactive
 
     # direnv (https://github.com/direnv/direnv)
     direnv hook fish | source
+
+    # fzf (https://github.com/junegunn/fzf)
+    fzf --fish | source
 end
