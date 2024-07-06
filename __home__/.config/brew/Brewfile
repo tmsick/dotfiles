@@ -92,7 +92,6 @@ brew "pcre2"
 brew "perl"
 brew "pipx"
 brew "pkg-config"
-brew "postgresql@14"
 brew "protobuf"
 brew "pstree"
 brew "pwgen"
@@ -142,7 +141,6 @@ mas "Hex Fiend", id: 1342896380
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Mactracker", id: 430255202
-mas "Mini Metro+", id: 1550663539
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
