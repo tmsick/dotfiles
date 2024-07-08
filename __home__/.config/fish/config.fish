@@ -3,9 +3,6 @@ if status is-interactive
 
     set -x XDG_CONFIG_HOME "$HOME/.config"
 
-    set -x GOHOME "$HOME/go"
-    set -x GOBIN "$GOHOME/bin"
-
     set -x BAT_THEME Dracula
     set -x CLICOLOR 1
     set -x DOCKER_HIDE_LEGACY_COMMANDS 1
@@ -22,11 +19,11 @@ if status is-interactive
 
     set -a fish_function_path "$DOTFILES_HOME/fish/functions"
 
-    fish_add_path -pm "$GOBIN"
-    fish_add_path -pm "$VOLTA_HOME/bin"
     fish_add_path -pm "$HOME/.local/bin"
-    fish_add_path -pm "$HOME/bin"
     fish_add_path -pm "$HOMEBREW_PREFIX/opt/fzf/bin"
+    fish_add_path -pm "$VOLTA_HOME/bin"
+    fish_add_path -pm "$HOME/go/bin"
+    fish_add_path -pm "$HOME/bin"
 
     command -q bat && alias cat bat
     command -q grpcurl && alias gcurl grpcurl
