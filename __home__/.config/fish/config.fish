@@ -22,6 +22,7 @@ if status is-interactive
     fish_add_path -pm "$HOME/.local/bin"
     fish_add_path -pm "$HOMEBREW_PREFIX/opt/fzf/bin"
     fish_add_path -pm "$VOLTA_HOME/bin"
+    fish_add_path -pm "$HOMEBREW_PREFIX/opt/rustup-init/bin"
     fish_add_path -pm "$HOME/go/bin"
     fish_add_path -pm "$HOME/bin"
 
