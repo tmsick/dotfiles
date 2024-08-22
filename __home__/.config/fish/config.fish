@@ -12,6 +12,7 @@ if status is-interactive
     set -x LANG "en_US.UTF-8"
     set -x PIPENV_VENV_IN_PROJECT 1
     set -x PIPENV_VERBOSITY -1
+    set -x PNPM_HOME "$HOME/Library/pnpm"
     set -x PIPX_HOME "$HOME/.pipx"
     set -x POETRY_VIRTUALENVS_IN_PROJECT 1
     set -x PYENV_ROOT "$HOME/.pyenv"
@@ -22,6 +23,7 @@ if status is-interactive
     fish_add_path -pm "$HOME/.local/bin"
     fish_add_path -pm "$HOMEBREW_PREFIX/opt/fzf/bin"
     fish_add_path -pm "$VOLTA_HOME/bin"
+    fish_add_path -pm "$PNPM_HOME"
     fish_add_path -pm "$HOMEBREW_PREFIX/opt/rustup-init/bin"
     fish_add_path -pm "$HOME/go/bin"
     fish_add_path -pm "$HOME/bin"
