@@ -10,12 +10,7 @@ if status is-interactive
     set -x EDITOR vim
     set -x HOMEBREW_BUNDLE_FILE "$XDG_CONFIG_HOME/brew/Brewfile"
     set -x LANG "en_US.UTF-8"
-    set -x PIPENV_VENV_IN_PROJECT 1
-    set -x PIPENV_VERBOSITY -1
     set -x PNPM_HOME "$HOME/Library/pnpm"
-    set -x PIPX_HOME "$HOME/.pipx"
-    set -x POETRY_VIRTUALENVS_IN_PROJECT 1
-    set -x PYENV_ROOT "$HOME/.pyenv"
     set -x VOLTA_HOME "$HOME/.volta"
 
     set -a fish_function_path "$DOTFILES_HOME/fish/functions"
@@ -35,12 +30,6 @@ if status is-interactive
 
     # Starship (https://starship.rs)
     starship init fish | source
-
-    # rbenv (https://github.com/rbenv/rbenv)
-    source (rbenv init -|psub)
-
-    # pyenv (https://github.com/pyenv/pyenv)
-    pyenv init - | source
 
     # direnv (https://github.com/direnv/direnv)
     direnv hook fish | source
