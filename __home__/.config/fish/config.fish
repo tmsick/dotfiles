@@ -24,6 +24,7 @@ if status is-interactive
     fish_add_path -pm "$HOME/bin"
 
     command -q bat && alias cat bat
+    command -q git && alias g git
     command -q grpcurl && alias gcurl grpcurl
     command -q less && alias less "less -i"
     command -q nvim && alias vim nvim
