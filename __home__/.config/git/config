@@ -12,8 +12,9 @@
 	gpgsign = true
 
 [core]
-	quotepath = false
 	editor = nvim
+	ignorecase = false
+	quotepath = false
 
 [init]
 	defaultBranch = main
