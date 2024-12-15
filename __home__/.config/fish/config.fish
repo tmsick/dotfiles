@@ -12,6 +12,7 @@ if status is-interactive
     set -x HOMEBREW_BUNDLE_FILE "$XDG_CONFIG_HOME/brew/Brewfile"
     set -x LANG "en_US.UTF-8"
     set -x PNPM_HOME "$HOME/Library/pnpm"
+    set -x VOLTA_FEATURE_PNPM 1
     set -x VOLTA_HOME "$HOME/.volta"
     set -x VOLTA_FEATURE_PNPM 1
 
