@@ -5,7 +5,7 @@ if status is-interactive
 
     set -x BAT_THEME Dracula
     set -x CLICOLOR 1
-    set -x CLOUDSDK_PYTHON "/usr/bin/python3"
+    set -x CLOUDSDK_PYTHON /usr/bin/python3
     set -x DOCKER_HIDE_LEGACY_COMMANDS 1
     set -x DOTFILES_HOME "$HOME/.dotfiles"
     set -x EDITOR vim
@@ -13,6 +13,7 @@ if status is-interactive
     set -x LANG "en_US.UTF-8"
     set -x PNPM_HOME "$HOME/Library/pnpm"
     set -x VOLTA_HOME "$HOME/.volta"
+    set -x VOLTA_FEATURE_PNPM 1
 
     set -a fish_function_path "$DOTFILES_HOME/fish/functions"
 
