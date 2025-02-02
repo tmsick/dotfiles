@@ -48,7 +48,6 @@ brew "jpeg"
 brew "jq"
 brew "libde265"
 brew "libevent"
-brew "libgit2@1.7"
 brew "libheif"
 brew "libmpc"
 brew "libomp", link: true
