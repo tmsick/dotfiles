@@ -84,7 +84,6 @@ brew "telnet"
 brew "tmux"
 brew "tree"
 brew "unbound"
-brew "uv"
 brew "vim"
 brew "watch"
 brew "webp"
@@ -103,7 +102,7 @@ cask "font-cascadia-mono-pl"
 cask "font-monaspace"
 cask "font-noto-sans-cjk-jp"
 cask "font-noto-serif-cjk-jp"
-cask "google-cloud-sdk"
+cask "gcloud-cli"
 cask "yubico-authenticator"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
@@ -116,7 +115,6 @@ mas "Mactracker", id: 430255202
 mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Paste", id: 967805235
 mas "Slack", id: 803453959
 mas "Swift Playground", id: 1496833156
 mas "TestFlight", id: 899247664
@@ -151,6 +149,7 @@ vscode "ms-python.mypy-type-checker"
 vscode "ms-python.pylint"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
