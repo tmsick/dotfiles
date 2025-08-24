@@ -11,6 +11,7 @@ if status is-interactive
     set -x EDITOR vim
     set -x HOMEBREW_BUNDLE_FILE "$XDG_CONFIG_HOME/brew/Brewfile"
     set -x LANG "en_US.UTF-8"
+    set -x PNPM_HOME "$HOME/Library/pnpm"
 
     set -a fish_function_path "$DOTFILES_HOME/fish/functions"
 
@@ -19,6 +20,7 @@ if status is-interactive
     fish_add_path -pm "$HOME/.local/bin"
     fish_add_path -pm "$HOME/.local/share/mise/shims"
     fish_add_path -pm "$HOMEBREW_PREFIX/opt/fzf/bin"
+    fish_add_path -pm "$PHPM_HOME"
 
     command -q bat && alias cat bat
     command -q git && alias g git
