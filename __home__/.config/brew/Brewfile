@@ -118,7 +118,6 @@ mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "Swift Playground", id: 1496833156
 mas "TestFlight", id: 899247664
-mas "WutheringWaves", id: 6475033368
 mas "Xcode", id: 497799835
 mas "辞書 by 物書堂", id: 1380563956
 vscode "angular.ng-template"
@@ -166,6 +165,7 @@ vscode "ms-vscode.remote-repositories"
 vscode "ms-vscode.remote-server"
 vscode "ms-vscode.vscode-speech"
 vscode "ms-vsliveshare.vsliveshare"
+vscode "openai.chatgpt"
 vscode "pkief.material-icon-theme"
 vscode "prisma.prisma"
 vscode "redhat.java"
@@ -187,3 +187,5 @@ vscode "vscjava.vscode-java-upgrade"
 vscode "vscjava.vscode-maven"
 vscode "vscodevim.vim"
 vscode "vue.volar"
+go "cmd/go"
+go "cmd/gofmt"
