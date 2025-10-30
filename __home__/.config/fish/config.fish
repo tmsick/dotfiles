@@ -14,12 +14,12 @@ set -gx PNPM_HOME "$HOME/Library/pnpm"
 
 set -a fish_function_path "$DOTFILES_HOME/fish/functions"
 
+fish_add_path -gpm "$HOMEBREW_PREFIX/opt/fzf/bin"
+fish_add_path -gpm "$PNPM_HOME"
 fish_add_path -gpm "$HOME/.local/bin"
 fish_add_path -gpm "$HOME/.local/share/mise/shims"
 fish_add_path -gpm "$HOME/bin"
 fish_add_path -gpm "$HOME/go/bin"
-fish_add_path -gpm "$HOMEBREW_PREFIX/opt/fzf/bin"
-fish_add_path -gpm "$PNPM_HOME"
 
 command -q bat && alias cat bat
 command -q git && alias g git
