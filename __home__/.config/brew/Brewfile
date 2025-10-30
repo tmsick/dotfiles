@@ -2,6 +2,7 @@ brew "aspell"
 brew "autoconf"
 brew "bash"
 brew "bat"
+brew "biome"
 brew "cmake"
 brew "coreutils"
 brew "deno"
@@ -91,6 +92,7 @@ brew "x265"
 brew "xz"
 brew "ykman"
 brew "yq"
+cask "codex"
 cask "font-cascadia-code"
 cask "font-cascadia-code-nf"
 cask "font-cascadia-code-pl"
@@ -109,7 +111,6 @@ mas "Hex Fiend", id: 1342896380
 mas "Keynote", id: 409183694
 mas "LINE", id: 539883307
 mas "Mactracker", id: 430255202
-mas "MindNode", id: 1289197285
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
@@ -119,6 +120,7 @@ mas "Xcode", id: 497799835
 mas "辞書 by 物書堂", id: 1380563956
 vscode "angular.ng-template"
 vscode "anthropic.claude-code"
+vscode "biomejs.biome"
 vscode "bradlc.vscode-tailwindcss"
 vscode "charliermarsh.ruff"
 vscode "dbaeumer.vscode-eslint"
